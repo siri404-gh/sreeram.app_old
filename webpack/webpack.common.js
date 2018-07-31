@@ -4,11 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
+    polyfills: './src/web/polyfills.js',
     app: './src/web/index.js',
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
   },
   module: {
     rules: [
@@ -30,6 +31,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Sreeram Padmanabhan',
       template: path.resolve(__dirname, 'template.html'),
+      chunks: ['app'],
     }),
   ],
 };

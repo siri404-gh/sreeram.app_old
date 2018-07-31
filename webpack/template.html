@@ -1,10 +1,27 @@
 <!DOCTYPE html>
+
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <script>
+    var modernBrowser = (
+      'fetch' in window &&
+      'assign' in Object
+    );
+
+    if (!modernBrowser) {
+      var scriptElement = document.createElement('script');
+
+      scriptElement.async = false;
+      scriptElement.src = '/polyfills.bundle.js';
+      document.head.appendChild(scriptElement);
+    }
+  </script>
 </head>
+
 <body>
-    <div id="root"></div>
+  <div id="root"></div>
 </body>
+
 </html>
