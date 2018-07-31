@@ -9,7 +9,8 @@
     "test": "karma start",
     "lint:local": "eslint .",
     "precommit": "echo 'Are you using commitizen?'",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "husky": "^0.14.3",
     "react-hot-loader": "^4.3.4",
     "react-styleguidist": "^7.1.3",
+    "validate-commit-msg": "^2.14.0",
     "webpack": "^4.16.3",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.1.0",
