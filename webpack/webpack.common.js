@@ -22,6 +22,18 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    splitChunks: {
+      name(module) {
+        // generate a chunk name...
+        return 'vendor'; // ...
+      },
+      chunks(chunk) {
+        // exclude `my-excluded-chunk`
+        return chunk.name !== 'polyfills';
+      },
+    },
+  },
   plugins: [
     new BundleAnalyzerPlugin({
       openAnalyzer: false,
