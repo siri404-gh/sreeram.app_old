@@ -1,5 +1,6 @@
 const merge = require('webpack-merge');
 const path = require('path');
+const webpack = require('webpack');
 const commonConfig = require('./webpack.common');
 
 module.exports = merge(commonConfig, {
@@ -9,5 +10,9 @@ module.exports = merge(commonConfig, {
     contentBase: path.join(__dirname, '../dist'),
     compress: true,
     port: 9000,
+    hot: true,
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 });
