@@ -1,4 +1,6 @@
-export const components = 'src/web/components/**/[A-Z]*.js';
-export const webpackConfig = Object.assign({}, require('./webpack/webpack.config.js'), {
-  /* Custom config options */
-});
+module.exports = {
+  components: 'src/web/components/**/[A-Z]*.js',
+  webpackConfig: Object.assign({}, require('./webpack/webpack.prod.js'), {
+    /* Custom config options */
+  }),
+};
