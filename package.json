@@ -51,9 +51,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx -p node-notifier-cli notify -t 'sreeram.app' -m 'Are you being a commitizen?' -s Glass",
+      "pre-commit": "./node_modules/.bin/notify -t 'sreeram.app' -m 'Are you being a commitizen?'",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "post-commit": "npx -p node-notifier-cli notify -t 'sreeram.app' -m 'Commit Successful' -s Glass"
+      "post-commit": "./node_modules/.bin/notify -t 'sreeram.app' -m 'Commit Successful' -s Glass"
     }
   },
   "config": {
