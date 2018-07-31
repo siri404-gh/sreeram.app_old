@@ -1,0 +1,19 @@
+{
+  "name": "sreeram.app",
+  "version": "1.0.0",
+  "description": "Sreeram Padmanabhan's personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreerampr/sreeram.app.git"
+  },
+  "author": "Sreeram Padmanabhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sreerampr/sreeram.app/issues"
+  },
+  "homepage": "https://github.com/sreerampr/sreeram.app#readme"
+}
