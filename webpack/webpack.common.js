@@ -22,7 +22,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+      analyzerMode: 'static',
+      reportFilename: path.resolve(__dirname, `../dist/bundle.html`),
+    }),
     new HtmlWebpackPlugin({
       title: 'Sreeram Padmanabhan',
       template: path.resolve(__dirname, 'template.html'),
