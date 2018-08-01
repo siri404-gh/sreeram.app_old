@@ -8,5 +8,6 @@ WORKDIR /opt/app
 ADD .babelrc /opt/app/.babelrc
 ADD src /opt/app/src
 ADD webpack /opt/app/webpack
-RUN npm run build
+ADD server /opt/app/server
+RUN ./node_modules/.bin/webpack --env=prod  --config=webpack/webpack.config.js
 CMD [ "node", "server/"]
