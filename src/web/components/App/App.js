@@ -10,7 +10,7 @@ class App extends Component {
    * @return {Component}
    */
   render() {
-    return <h1>Hello, Worlds</h1>;
+    return <h1>Hello, World</h1>;
   }
 }
 
