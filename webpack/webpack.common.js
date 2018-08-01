@@ -1,6 +1,6 @@
 const path = require('path');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -24,26 +24,33 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
+      /**
+       * @param {*} module
+       * @return {string}
+       */
       name(module) {
-        // generate a chunk name...
-        return 'vendor'; // ...
+        return 'vendor';
       },
+        /**
+       * @param {*} chunk
+       * @return {string}
+       */
       chunks(chunk) {
-        // exclude `my-excluded-chunk`
         return chunk.name !== 'polyfills';
       },
     },
   },
   plugins: [
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false,
-      analyzerMode: 'static',
-      reportFilename: path.resolve(__dirname, `../dist/bundle.html`),
-    }),
     new HtmlWebpackPlugin({
       title: 'Sreeram Padmanabhan',
       template: path.resolve(__dirname, 'template.html'),
-      chunks: ['app'],
+      excludeChunks: ['polyfills'],
+    }),
+    new CleanWebpackPlugin(['dist'], {
+      root: path.resolve(__dirname, '../'),
+      exclude: [],
+      verbose: false,
+      dry: false,
     }),
   ],
 };
