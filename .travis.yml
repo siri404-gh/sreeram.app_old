@@ -1,0 +1,29 @@
+sudo: required
+
+language: node_js
+
+node_js:
+- '8'
+
+install:
+- npm i
+
+jobs:
+  include:
+    - stage: lint
+      script: npm run lint
+    #   name: "Lint"
+    # - stage: unit-test
+    #   script: npm test
+    #   name: "Unit Tests"
+    # - stage: "Stage"
+    #   script: npm run stage:heroku
+    # - stage: lighthouse-test
+    #   script: npm run lh
+    #   name: "Performance Tests"
+
+cache:
+  directories:
+    - "node_modules"
+
+# after_success:
