@@ -12,12 +12,13 @@ jobs:
   include:
     - stage: lint
       script: npm run lint:local
-    #   name: "Lint"
+      name: "Lint"
     # - stage: unit-test
     #   script: npm test
     #   name: "Unit Tests"
-    # - stage: "Stage"
-    #   script: npm run stage:heroku
+    - stage: "Stage"
+      script: sh ./scripts/heroku_stage.sh
+      name: "Staging"
     # - stage: lighthouse-test
     #   script: npm run lh
     #   name: "Performance Tests"
@@ -26,4 +27,5 @@ cache:
   directories:
     - "node_modules"
 
-# after_success:
+after_success:
+  - npm run lh -- https://sreeram-stage.herokuapp.com
