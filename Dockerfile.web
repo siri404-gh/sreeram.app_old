@@ -1,0 +1,12 @@
+FROM node:latest
+WORKDIR /usr/src/app
+ADD package.json /tmp/package.json
+ADD package-lock.json /tmp/package-lock.json
+RUN cd /tmp && npm i
+RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
+WORKDIR /opt/app
+ADD .babelrc /opt/app/.babelrc
+ADD src /opt/app/src
+ADD webpack /opt/app/webpack
+RUN npm run build
+CMD [ "node", "server/"]
