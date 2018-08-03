@@ -9,15 +9,27 @@ jobs:
   - stage: lint
     script: npm run lint:local
     name: Lint
+  - stage: build
+    script: npm run build
+    name: Build
   - stage: Stage
     script: sh ./scripts/heroku_stage.sh
-    name: Staging
+    name: Stage (Heroku)
+  - stage: performance
+    script: npm run lighthouse --  https://sreeram-stage.herokuapp.com --output-path=./dist/lighthouse.html --quiet --chrome-flags="--headless"
+    name: Lighthouse
+  - stage: Host
+    script: npm run firebase:deploy
+    name: Host (Firebase)
+
 cache:
   directories:
   - node_modules
-after_success:
-- npm run lighthouse --  https://sreeram-stage.herokuapp.com --output-path=./dist/lighthouse.html --quiet --chrome-flags="--headless"
-- npm run lighthouse:ci -- https://sreeram-stage.herokuapp.com
+
+# after_success:
+# - npm run lighthouse --  https://sreeram-stage.herokuapp.com --output-path=./dist/lighthouse.html --quiet --chrome-flags="--headless"
+# - npm run lighthouse:ci -- https://sreeram-stage.herokuapp.com
+
 deploy:
   provider: firebase
   token:
