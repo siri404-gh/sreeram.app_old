@@ -11,7 +11,8 @@
     "lint:local": "eslint .",
     "commit": "git-cz",
     "docker": "docker-compose -f docker-compose-web.yml up",
-    "lh": "lighthouse-ci"
+    "lighthouse": "lighthouse",
+    "lighthouse:ci": "lighthouse-ci"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "heroku": "^7.7.8",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.0.0-rc.13",
+    "lighthouse": "^3.0.3",
     "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
     "node-notifier-cli": "^1.1.2",
     "react-hot-loader": "^4.3.4",

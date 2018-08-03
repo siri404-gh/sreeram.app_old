@@ -28,4 +28,5 @@ cache:
     - "node_modules"
 
 after_success:
-  - npm run lh -- https://sreeram-stage.herokuapp.com
+  - npm run lighthouse --  https://sreeram-stage.herokuapp.com --output=json --quiet --chrome-flags="--headless"
+  - npm run lighthouse:ci -- https://sreeram-stage.herokuapp.com
