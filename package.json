@@ -11,7 +11,7 @@
     "lint:local": "eslint .",
     "commit": "git-cz",
     "docker": "docker-compose -f docker-compose-web.yml up",
-    "lighthouse": "mkdir dist && lighthouse",
+    "lighthouse": "lighthouse",
     "lighthouse:ci": "lighthouse-ci",
     "firebase:deploy": "firebase deploy --token $FIREBASE_TOKEN"
   },
