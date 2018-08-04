@@ -23,6 +23,7 @@ jobs:
     script:
       - npm tun test
       - mv dist mycache
+    name: Unit Test
   - stage: build
     script:
       - npm run build
