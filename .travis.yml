@@ -27,7 +27,7 @@ jobs:
   - stage: build
     script:
       - npm run build
-      - mv dist mycache
+      - cp -a dist/. mycache/dist/
     name: Build
   - stage: Stage
     script: sh ./scripts/heroku_stage.sh
