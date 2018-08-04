@@ -7,6 +7,9 @@ install:
 jobs:
   include:
   - stage: lint
+    install:
+    - rm -rf mycache
+    - mkdir mycache
     script: npm run lint:local
     name: Lint
   - stage: build
@@ -17,6 +20,8 @@ jobs:
   - stage: Stage
     script: sh ./scripts/heroku_stage.sh
     name: Stage (Heroku)
+    after_success:
+    - npm run lighthouse:pr -- https://sreeram-stage.herokuapp.com
   - stage: performance
     script:
       - npm run lighthouse --  https://sreeram-stage.herokuapp.com --output-path=./mycache/dist/lighthouse.html --quiet --chrome-flags="--headless"
@@ -26,17 +31,7 @@ jobs:
       - mv mycache/dist dist
       - npm run firebase:deploy
     name: Host (Firebase)
-
 cache:
   directories:
   - node_modules
   - mycache
-
-after_success:
-  - npm run lighthouse:ci -- https://sreeram-stage.herokuapp.com
-
-deploy:
-  provider: firebase
-  token:
-    secure: QMoz5WgQtVouTgnqtctiBMjCpu0nCudaYfeVGXtK08otaK5Av2z+fNTT7vTsLXaPObnquGUvxYlwpur1L/sKfVRGvtTgulF0V55a5mTnHPiVyfLyyPbTxdR3poDrD6LvCgoz6sEclcOJjhjHII4QuKWmFWP1vWOGfy+EO0lmeMBHc2Xpb8qWuOG9kR2Qmt/cPcu+Gl20zyOABymHIV09qWbNHYcrSjxOVJA3CSWdf6J63/khF2prztuxfdaWY4RYUF+L8RWl1yYni2uPp0rEjmVRkRVIRw8GkYBxyXCSBsGOohDD/4SnaMrkn9Gw2ZlfV7kMavGrRQbeXMvNxUipPkF15IT+C5Kpt6mHMsMFK7e80WzayKZVAnLZttsdTL3+1KZ/INXS9k6kgXqq4KJl/C0mBJoV+zUZ8a/ha0gZe/Ap8jXpV1rFb+FSxgXYDRuYnWTW7kV+Agj06tNO8NmvY5sSpO72/MLugzAX1BFdKi1zkvkEFiXGhF738p24oTyQWAw0kvc51fT269Qrr2keqxz3lUZbSVKnrtBiP9itt+1UwQWTHFCxlJ59tg1QYLCn0G6D2F915j45TeU24aSr1aFxvtVWujIwJ4tYcCvSiu+p/fAhqp0rbzsuh1EEX9cNNzIDkIj5NjSp07yRqpOur+nidL3qGPRm7eWrTM986ZU=
-  project: sreeram-app

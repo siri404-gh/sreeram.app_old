@@ -12,7 +12,7 @@
     "commit": "git-cz",
     "docker": "docker-compose -f docker-compose-web.yml up",
     "lighthouse": "lighthouse",
-    "lighthouse:ci": "lighthouse-ci",
+    "lighthouse:pr": "lighthouse-ci",
     "firebase:deploy": "firebase deploy --token $FIREBASE_TOKEN"
   },
   "repository": {
