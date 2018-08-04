@@ -1,5 +1,17 @@
 {
   "hosting": {
-    "public": "./dist"
+    "public": "./dist",
+    "redirects": [{
+      "source" : "/:name.bundle.js",
+      "destination" : "/:name.bundle.js.gz",
+      "type" : 301
+    }],
+    "headers": [{
+      "source" : "**/*.@(gz)",
+      "headers" : [{
+        "key" : "Content-Encoding",
+        "value" : "gzip"
+      }]
+    }]
   }
 }
