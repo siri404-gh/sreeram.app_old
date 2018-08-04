@@ -1,15 +1,16 @@
+sudo: required
 language: node_js
 node_js:
   - '8'
 services:
   - docker
+addons:
+  chrome: stable
 cache:
   directories:
     - node_modules
     - mycache
 install: npm install
-addons:
-  chrome: stable
 jobs:
   include:
   - stage: lint
