@@ -1,13 +1,18 @@
-sudo: required
 language: node_js
 node_js:
-- '8'
-install:
-- npm i
+  - '8'
+cache:
+  directories:
+    - node_modules
+    - mycache
+install: npm install
+addons:
+  chrome: stable
 jobs:
   include:
   - stage: lint
     install:
+    - npm i
     - rm -rf mycache
     - mkdir mycache
     script: npm run lint:local
@@ -24,14 +29,10 @@ jobs:
     - npm run lighthouse:pr -- https://sreeram-stage.herokuapp.com
   - stage: performance
     script:
-      - npm run lighthouse --  https://sreeram-stage.herokuapp.com --output-path=./mycache/dist/lighthouse.html --quiet --chrome-flags="--headless"
+      - npm run lighthouse --  https://sreeram-stage.herokuapp.com --output-path=./mycache/dist/lighthouse.html --quiet --chrome-flags="--headless --no-sandbox"
     name: Lighthouse
   - stage: Host
     script:
       - mv mycache/dist dist
       - npm run firebase:deploy
     name: Host (Firebase)
-cache:
-  directories:
-  - node_modules
-  - mycache
