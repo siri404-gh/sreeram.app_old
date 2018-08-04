@@ -57,6 +57,7 @@
     "lighthouse": "^3.0.3",
     "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
     "node-notifier-cli": "^1.1.2",
+    "path": "^0.12.7",
     "react-hot-loader": "^4.3.4",
     "react-styleguidist": "^7.1.3",
     "rimraf": "^2.6.2",
