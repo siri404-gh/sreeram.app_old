@@ -14,7 +14,7 @@ module.exports = {
     jasmine: true,
   },
   rules: {
-    "max-len": ["error", { "code": 100 }],
+    "max-len": ["error", { "code": 200 }],
     "arrow-parens": ["error", "as-needed"],
     "require-jsdoc": [
       "error", {
