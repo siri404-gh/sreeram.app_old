@@ -21,7 +21,7 @@ jobs:
     name: Lint
   - stage: test
     script:
-      - npm tun test
+      - npm run test
       - mv dist mycache
     name: Unit Test
   - stage: build
