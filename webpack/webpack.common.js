@@ -1,11 +1,12 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    polyfills: './src/web/polyfills.js',
     app: './src/web/index.js',
+    polyfills: './src/web/polyfills.js',
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -51,6 +52,10 @@ module.exports = {
       exclude: [],
       verbose: false,
       dry: false,
+    }),
+    new webpack.ProgressPlugin(),
+    new webpack.BannerPlugin({
+      banner: 'hash:[hash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]'
     }),
   ],
 };

@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:latest
 WORKDIR /usr/src/app
 ADD package.json /tmp/package.json
 ADD package-lock.json /tmp/package-lock.json
