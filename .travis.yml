@@ -19,6 +19,10 @@ jobs:
     - mkdir mycache
     script: npm run lint:local
     name: Lint
+  - stage: test
+    script:
+      - npm tun test
+      - mv dist mycache
   - stage: build
     script:
       - npm run build

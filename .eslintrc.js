@@ -10,7 +10,8 @@ module.exports = {
   },
   env: {
     browser: true,
-    node: true
+    node: true,
+    jasmine: true,
   },
   rules: {
     "max-len": ["error", { "code": 100 }],
