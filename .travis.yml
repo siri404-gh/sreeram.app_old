@@ -13,13 +13,14 @@ cache:
     - node_modules
     - mycache
 install:
-  - rm -rf mycache
-  - mkdir mycache
   - npm i
 jobs:
   include:
   - stage: lint
-    script: npm run lint:local
+    script:
+      - rm -rf mycache
+      - mkdir mycache
+      - npm run lint:local
     name: Lint
   - stage: test
     script:
