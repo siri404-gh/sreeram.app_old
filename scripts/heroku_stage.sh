@@ -6,4 +6,4 @@ echo "   CheckHostIP no" >> ~/.ssh/config
 echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
 heroku keys:clear
 yes | heroku keys:add
-git push heroku master
+git push --force heroku master
