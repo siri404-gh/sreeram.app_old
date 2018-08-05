@@ -19,6 +19,7 @@ module.exports = function (config) {
       includeAllSources: true,
       reporters: [
         { type: 'html', subdir: 'test' },
+        { type: 'lcovonly', subdir: '.', file: 'test/lcov.txt' },
       ],
       dir: `./dist`,
     },
