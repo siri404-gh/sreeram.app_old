@@ -10,13 +10,13 @@ cache:
   directories:
     - node_modules
     - mycache
-install: npm install
 jobs:
   include:
   - stage: lint
     install:
     - rm -rf mycache
     - mkdir mycache
+    - npm i
     script: npm run lint:local
     name: Lint
   - stage: test
@@ -30,7 +30,9 @@ jobs:
       - cp -a dist/. mycache/dist/
     name: Build
   - stage: Stage
-    script: sh ./scripts/heroku_stage.sh
+    script:
+      # - sh ./scripts/heroku_stage_container.sh
+      - sh ./scripts/heroku_stage.sh
     name: Stage (Heroku)
     after_success:
     - npm run lighthouse:pr -- https://sreeram-stage.herokuapp.com
