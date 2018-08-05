@@ -4,7 +4,7 @@
   "description": "Sreeram Padmanabhan's personal website",
   "main": "src/web/index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack --env=prod --config=webpack/webpack.config.js",
+    "build": "webpack --env=prod --config=webpack/webpack.config.js",
     "build:dev": "webpack --env=dev --config=webpack/webpack.config.js",
     "build:devserver": "webpack-dev-server --open --env=dev --config=webpack/webpack.config.js",
     "test": "karma start",
