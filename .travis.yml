@@ -5,9 +5,9 @@ node_js:
 # services:
 #   - docker
 addons:
-#   chrome: stable
-  sonarcloud:
-    organization: "sreerampr-github"
+  #  chrome: stable
+  # sonarcloud:
+  #   organization: "sreerampr-github"
 cache:
   directories:
     - node_modules
@@ -28,7 +28,7 @@ jobs:
     name: Unit Test
   - stage: sonar
     script:
-      - sonar-scanner
+      - npm run sonar
     name: Sonar analysis
   - stage: build
     script:

@@ -5,6 +5,8 @@ sonarqubeScanner({
   token: process.env.SONAR_TOKEN,
   options: {
     'sonar.organization': 'sreerampr-github',
-    'sonar.exclusions': 'mycache'
+    'sonar.exclusions': 'node_modules, mycache',
+    'sonar.sources': 'src',
+    'sonar.javascript.lcov.reportPaths':'dist/test/lcov.txt'
   },
 }, () => console.log('Sonar Analysis done'));
