@@ -8,7 +8,7 @@ app.get('*.bundle.js', function (req, res, next) {
   next();
 });
 
-app.use('/', express.static('./dist'));
+app.use('/', express.static('dist'));
 
 app.listen(port);
 
