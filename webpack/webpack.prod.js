@@ -19,11 +19,13 @@ module.exports = merge(commonConfig, {
       // and not allow any straggling "old" SWs to hang around
       clientsClaim: true,
       skipWaiting: true,
+      precacheManifestFilename: 'wb-manifest.[manifestHash].js',
     }),
     new CompressionPlugin({
       test: /\.js/,
       cache: true,
       asset: '[path].gz[query]',
+      exclude: /service-worker*|wb-manifest-*/,
       algorithm: 'gzip',
       minRatio: 0.8,
       deleteOriginalAssets: true,
