@@ -5,5 +5,6 @@ sonarqubeScanner({
   token: process.env.SONAR_TOKEN,
   options: {
     'sonar.organization': 'sreerampr-github',
+    'sonar.exclusions': 'mycache'
   },
 }, () => console.log('Sonar Analysis done'));
