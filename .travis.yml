@@ -24,6 +24,10 @@ jobs:
       - npm run test
       - mv dist mycache
     name: Unit Test
+  - stage: sonar
+    script:
+      - npm run sonar
+    name: Sonar analysis
   - stage: build
     script:
       - npm run build
