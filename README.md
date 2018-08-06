@@ -3,3 +3,4 @@
 [![Quality Gate](https://sonarcloud.io/api/badges/gate?key=sreeramapp)](https://sonarcloud.io/dashboard/index/sreeramapp)
 [![Maintainability](https://api.codeclimate.com/v1/badges/7824f3ae21dd6bd87291/maintainability)](https://codeclimate.com/github/sreerampr/sreeram.app/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7824f3ae21dd6bd87291/test_coverage)](https://codeclimate.com/github/sreerampr/sreeram.app/test_coverage)
+[![codecov](https://codecov.io/gh/sreerampr/sreeram.app/branch/master/graph/badge.svg)](https://codecov.io/gh/sreerampr/sreeram.app)
