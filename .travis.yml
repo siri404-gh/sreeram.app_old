@@ -14,7 +14,7 @@ cache:
     - mycache
 install:
   - npm i
-  - npm install -g codecov
+  - npm install -g codecov codeclimate-test-reporter
 jobs:
   include:
   - stage: lint
@@ -28,7 +28,9 @@ jobs:
       - npm run test
       - mv dist mycache
     name: Unit Test
-    after_success: codecov --disable=gcov --file=mycache/dist/test/lcov.txt
+    after_success:
+      - codecov --disable=gcov --file=mycache/dist/test/lcov.txt
+      - codeclimate-test-reporter < mycache/dist/test/lcov.txt
   - stage: sonar
     script:
       - npm run sonar
