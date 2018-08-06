@@ -43,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Sreeram Padmanabhan',
+      title: 'Title',
       template: path.resolve(__dirname, 'template.html'),
       excludeChunks: ['polyfills'],
     }),
