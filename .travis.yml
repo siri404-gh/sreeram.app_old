@@ -6,8 +6,6 @@ node_js:
 #   - docker
 addons:
   #  chrome: stable
-  # sonarcloud:
-  #   organization: "sreerampr-github"
 cache:
   directories:
     - node_modules
@@ -51,10 +49,10 @@ jobs:
       - sh ./scripts/heroku_stage.sh
     name: Stage (Heroku)
     after_success:
-    - npm run lighthouse:pr -- https://sreeram-stage.herokuapp.com
+    - npm run lighthouse:pr -- https://$HEROKU_APP_NAME.herokuapp.com
   - stage: performance
     script:
-      - npm run lighthouse --  https://sreeram-stage.herokuapp.com --output-path=./mycache/dist/lighthouse.html --quiet --chrome-flags="--headless --no-sandbox"
+      - npm run lighthouse --  https://$HEROKU_APP_NAME.herokuapp.com --output-path=./mycache/dist/lighthouse.html --quiet --chrome-flags="--headless --no-sandbox"
     name: Lighthouse
   - stage: Host
     script:
