@@ -1,3 +1,5 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Build Status](https://travis-ci.org/sreerampr/sreeram.app.svg?branch=master)](https://travis-ci.org/sreerampr/sreeram.app)
 [![Quality Gate](https://sonarcloud.io/api/badges/gate?key=sreeramapp)](https://sonarcloud.io/dashboard/index/sreeramapp)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7824f3ae21dd6bd87291/maintainability)](https://codeclimate.com/github/sreerampr/sreeram.app/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/7824f3ae21dd6bd87291/test_coverage)](https://codeclimate.com/github/sreerampr/sreeram.app/test_coverage)
