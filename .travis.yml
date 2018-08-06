@@ -14,6 +14,7 @@ cache:
     - mycache
 install:
   - npm i
+  - npm install -g codecov
 jobs:
   include:
   - stage: lint
@@ -27,6 +28,7 @@ jobs:
       - npm run test
       - mv dist mycache
     name: Unit Test
+    after_success: codecov --file mycache/dist/test/lcov.txt
   - stage: sonar
     script:
       - npm run sonar
