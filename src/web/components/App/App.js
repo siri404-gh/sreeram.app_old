@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <Button variant="contained" color="primary">
+        <Button className='some-button' variant="contained" color="primary">
           Hello World
         </Button>
       </MuiThemeProvider>

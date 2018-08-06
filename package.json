@@ -15,7 +15,9 @@
     "lighthouse:pr": "lighthouse-ci",
     "firebase:deploy": "firebase deploy --token $FIREBASE_TOKEN",
     "clean": "rimraf dist reports",
-    "sonar": "node sonarqube.js"
+    "sonar": "node sonarqube.js",
+    "styleguide": "npx styleguidist server",
+    "styleguide:eject": "npx styleguidist build"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,8 @@
     "commitizen": "^2.10.1",
     "compression-webpack-plugin": "^1.1.11",
     "cz-conventional-changelog": "^2.1.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^5.2.0",
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-jsx-a11y": "^6.1.1",

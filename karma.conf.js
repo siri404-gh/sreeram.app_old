@@ -7,11 +7,11 @@ module.exports = function (config) {
     singleRun: true,
     frameworks: [ 'jasmine' ],
     files: [
-      'src/web/components/App/App.js',
+      // 'src/web/components/App/App.js',
       'src/web/spec.js'
     ],
     preprocessors: {
-      'src/web/components/App/App.js': ['webpack'],
+      // 'src/web/components/App/App.js': ['webpack'],
       'src/web/spec.js': [ 'webpack', 'sourcemap' ]
     },
     reporters: [ 'dots', 'coverage' ],

@@ -13,6 +13,9 @@ module.exports = {
     node: true,
     jasmine: true,
   },
+  globals: {
+    shallow: true
+  },
   rules: {
     "max-len": ["error", { "code": 200 }],
     "arrow-parens": ["error", "as-needed"],

@@ -33,6 +33,11 @@ jobs:
     script:
       - npm run sonar
     name: Sonar analysis
+  - stage: documentation
+    script:
+      - npm run styleguide:eject
+      - mv styleguide mycache/dist
+    name: Documentation
   - stage: build
     script:
       - npm run build
