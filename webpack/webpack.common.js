@@ -42,6 +42,11 @@ module.exports = {
     },
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        LOGROCKET_ID: JSON.stringify(process.env.LOGROCKET_ID),
+      },
+    }),
     new HtmlWebpackPlugin({
       title: 'Title',
       template: path.resolve(__dirname, 'template.html'),

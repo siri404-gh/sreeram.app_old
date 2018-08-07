@@ -76,8 +76,11 @@
   "dependencies": {
     "@material-ui/core": "^1.4.3",
     "@material-ui/icons": "^2.0.1",
+    "babel-plugin-add-react-displayname": "0.0.5",
     "babel-plugin-istanbul": "^4.1.6",
     "babel-polyfill": "^6.26.0",
+    "logrocket": "^0.6.16",
+    "logrocket-react": "^2.0.0",
     "promise-polyfill": "8.0.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
