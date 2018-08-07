@@ -17,6 +17,7 @@ module.exports = {
     shallow: true
   },
   rules: {
+    "react/prop-types": 0,
     "max-len": ["error", { "code": 200 }],
     "arrow-parens": ["error", "as-needed"],
     "require-jsdoc": [

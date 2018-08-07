@@ -41,6 +41,17 @@ module.exports = {
       },
     },
   },
+  externals: {
+    request: {
+      commonjs: 'request',
+      commonjs2: 'request',
+    },
+    os: {
+      commonjs: 'os',
+      commonjs2: 'os',
+    },
+    process: 'process',
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {

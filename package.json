@@ -78,6 +78,7 @@
   "dependencies": {
     "@material-ui/core": "^1.4.3",
     "@material-ui/icons": "^2.0.1",
+    "airbrake-js": "^1.4.4",
     "babel-plugin-add-react-displayname": "0.0.5",
     "babel-plugin-istanbul": "^4.1.6",
     "babel-polyfill": "^6.26.0",
@@ -86,6 +87,7 @@
     "promise-polyfill": "8.0.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "request": "^2.87.0",
     "save": "^2.3.2",
     "whatwg-fetch": "^2.0.4"
   },

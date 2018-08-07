@@ -3,11 +3,12 @@ import { render } from 'react-dom';
 import App from './components/App/App';
 import LogRocket from 'logrocket';
 import setupLogRocketReact from 'logrocket-react';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
 LogRocket.init(process.env.LOGROCKET_ID);
 setupLogRocketReact(LogRocket);
 
-render(<App />, document.getElementById('root'));
+render(<ErrorBoundary><App /></ErrorBoundary>, document.getElementById('root'));
 
 if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
   window.addEventListener('load', () => {
