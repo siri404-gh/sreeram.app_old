@@ -61,3 +61,4 @@ jobs:
       - mv mycache/dist dist
       - npm run firebase:deploy
     name: Host (Firebase)
+    if: branch = master
