@@ -12,7 +12,7 @@ cache:
     - mycache
 install:
   - npm i
-  - npm install -g codecov codeclimate-test-reporter
+  - npm install -g codecov codeclimate-test-reporter codacy-coverage
 jobs:
   include:
   - stage: lint
@@ -25,14 +25,12 @@ jobs:
     script:
       - npm run test
       - mv dist mycache
-    name: Unit Test
+    name: Unit Test, Coverage reports (Codecov, Codeclimate, Codacy, Sonar)
     after_success:
       - codecov --disable=gcov --file=mycache/dist/test/lcov.txt
       - codeclimate-test-reporter < mycache/dist/test/lcov.txt
-  - stage: sonar
-    script:
+      - codacy-coverage --accountToken $CODACY_TOKEN --username $CODACY_USERNAME --projectName $CODACY_PROJECT < mycache/dist/test/lcov.txt
       - npm run sonar
-    name: Sonar analysis
   - stage: documentation
     script:
       - npm run styleguide:eject
