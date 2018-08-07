@@ -56,6 +56,10 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env': {
         LOGROCKET_ID: JSON.stringify(process.env.LOGROCKET_ID),
+        SENTRY_TOKEN: JSON.stringify(process.env.SENTRY_TOKEN),
+        SENTRY_ID: JSON.stringify(process.env.SENTRY_ID),
+        AIRBRAKE_PROJECT_KEY: JSON.stringify(process.env.AIRBRAKE_PROJECT_KEY),
+        AIRBRAKE_ID: JSON.stringify(process.env.AIRBRAKE_ID),
       },
     }),
     new HtmlWebpackPlugin({

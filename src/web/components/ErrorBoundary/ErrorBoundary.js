@@ -1,8 +1,8 @@
 import React from 'react';
 import AirbrakeClient from 'airbrake-js';
+import Raven from 'raven-js';
 
 /**
- *
  *
  * @class ErrorBoundary
  * @extends {React.Component}
@@ -16,9 +16,13 @@ export default class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
     this.airbrake = new AirbrakeClient({
-      projectId: 192034,
-      projectKey: '566cd7dbc2e1eadf8bd5992752f7fb96',
+      projectId: process.env.AIRBRAKE_ID,
+      projectKey: process.env.AIRBRAKE_PROJECT_KEY,
     });
+    Raven.config(`https://${process.env.SENTRY_TOKEN}@sentry.io/${process.env.SENTRY_ID}`, {
+      release: '0-0-0',
+      environment: 'development-test',
+    }).install();
   }
 
   /**
@@ -34,6 +38,7 @@ export default class ErrorBoundary extends React.Component {
       error: error,
       params: { info: info },
     });
+    Raven.captureException(error, { extra: info });
   }
 
   /**
