@@ -31,6 +31,10 @@ jobs:
       - codeclimate-test-reporter < mycache/dist/test/lcov.txt
       - codacy-coverage --accountToken $CODACY_TOKEN --username $CODACY_USERNAME --projectName $CODACY_PROJECT < mycache/dist/test/lcov.txt
       - npm run sonar
+  - stage: Browserstack
+    script:
+      - npm run test:browserstack
+    name: Browserstack tests
   - stage: documentation
     script:
       - npm run styleguide:eject
