@@ -102,3 +102,55 @@ Analytics
 - SENTRY_TOKEN
 - SONAR_ORG
 - SONAR_TOKEN
+
+## npm scripts
+- npm build - Production build.
+- build:dev - Development build, without webpack-dev-server.
+- build:devserver - Development build, with webpack-dev-server.
+- test - Karma test.
+- lint:local - Eslint scan local.
+- commit - This is what you use to commit, not git commit.
+- docker - Builds the app in a dockerized container
+- lighthouse - Perform a lighthouse performance test.
+- lighthouse:pr - Travis invokes this for pull requests.
+- firebase:deploy - Deploy to firebase. Make sure you build first.
+- clean - Remove unnecessary folders.
+- sonar - Perform a sonar analysis. (You will need env variables set)
+- styleguide - Generate documentaton.
+- styleguide:eject - Generate and output documentation.
+- test:browserstack - Creates a tunnel to Browserstack and runs the unit tests in browsers specified in customLaunchers.js. (You will need env variables set)
+
+## How it all works
+
+- Fork this repo.
+- Husky, Commitizen and Commitlint, all npm installed, ensure that you follow good commit practices.
+- Signup at Travis. Here is where most things happen.
+- Every travis build has 8 stages - Lint, Test, Browserstack, Documentation, Build, Stage, Performance, Host.
+- Lint - performs a lint check.
+- Test - Performs unit testing and generate reports.
+  - After success, reports are sent to Codecov, Codeclimate, Codacy and Sonarqube. (You will need to have signed up at all those places and set appropriate environment variables).
+  - Browserstack - Runs the unit tests in browsers specified in customLaunchers.js.  (You will need to have signed up and set appropriate environment variables).
+  - Documentation - Generates react styleguide.
+  - Build - Performs a build and generates a webpack visualizer analysis report.
+  - Stage - Stages an app in heroku. (You will need to have signed up and set appropriate environment variables).
+  - Performance - Generates a lighthouse performance test report.
+  - Host - Pushes the app to firebase. (You will need to have signed up and set appropriate environment variables).
+
+## Examples:
+ - Test report - https://test.sreeram.app
+ - Codecov report - https://codecov.sreeram.app
+ - Codeclimate report - https://codeclimate.sreeram.app
+ - Codacy report - https://codacy.sreeram.app
+ - Sonar Analysis - https://sonar.sreeram.app
+ - Bundle analysis - https://bundle.sreeram.app
+ - Documentation - https://styleguide.sreeram.app
+ - Stage app - https://heroku.sreeram.app
+ - Performance report - https://lighthouse.sreeram.app
+ - Production app - https://www.sreeram.app
+
+## Others
+  - Browserstack
+  - Logrocket
+  - Airbrake
+  - Sentry
+  - Greenhouse
