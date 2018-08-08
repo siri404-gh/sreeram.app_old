@@ -15,14 +15,16 @@ export default class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
-    this.airbrake = new AirbrakeClient({
-      projectId: process.env.AIRBRAKE_ID,
-      projectKey: process.env.AIRBRAKE_PROJECT_KEY,
-    });
-    Raven.config(`https://${process.env.SENTRY_TOKEN}@sentry.io/${process.env.SENTRY_ID}`, {
-      release: '0-0-0',
-      environment: 'development-test',
-    }).install();
+    if (process.env.NODE_ENV === 'production') {
+      this.airbrake = new AirbrakeClient({
+        projectId: process.env.AIRBRAKE_ID,
+        projectKey: process.env.AIRBRAKE_PROJECT_KEY,
+      });
+      Raven.config(`https://${process.env.SENTRY_TOKEN}@sentry.io/${process.env.SENTRY_ID}`, {
+        release: '0-0-0',
+        environment: 'development-test',
+      }).install();
+    }
   }
 
   /**
@@ -34,11 +36,13 @@ export default class ErrorBoundary extends React.Component {
     // Display fallback UI
     this.setState({ hasError: true });
     // Send error to Airbrake
-    this.airbrake.notify({
-      error: error,
-      params: { info: info },
-    });
-    Raven.captureException(error, { extra: info });
+    if (process.env.NODE_ENV === 'production') {
+      this.airbrake.notify({
+        error: error,
+        params: { info: info },
+      });
+      Raven.captureException(error, { extra: info });
+    }
   }
 
   /**

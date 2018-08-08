@@ -5,8 +5,10 @@ import LogRocket from 'logrocket';
 import setupLogRocketReact from 'logrocket-react';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
-LogRocket.init(process.env.LOGROCKET_ID);
-setupLogRocketReact(LogRocket);
+if (process.env.NODE_ENV === 'production') {
+  LogRocket.init(process.env.LOGROCKET_ID);
+  setupLogRocketReact(LogRocket);
+}
 
 render(<ErrorBoundary><App /></ErrorBoundary>, document.getElementById('root'));
 
