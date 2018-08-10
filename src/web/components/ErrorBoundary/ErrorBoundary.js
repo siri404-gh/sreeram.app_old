@@ -1,6 +1,13 @@
 import React from 'react';
+import LogRocket from 'logrocket';
+import setupLogRocketReact from 'logrocket-react';
 import AirbrakeClient from 'airbrake-js';
 import Raven from 'raven-js';
+
+if (process.env.NODE_ENV === 'production') {
+  LogRocket.init(process.env.LOGROCKET_ID);
+  setupLogRocketReact(LogRocket);
+}
 
 /**
  *
