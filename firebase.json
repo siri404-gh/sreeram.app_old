@@ -2,8 +2,16 @@
   "hosting": {
     "public": "./dist",
     "redirects": [{
-      "source" : "/:name.bundle.js",
-      "destination" : "/:name.bundle.js.gz",
+      "source" : "/app.bundle.js",
+      "destination" : "/app.bundle.js.gz",
+      "type" : 301
+    },{
+      "source" : "/vendor.bundle.js",
+      "destination" : "/vendor.bundle.js.gz",
+      "type" : 301
+    },{
+      "source" : "/polyfill.bundle.js",
+      "destination" : "/polyfill.bundle.js.gz",
       "type" : 301
     }],
     "headers": [{
