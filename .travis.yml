@@ -1,3 +1,4 @@
+os: osx
 sudo: required
 language: node_js
 node_js:
@@ -5,7 +6,7 @@ node_js:
 # services:
 #   - docker
 addons:
-  #  chrome: stable
+   chrome: stable
 cache:
   directories:
     - node_modules
@@ -31,7 +32,7 @@ jobs:
       - codeclimate-test-reporter < mycache/dist/test/lcov.txt
       - codacy-coverage --accountToken $CODACY_TOKEN --username $CODACY_USERNAME --projectName $CODACY_PROJECT < mycache/dist/test/lcov.txt
       - npm run sonar
-  - stage: Browserstack
+  - stage: test
     script:
       - npm run test:browserstack
     name: Browserstack tests
@@ -46,9 +47,11 @@ jobs:
       - cp -a dist/. mycache/dist/
     name: Build
   - stage: Stage
-    script:
-      # - sh ./scripts/heroku_stage_container.sh
-      - sh ./scripts/heroku_stage.sh
+    script: skip
+    deploy: &heroku
+      provider: heroku
+      app: $HEROKU_APP_NAME
+      api_key: $HEROKU_API_KEY
     name: Stage (Heroku)
     after_success:
     - npm run lighthouse:pr -- https://$HEROKU_APP_NAME.herokuapp.com
