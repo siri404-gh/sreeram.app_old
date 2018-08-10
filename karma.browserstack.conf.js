@@ -1,4 +1,5 @@
 const { customLaunchers, browsers } = require('./customLaunchers');
+const webpackConfig = require('./webpack/webpack.test');
 
 module.exports = function(config) {
   config.set({
@@ -18,20 +19,6 @@ module.exports = function(config) {
       'src/web/spec.js': ['webpack', 'sourcemap'],
     },
     reporters: ['dots', 'BrowserStack'],
-    webpack: {
-      mode: 'production',
-      devtool: 'inline-source-map',
-      module: {
-        rules: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-              loader: 'babel-loader',
-            },
-          },
-        ],
-      },
-    },
+    webpack: webpackConfig,
   });
 };

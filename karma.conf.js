@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const webpackConfig = require('./webpack/webpack.test');
 
 module.exports = function (config) {
   config.set({
@@ -23,20 +23,6 @@ module.exports = function (config) {
       ],
       dir: `./dist`,
     },
-    webpack: {
-      mode: 'production',
-      devtool: 'inline-source-map',
-      module: {
-        rules: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-              loader: 'babel-loader',
-            },
-          },
-        ],
-      },
-    },
+    webpack: webpackConfig,
   });
 };
