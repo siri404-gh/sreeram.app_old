@@ -1,25 +1,28 @@
-os: osx
+# os: osx
 sudo: required
 language: node_js
 node_js:
   - '8'
 # services:
 #   - docker
-addons:
-   chrome: stable
+# addons:
+#   chrome: stable
 cache:
   directories:
     - node_modules
     - mycache
-install:
-  - npm i
-  - npm install -g codecov codeclimate-test-reporter codacy-coverage
+install: skip
 jobs:
   include:
-  - stage: lint
+  - stage: dependencies
     script:
+      - npm install -g codecov codeclimate-test-reporter codacy-coverage
+      - npm i
       - rm -rf mycache
       - mkdir mycache
+    name: Setup
+  - stage: lint
+    script:
       - npm run lint:local
     name: Lint
   - stage: test
@@ -36,24 +39,25 @@ jobs:
     script:
       - npm run test:browserstack
     name: Browserstack tests
-  - stage: documentation
-    script:
-      - npm run styleguide:eject
-      - mv styleguide mycache/dist
-    name: Documentation
   - stage: build
     script:
       - npm run build
       - cp -a dist/. mycache/dist/
     name: Build
+  - stage: Documentation
+    script:
+      - npm run styleguide:eject
+      - mv styleguide mycache/dist
+    name: Documentation
   - stage: Stage
     script: skip
     deploy: &heroku
+      skip_cleanup: true
       provider: heroku
       app: $HEROKU_APP_NAME
       api_key: $HEROKU_API_KEY
-    name: Stage (Heroku)
-    after_success:
+    name: Stage (Heroku $HEROKU_APP_NAME)
+    after_deploy:
     - npm run lighthouse:pr -- https://$HEROKU_APP_NAME.herokuapp.com
   - stage: performance
     script:
