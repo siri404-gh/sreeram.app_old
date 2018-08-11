@@ -1,16 +1,12 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Build Status](https://travis-ci.org/sreerampr/sreeram.app.svg?branch=master)](https://travis-ci.org/sreerampr/sreeram.app)
+[![CircleCI](https://circleci.com/gh/sreerampr/sreeram.app/tree/master.svg?style=svg)](https://circleci.com/gh/sreerampr/sreeram.app/tree/master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/7824f3ae21dd6bd87291/maintainability)](https://codeclimate.com/github/sreerampr/sreeram.app/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7824f3ae21dd6bd87291/test_coverage)](https://codeclimate.com/github/sreerampr/sreeram.app/test_coverage)
 [![codecov](https://codecov.io/gh/sreerampr/sreeram.app/branch/master/graph/badge.svg)](https://codecov.io/gh/sreerampr/sreeram.app)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5fdcfb541d7b465ca2e4ac7dc0f05876)](https://www.codacy.com/project/sreeram.com/sreeram.app/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sreerampr/sreeram.app&amp;utm_campaign=Badge_Grade_Dashboard) [![Greenkeeper badge](https://badges.greenkeeper.io/sreerampr/sreeram.app.svg)](https://greenkeeper.io/)
 
-# ``` Configuration```
-
-## Firebase
-Replace app name in .firebaserc
-
-## Features
+# Features
 - React
   - React Hot Loader
   - React router
@@ -44,7 +40,8 @@ Replace app name in .firebaserc
     - Compression
     - HtmlWebpackPlugin
 - CI
-  - Travis
+  - Travis CI
+  - Circle CI
   - Gitlab CI
 - Retporting tools
   - Codecov
@@ -80,7 +77,6 @@ Analytics
   - Airbrake
   - Sentry
   - Google Analytics
-  
 
 ## Environment variables
 
@@ -125,10 +121,10 @@ Analytics
 - Fork this repo.
 - Husky, Commitizen and Commitlint, all npm installed, ensure that you follow good commit practices.
 - Signup at Travis. Here is where most things happen.
-- Every travis build has 8 stages - Lint, Test, Browserstack, Documentation, Build, Stage, Performance, Host.
-- Lint - performs a lint check.
-- Test - Performs unit testing and generate reports.
-  - After success, reports are sent to Codecov, Codeclimate, Codacy and Sonarqube. (You will need to have signed up at all those places and set appropriate environment variables).
+- Signup at CircleCI too.
+- Every Travis/CircleCi build has 8 stages - Lint, Test, Browserstack, Documentation, Build, Stage, Performance, Host.
+- Lint - Performs a lint check.
+- Test - Performs unit testing and generates reports and are sent to Codecov, Codeclimate, Codacy and Sonarqube. (You will need to have signed up at all those places and set appropriate environment variables).
   - Browserstack - Runs the unit tests in browsers specified in customLaunchers.js.  (You will need to have signed up and set appropriate environment variables).
   - Documentation - Generates react styleguide.
   - Build - Performs a build and generates a webpack visualizer analysis report.
@@ -154,3 +150,10 @@ Analytics
   - Airbrake
   - Sentry
   - Greenhouse
+
+# ``` Configuration```
+
+## Firebase
+- Replace app name in .firebaserc
+- Signup at all the places and set environment variables at travis, heroku and circle.
+- Push the code.

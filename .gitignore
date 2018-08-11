@@ -3,3 +3,4 @@ dist
 reports
 .scannerwork
 styleguide
+.env

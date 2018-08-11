@@ -1,0 +1,69 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8-browsers
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+    working_directory: ~/repo
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run:
+          name: Setup
+          command: npm install
+      - run:
+          name: Empty mycache
+          command: rm -rf mycache && mkdir mycache
+      - save_cache:
+          paths:
+            - node_modules
+            - mycache
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Lint
+          command: npm run lint:html && mv dist/eslint mycache/eslint
+      - run:
+          name: Unit Test
+          command: npm run test && cp -a dist/. mycache
+      - run:
+          name: Unit Test Reporting
+          command: sh ./scripts/test.sh
+      - run:
+          name: Browserstack
+          command: npm run test:browserstack
+      - run:
+          name: Build
+          command: npm run build:firebase && cp -a dist/. mycache
+      - run:
+          name: Styleguide
+          command: npm run styleguide:eject && mv styleguide mycache/styleguide
+      - run:
+          name: Deploy Master to Heroku
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master -f
+      # - run:
+      #     name: PR performance
+      #     command: npm run lighthouse:pr -- https://$HEROKU_APP_NAME.herokuapp.com
+      - run:
+          name: lighthouse
+          command: npm run lighthouse --  https://$HEROKU_APP_NAME.herokuapp.com --output-path=./mycache/lighthouse.html --quiet --chrome-flags="--headless --no-sandbox"
+      - run:
+          name: List files
+          command: ls -la mycache
+      - run:
+          name: Host (Firebase)
+          command: rm -rf dist && mv mycache/ dist && ls -la dist && npm run firebase:deploy
+          filters:
+            branches:
+              only: master
