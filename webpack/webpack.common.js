@@ -60,6 +60,7 @@ module.exports = {
         SENTRY_ID: JSON.stringify(process.env.SENTRY_ID),
         AIRBRAKE_PROJECT_KEY: JSON.stringify(process.env.AIRBRAKE_PROJECT_KEY),
         AIRBRAKE_ID: JSON.stringify(process.env.AIRBRAKE_ID),
+        BUILD_NUM: JSON.stringify(process.env.CIRCLE_BUILD_NUM) || JSON.stringify('hello'),
       },
     }),
     new HtmlWebpackPlugin({

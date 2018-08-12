@@ -19,7 +19,7 @@ class App extends Component {
       <ErrorBoundary>
         <MuiThemeProvider theme={theme}>
           <Button className='some-button' variant="contained" color="primary">
-            Hello World
+            {process.env.BUILD_NUM}
           </Button>
         </MuiThemeProvider>
       </ErrorBoundary>
