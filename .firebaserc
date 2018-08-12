@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "sreeram-app"
+    "staging": "sreeram-stage",
+    "production": "sreeram-app"
   }
 }
