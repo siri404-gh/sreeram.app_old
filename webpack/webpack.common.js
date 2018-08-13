@@ -65,6 +65,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title: 'Title',
+      description: 'Sreeram Padmanabhan - Web engineer, traveller, photographer.',
       template: path.resolve(__dirname, 'template.html'),
       excludeChunks: ['polyfills'],
     }),
