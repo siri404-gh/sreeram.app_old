@@ -1,10 +1,19 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 [![Build Status](https://travis-ci.org/sreerampr/sreeram.app.svg?branch=master)](https://travis-ci.org/sreerampr/sreeram.app)
+
 [![CircleCI](https://circleci.com/gh/sreerampr/sreeram.app/tree/master.svg?style=svg)](https://circleci.com/gh/sreerampr/sreeram.app/tree/master)
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/7824f3ae21dd6bd87291/maintainability)](https://codeclimate.com/github/sreerampr/sreeram.app/maintainability)
+
 [![Test Coverage](https://api.codeclimate.com/v1/badges/7824f3ae21dd6bd87291/test_coverage)](https://codeclimate.com/github/sreerampr/sreeram.app/test_coverage)
+
 [![codecov](https://codecov.io/gh/sreerampr/sreeram.app/branch/master/graph/badge.svg)](https://codecov.io/gh/sreerampr/sreeram.app)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5fdcfb541d7b465ca2e4ac7dc0f05876)](https://www.codacy.com/project/sreeram.com/sreeram.app/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sreerampr/sreeram.app&amp;utm_campaign=Badge_Grade_Dashboard) [![Greenkeeper badge](https://badges.greenkeeper.io/sreerampr/sreeram.app.svg)](https://greenkeeper.io/)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5fdcfb541d7b465ca2e4ac7dc0f05876)](https://www.codacy.com/project/sreeram.com/sreeram.app/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sreerampr/sreeram.app&amp;utm_campaign=Badge_Grade_Dashboard) 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/sreerampr/sreeram.app.svg)](https://greenkeeper.io/)
+
 
 # Features
 - React
