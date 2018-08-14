@@ -61,7 +61,7 @@ jobs:
           name: Host (Firebase)
           command: rm -rf dist && mv mycache/ dist && ls -la dist && npm run firebase:deploy -- -P production
           filters:
-            branchs:
+            branches:
               only: master
   stage:
     docker:
