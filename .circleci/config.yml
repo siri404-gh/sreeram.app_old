@@ -49,6 +49,12 @@ jobs:
           name: lighthouse
           command: npm run lighthouse --  https:/$FIREBASE_APP_NAME.firebaseapp.com --output-path=./mycache/lighthouse.html --quiet --chrome-flags="--headless --no-sandbox"
       - run:
+          name: lighthouse2
+          command: npm run lighthouse --  https:/$FIREBASE_APP_NAME.firebaseapp.com --output-path=./mycache/lighthouse2.html --quiet --chrome-flags="--headless --no-sandbox"
+      - run:
+          name: lighthouse3
+          command: npm run lighthouse --  https:/$FIREBASE_APP_NAME.firebaseapp.com --output-path=./mycache/lighthouse3.html --quiet --chrome-flags="--headless --no-sandbox"
+      - run:
           name: List files
           command: ls -la mycache
       - run:
