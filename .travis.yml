@@ -3,69 +3,17 @@ sudo: required
 language: node_js
 node_js:
   - '8'
-# services:
-#   - docker
-# addons:
-#   chrome: stable
 cache:
   directories:
     - node_modules
-    - mycache
 install: skip
 jobs:
   include:
   - stage: dependencies
     script:
-      - npm install -g codecov codeclimate-test-reporter codacy-coverage
       - npm i
-      - rm -rf mycache
-      - mkdir mycache
     name: Setup
-  - stage: lint
-    script:
-      - npm run lint:local
-    name: Lint
-  - stage: test
-    script:
-      - npm run test
-      - mv dist mycache
-    name: Unit Test, Coverage reports (Codecov, Codeclimate, Codacy, Sonar)
-    after_success:
-      - codecov --disable=gcov --file=mycache/dist/test/lcov.txt
-      - codeclimate-test-reporter < mycache/dist/test/lcov.txt
-      - codacy-coverage --accountToken $CODACY_TOKEN --username $CODACY_USERNAME --projectName $CODACY_PROJECT < mycache/dist/test/lcov.txt
-      - npm run sonar
-  - stage: test
-    script:
-      - npm run test:browserstack
-    name: Browserstack tests
   - stage: build
     script:
       - npm run build
-      - cp -a dist/. mycache/dist/
     name: Build
-  - stage: Documentation
-    script:
-      - npm run styleguide:eject
-      - mv styleguide mycache/dist
-    name: Documentation
-  - stage: Stage
-    script: skip
-    deploy: &heroku
-      skip_cleanup: true
-      provider: heroku
-      app: $HEROKU_APP_NAME
-      api_key: $HEROKU_API_KEY
-    name: Stage (Heroku $HEROKU_APP_NAME)
-    after_deploy:
-    - npm run lighthouse:pr -- https://$HEROKU_APP_NAME.herokuapp.com
-  - stage: performance
-    script:
-      - npm run lighthouse --  https://$HEROKU_APP_NAME.herokuapp.com --output-path=./mycache/dist/lighthouse.html --quiet --chrome-flags="--headless --no-sandbox"
-    name: Lighthouse
-  - stage: Host
-    script:
-      - mv mycache/dist dist
-      - npm run firebase:deploy
-    name: Host (Firebase)
-    if: branch = master
