@@ -87,6 +87,7 @@ module.exports = {
         'start_url': '/',
         'background_color': '#ffffff',
         'display': 'standalone',
+        'theme_color': 'orange',
       },
     }),
   ],
