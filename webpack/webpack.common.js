@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   entry: {
@@ -78,6 +79,15 @@ module.exports = {
     new webpack.ProgressPlugin(),
     new webpack.BannerPlugin({
       banner: 'hash:[hash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]',
+    }),
+    new ManifestPlugin({
+      seed: {
+        'short_name': 'Sreeram',
+        'name': 'Sreeram Padmanabhan',
+        'start_url': '/',
+        'background_color': '#ffffff',
+        'display': 'standalone',
+      },
     }),
   ],
 };
