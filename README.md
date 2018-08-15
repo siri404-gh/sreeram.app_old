@@ -82,6 +82,7 @@
   - Lighthouse PR integration
 - Serverside
   - Express
+  - Serverside Rendering
 - Tooling
   - Eslint
   - Editorconfig
@@ -131,44 +132,56 @@ Analytics
 - styleguide:eject - Generate and output documentation.
 - test:browserstack - Creates a tunnel to Browserstack and runs the unit tests in browsers specified in customLaunchers.js. (You will need env variables set)
 
+
+# Aim
+- One codebase for Desktop, Mobile, Android and Ios.
+- Focus on performance
+- Minimal footprint
+- Best practices
+- Performant
+
 ## How it all works
 
 - Fork this repo.
-- Husky, Commitizen and Commitlint, all npm installed, ensure that you follow good commit practices.
-- Signup at Travis. Here is where most things happen.
-- Signup at CircleCI too.
-- Every Travis/CircleCi build has 8 stages - Lint, Test, Browserstack, Documentation, Build, Stage, Performance, Host.
+- Husky, Commitizen and Commitlint ensure that you follow good commit practices.
+- CircleCI and Travis perform the builds and deploys.
+- Every CircleCi build has 3 workflows and several stages like Lint, Test, Browserstack, Documentation, Build, Stage, Performance, Host etc.
+- Travis being slow, only performs a packaging build.
 - Lint - Performs a lint check.
-- Test - Performs unit testing and generates reports and are sent to Codecov, Codeclimate, Codacy and Sonarqube. (You will need to have signed up at all those places and set appropriate environment variables).
-  - Browserstack - Runs the unit tests in browsers specified in customLaunchers.js.  (You will need to have signed up and set appropriate environment variables).
-  - Documentation - Generates react styleguide.
-  - Build - Performs a build and generates a webpack visualizer analysis report.
-  - Stage - Stages an app in heroku. (You will need to have signed up and set appropriate environment variables).
-  - Performance - Generates a lighthouse performance test report.
-  - Host - Pushes the app to firebase. (You will need to have signed up and set appropriate environment variables).
+- Test - Performs unit testing and generates reports which are sent to Codecov, Codeclimate, Codacy and Sonarqube. (You will need to have signed up at all those places and set appropriate environment variables).
+- Browserstack - Runs the unit tests in browsers specified in customLaunchers.js.  (You will need to have signed up and set appropriate environment variables).
+- Documentation - Generates react styleguide.
+- Build - Performs a build and generates a webpack visualizer analysis report.
+- Stage - Stages an app in Firebase (You will need to have signed up and set appropriate environment variables).
+- Performance - Generates 3 lighthouse performance test reports namely lighthouse, lighthouse2 and lighthouse3.
+- Host - Pushes the app to firebase. (You will need to have signed up and set appropriate environment variables).
+- Heroku - Deploys app to heroku (slower).
+
+For more in depth understanding, go to https://www.sreeram.app
 
 ## Examples:
- - Test report - https://test.sreeram.app
- - Codecov report - https://codecov.sreeram.app
- - Codeclimate report - https://codeclimate.sreeram.app
- - Codacy report - https://codacy.sreeram.app
- - Sonar Analysis - https://sonar.sreeram.app
- - Bundle analysis - https://bundle.sreeram.app
- - Documentation - https://styleguide.sreeram.app
- - Stage app - https://heroku.sreeram.app
- - Performance report - https://lighthouse.sreeram.app
- - Production app - https://www.sreeram.app
+- Github Pages - https://sreeram.pro/sreeram.app
+- Test report - https://test.sreeram.app
+- Codecov report - https://codecov.sreeram.app
+- Codeclimate report - https://codeclimate.sreeram.app
+- Codacy report - https://codacy.sreeram.app
+- Sonar Analysis - https://sonar.sreeram.app
+- Bundle analysis - https://bundle.sreeram.app
+- Documentation - https://styleguide.sreeram.app
+- Performance report - https://lighthouse.sreeram.app
+- Stage app - https://sreeram-stage.firebaseapp.com
+- Heroku app - https://heroku-app.sreeram.app
+- Production app - https://www.sreeram.app
 
 ## Others
-  - Browserstack
-  - Logrocket
-  - Airbrake
-  - Sentry
-  - Greenhouse
+  - Browserstack Cross browser automated testing.
+  - Logrocket for monitoring
+  - Airbrake for error catching.
+  - Sentry for error catching.
+  - Greenhouse Dependency management
 
-# ``` Configuration```
+## Configuration
 
-## Firebase
-- Replace app name in .firebaserc
-- Signup at all the places and set environment variables at travis, heroku and circle.
+- Replace app names in .firebaserc
+- Signup at all the places and set environment variables at CircleCI, Travis and Heroku.
 - Push the code.
