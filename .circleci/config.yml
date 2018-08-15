@@ -1,7 +1,7 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 version: 2
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/node:8-browsers
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -95,8 +95,8 @@ jobs:
           command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master -f
 workflows:
   version: 2
-  build_and_stage:
+  stage_test_heroku:
     jobs:
-      - build
       - stage
+      - test
       - heroku
