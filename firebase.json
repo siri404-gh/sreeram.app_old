@@ -1,5 +1,12 @@
 {
   "hosting": {
-    "public": "./dist"
+    "public": "./dist",
+    "headers": [ {
+      "source" : "**/*.min.js)",
+      "headers" : [ {
+        "key" : "Cache-Control",
+        "value" : "max-age=90000"
+      } ]
+    }]
   }
 }
