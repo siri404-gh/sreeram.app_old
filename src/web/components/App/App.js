@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-import Button from '@material-ui/core/Button';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Navbar from '../Navbar/Navbar';
 
 const theme = createMuiTheme();
 
@@ -16,9 +16,8 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <Button className="some-button" variant="contained" color="primary">
-          {process.env.BUILD_NUM}
-        </Button>
+        <Navbar title={'Sreeram Padmanabhan'} />
+        {process.env.BUILD_NUM}
       </MuiThemeProvider>
     );
   }
