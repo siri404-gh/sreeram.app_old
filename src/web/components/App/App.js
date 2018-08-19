@@ -16,8 +16,10 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <Navbar title={'Sreeram Padmanabhan'} />
-        {process.env.BUILD_NUM}
+        <div className='app'>
+          <Navbar title={'Sreeram Padmanabhan'} />
+          {process.env.BUILD_NUM}
+        </div>
       </MuiThemeProvider>
     );
   }
