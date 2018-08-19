@@ -28,6 +28,7 @@
 - Redux
   - Redux thunk
   - Redux middlewares
+- Material UI
 - Unit Testing
   - Karma
   - Jasmine
