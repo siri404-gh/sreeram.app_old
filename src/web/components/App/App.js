@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Navbar from '../Navbar/Navbar';
+import Drawer from '../Drawer/Drawer';
 
 const theme = createMuiTheme();
 
@@ -17,8 +17,7 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <div className='app'>
-          <Navbar title={'Sreeram Padmanabhan'} />
-          {process.env.BUILD_NUM}
+          <Drawer />
         </div>
       </MuiThemeProvider>
     );
