@@ -1,6 +1,6 @@
 module.exports = {
   navbar: {
-    title: 'Navbar title',
+    title: 'Sreeram\'s Web Development Research',
     tagline: 'Navbar tagline',
     tabs: ['Item 1', 'Item 2', 'Item 3'],
   },
