@@ -12,11 +12,6 @@ export default theme => ({
     position: 'relative',
     display: 'flex',
     width: '100%',
+    backgroundColor: '#f1f3f4',
   },
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
-  },
-  toolbar: theme.mixins.toolbar,
 });

@@ -5,6 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 // Component
 import Navbar from '../Navbar/Navbar';
 import Sidebar from '../Sidebar/Sidebar';
+import Content from '../Content/Content';
 // Config
 import variables from '../../../../config/variables';
 import styles from './styles';
@@ -48,6 +49,7 @@ class App extends Component {
           <Sidebar
             mobileOpen={this.state.mobileOpen}
             handleDrawerToggle={this.handleDrawerToggle.bind(this)} />
+            <Content />
         </div>
       </MuiThemeProvider>
     );

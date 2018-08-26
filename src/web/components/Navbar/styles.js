@@ -12,4 +12,7 @@ export default theme => ({
       display: 'none',
     },
   },
+  flex: {
+    flexGrow: 1,
+  },
 });

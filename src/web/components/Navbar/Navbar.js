@@ -5,6 +5,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
 import styles from './styles';
 
 /**
@@ -14,6 +17,29 @@ import styles from './styles';
  * @extends {React.Component}
  */
 class Navbar extends React.Component {
+  state = {
+    auth: true,
+    anchorEl: null,
+  };
+
+  /**
+   *
+   *
+   * @param {*} event
+   * @memberof Navbar
+   */
+  handleMenu(event) {
+    this.setState({ anchorEl: event.currentTarget });
+  }
+
+  /**
+   *
+   *
+   * @memberof Navbar
+   */
+  handleClose() {
+    this.setState({ anchorEl: null });
+  }
   /**
    *
    *
@@ -22,6 +48,9 @@ class Navbar extends React.Component {
    */
   render() {
     const { classes, title = '' } = this.props;
+    const { auth, anchorEl } = this.state;
+    const open = Boolean(anchorEl);
+
     return (
       <AppBar className={classes.appBar}>
         <Toolbar>
@@ -32,9 +61,38 @@ class Navbar extends React.Component {
             className={classes.navIconHide}>
             <MenuIcon />
           </IconButton>
-          <Typography variant="title" color="inherit" noWrap>
+          <Typography variant="title" color="inherit" className={classes.flex} noWrap>
             {title}
           </Typography>
+          {auth && (
+              <div>
+                <IconButton
+                  aria-owns={open ? 'menu-appbar' : null}
+                  aria-haspopup="true"
+                  onClick={this.handleMenu.bind(this)}
+                  color="inherit"
+                >
+                  <AccountCircle />
+                </IconButton>
+                <Menu
+                  id="menu-appbar"
+                  anchorEl={anchorEl}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                  }}
+                  open={open}
+                  onClose={() => this.handleClose()}
+                >
+                  <MenuItem onClick={this.handleClose.bind(this)}>Profile</MenuItem>
+                  <MenuItem onClick={this.handleClose.bind(this)}>My account</MenuItem>
+                </Menu>
+              </div>
+            )}
         </Toolbar>
       </AppBar>
     );
