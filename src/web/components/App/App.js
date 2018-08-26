@@ -11,7 +11,7 @@ import variables from '../../../../config/variables';
 import styles from './styles';
 import theme from './theme';
 const {
-  navbar: { title },
+  navbar: { title, tabs },
 } = variables;
 
 /**
@@ -45,11 +45,16 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <div id="app" className={classes.app}>
-          <Navbar handleDrawerToggle={this.handleDrawerToggle.bind(this)} title={title} />
+          <Navbar
+            handleDrawerToggle={this.handleDrawerToggle.bind(this)}
+            title={title}
+            tabs={tabs}
+          />
           <Sidebar
             mobileOpen={this.state.mobileOpen}
-            handleDrawerToggle={this.handleDrawerToggle.bind(this)} />
-            <Content />
+            handleDrawerToggle={this.handleDrawerToggle.bind(this)}
+          />
+          <Content />
         </div>
       </MuiThemeProvider>
     );

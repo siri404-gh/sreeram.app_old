@@ -8,6 +8,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 import styles from './styles';
 
 /**
@@ -20,6 +22,7 @@ class Navbar extends React.Component {
   state = {
     auth: true,
     anchorEl: null,
+    value: 0,
   };
 
   /**
@@ -32,6 +35,18 @@ class Navbar extends React.Component {
     this.setState({ anchorEl: event.currentTarget });
   }
 
+
+  /**
+   *
+   *
+   * @param {*} event
+   * @param {*} value
+   * @memberof Navbar
+   */
+  handleChange(event, value) {
+    this.setState({ value });
+  }
+
   /**
    *
    *
@@ -40,6 +55,7 @@ class Navbar extends React.Component {
   handleClose() {
     this.setState({ anchorEl: null });
   }
+
   /**
    *
    *
@@ -48,7 +64,7 @@ class Navbar extends React.Component {
    */
   render() {
     const { classes, title = '' } = this.props;
-    const { auth, anchorEl } = this.state;
+    const { auth, anchorEl, value } = this.state;
     const open = Boolean(anchorEl);
 
     return (
@@ -64,6 +80,14 @@ class Navbar extends React.Component {
           <Typography variant="title" color="inherit" className={classes.flex} noWrap>
             {title}
           </Typography>
+          <Tabs
+            value={value}
+            onChange={this.handleChange.bind(this)}
+            indicatorColor="primary"
+            textColor="primary"
+            classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}>
+            {this.props.tabs.map((tab, i) => <Tab key={i} label={tab} classes={{ root: classes.tabRoot, selected: classes.tabSelected }}/>)}
+          </Tabs>
           {auth && (
               <div>
                 <IconButton
