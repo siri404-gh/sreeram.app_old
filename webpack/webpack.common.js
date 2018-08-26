@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -67,7 +68,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Title',
       description: 'Sreeram Padmanabhan - Web engineer, traveller, photographer.',
-      template: path.resolve(__dirname, 'template.html'),
+      template: path.resolve(__dirname, 'template/template.html'),
       excludeChunks: ['polyfills'],
     }),
     new CleanWebpackPlugin(['dist'], {
@@ -90,5 +91,8 @@ module.exports = {
         'theme_color': 'orange',
       },
     }),
+    new CopyWebpackPlugin([
+      { from: 'webpack/template/favicon.png', to: 'favicon.png' },
+    ]),
   ],
 };
