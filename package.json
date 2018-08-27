@@ -83,7 +83,7 @@
     "workbox-webpack-plugin": "^3.4.1"
   },
   "dependencies": {
-    "@material-ui/core": "^1.4.3",
+    "@material-ui/core": "^3.0.0",
     "@material-ui/icons": "^2.0.1",
     "airbrake-js": "^1.4.4",
     "babel-plugin-add-react-displayname": "0.0.5",
