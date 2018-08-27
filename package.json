@@ -84,7 +84,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^1.4.3",
-    "@material-ui/icons": "^2.0.1",
+    "@material-ui/icons": "^3.0.0",
     "airbrake-js": "^1.4.4",
     "babel-plugin-add-react-displayname": "0.0.5",
     "babel-plugin-istanbul": "^4.1.6",
