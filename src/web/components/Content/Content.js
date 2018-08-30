@@ -1,8 +1,14 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+
+import Markdown from './Markdown';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
+
+import post1 from './blog-post-1.md';
+
+const posts = [post1];
 
 /**
  *
@@ -17,12 +23,15 @@ function PaperSheet(props) {
     <main className={classes.content}>
       <div className={classes.toolbar} />
       <Paper className={classes.root} elevation={1}>
-        <Typography variant="headline" component="h3">
-          This is a sheet of paper.
-        </Typography>
-        <Typography component="p">
-          Paper can be used to build surface or other elements for your application.
-        </Typography>
+        <Grid container spacing={40}>
+          <Grid item xs={12}>
+            {posts.map(post => (
+              <Markdown className={classes.markdown} key={post.substring(0, 40)}>
+                {post}
+              </Markdown>
+            ))}
+          </Grid>
+        </Grid>
       </Paper>
     </main>
   );

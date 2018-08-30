@@ -15,4 +15,7 @@ export default theme => ({
     padding: theme.spacing.unit * 2,
   },
   toolbar: theme.mixins.toolbar,
+  markdown: {
+    // padding: `${theme.spacing.unit * 1.5}px 0`,
+  },
 });

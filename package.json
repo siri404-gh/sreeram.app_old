@@ -95,8 +95,10 @@
     "logrocket-react": "^2.0.0",
     "promise-polyfill": "8.1.0",
     "raven-js": "^3.26.4",
+    "raw-loader": "^0.5.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-markdown": "^3.4.1",
     "request": "^2.87.0",
     "save": "^2.3.2",
     "whatwg-fetch": "^2.0.4"

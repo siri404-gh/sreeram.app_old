@@ -1,3 +1,4 @@
 server
 karma.conf.js
 sonarqube.js
+src/web/components/Content/Markdown.js
