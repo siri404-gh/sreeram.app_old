@@ -10,6 +10,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Hidden from '@material-ui/core/Hidden';
 import styles from './styles';
 
 /**
@@ -80,14 +81,16 @@ class Navbar extends React.Component {
           <Typography variant="title" color="inherit" className={classes.flex} noWrap>
             {title}
           </Typography>
-          <Tabs
-            value={value}
-            onChange={this.handleChange.bind(this)}
-            indicatorColor="primary"
-            textColor="primary"
-            classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}>
-            {this.props.tabs.map((tab, i) => <Tab key={i} label={tab} classes={{ root: classes.tabRoot, selected: classes.tabSelected }}/>)}
-          </Tabs>
+          <Hidden smDown implementation="css">
+            <Tabs
+              value={value}
+              onChange={this.handleChange.bind(this)}
+              indicatorColor="primary"
+              textColor="primary"
+              classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}>
+              {this.props.tabs.map((tab, i) => <Tab key={i} label={tab} classes={{ root: classes.tabRoot, selected: classes.tabSelected }}/>)}
+            </Tabs>
+          </Hidden>
           {auth && (
               <div>
                 <IconButton

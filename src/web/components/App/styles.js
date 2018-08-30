@@ -12,6 +12,5 @@ export default theme => ({
     position: 'relative',
     display: 'flex',
     width: '100%',
-    backgroundColor: '#f1f3f4',
   },
 });
