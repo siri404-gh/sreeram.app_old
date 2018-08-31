@@ -1,8 +1,8 @@
 module.exports = {
   navbar: {
-    title: 'Sreeram\'s Web Development Research',
-    tagline: 'Navbar tagline',
-    tabs: ['HTML', 'CSS', 'Javascript', 'Git', 'Algorithms'],
+    title: 'Boilerplate Project',
+    tagline: 'Web Development, Supercharged!',
+    tabs: ['Home', 'About me'],
   },
   defaultTopic: 'home',
   defaultPost: 'home',

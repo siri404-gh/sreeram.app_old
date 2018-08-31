@@ -79,4 +79,24 @@ export default [
   //   topic: 'Accessibility',
   //   links: ['pa11y'],
   // },
+  // {
+  //   topic: 'HTML',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'CSS',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'Javascript',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'Git',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'Algorthms',
+  //   links: [],
+  // },
 ];
