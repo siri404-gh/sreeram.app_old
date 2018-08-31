@@ -15,7 +15,11 @@ export default theme => ({
   flex: {
     flexGrow: 1,
   },
+  italics: {
+    fontStyle: 'italic',
+  },
   tabsRoot: {
+    'marginLeft': theme.spacing.unit * 5,
   },
   tabsIndicator: {
     backgroundColor: '#1890ff',

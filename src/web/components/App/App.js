@@ -11,7 +11,7 @@ import variables from '../../../../config/variables';
 import styles from './styles';
 import theme from './theme';
 const {
-  navbar: { title, tabs },
+  navbar: { title, tagline, tabs },
 } = variables;
 
 /**
@@ -48,6 +48,7 @@ class App extends Component {
           <Navbar
             handleDrawerToggle={this.handleDrawerToggle.bind(this)}
             title={title}
+            tagline={tagline}
             tabs={tabs}
           />
           <Sidebar

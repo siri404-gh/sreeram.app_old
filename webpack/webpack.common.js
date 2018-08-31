@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const variables = require('../config/variables');
+const { navbar: { title, tagline } } = variables;
 
 module.exports = {
   entry: {
@@ -73,8 +75,8 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
-      title: 'Title',
-      description: 'Sreeram Padmanabhan - Web engineer, traveller, photographer.',
+      title,
+      description: tagline,
       template: path.resolve(__dirname, 'template/template.html'),
       excludeChunks: ['polyfills'],
     }),

@@ -64,7 +64,7 @@ class Navbar extends React.Component {
    * @memberof Navbar
    */
   render() {
-    const { classes, title = '' } = this.props;
+    const { classes, title = '', tagline = '' } = this.props;
     const { auth, anchorEl, value } = this.state;
     const open = Boolean(anchorEl);
 
@@ -80,6 +80,9 @@ class Navbar extends React.Component {
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.flex} noWrap>
             {title}
+          </Typography>
+          <Typography variant="subheading" color="inherit" className={classes.italics} noWrap>
+            {tagline}
           </Typography>
           <Hidden smDown implementation="css">
             <Tabs
