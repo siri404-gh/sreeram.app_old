@@ -3,7 +3,7 @@ export default [
     topic: 'IDE',
     links: [{
       name: 'VS Code extensions',
-      route: 'vs_code_extensions',
+      route: '/post/ide/vs_code_extensions',
     }],
   },
   // {
