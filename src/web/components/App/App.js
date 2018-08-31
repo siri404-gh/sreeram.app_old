@@ -41,7 +41,8 @@ class App extends Component {
    * @memberof App
    */
   render() {
-    const { classes } = this.props;
+    const { classes, match: { params: { post, topic } } } = this.props;
+
     return (
       <MuiThemeProvider theme={theme}>
         <div id="app" className={classes.app}>
@@ -55,7 +56,7 @@ class App extends Component {
             mobileOpen={this.state.mobileOpen}
             handleDrawerToggle={this.handleDrawerToggle.bind(this)}
           />
-          <Content />
+          <Content topic={topic ? topic : 'home'} post={post ? post : 'home'}/>
         </div>
       </MuiThemeProvider>
     );

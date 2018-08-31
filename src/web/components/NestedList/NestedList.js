@@ -7,6 +7,7 @@ import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Divider from '@material-ui/core/Divider';
+import { Link } from 'react-router-dom';
 import styles from './styles';
 
 /**
@@ -46,7 +47,7 @@ class NestedList extends React.Component {
         <Collapse in={this.state.open} timeout="auto" unmountOnExit>
           <List component="div" className={classes.nestedList} disablePadding dense={true}>
             {this.props.links.map((link, i) =>
-              <ListItem key={i} component='a' className={classes.nestedListItem} href={link.route}>
+              <ListItem key={i} component={Link} className={classes.nestedListItem} to={link.route}>
                 <ListItemText primary={link.name} className={classes.nestedListItemText}/>
               </ListItem>)}
           </List>

@@ -12,6 +12,7 @@ const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={App} />
+      <Route path="/post/:topic/:post" component={App} />
     </Switch>
   </BrowserRouter>
 );
