@@ -2,7 +2,7 @@ module.exports = {
   navbar: {
     title: 'Sreeram\'s Web Development Research',
     tagline: 'Navbar tagline',
-    tabs: ['About Me', 'Blog', 'Works'],
+    tabs: ['HTML', 'CSS', 'Javascript', 'Git', 'Algorithms'],
   },
   defaultTopic: 'home',
   defaultPost: 'home',

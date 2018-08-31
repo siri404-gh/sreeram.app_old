@@ -8,11 +8,11 @@ export default [
   },
   // {
   //   topic: 'Npm',
-  //   links: ['npm init', 'package-lock.json', 'semantic-versioning'],
+  //   links: ['Npm init', 'Package-lock.json', 'Semantic versioning'],
   // },
   // {
   //   topic: 'Tooling',
-  //   links: ['eslint', 'editorconfig', 'Husky hooks', 'Commitizen', 'Commitlint'],
+  //   links: ['VS Code extensions', 'Eslint', 'Editorconfig', 'Husky hooks', 'Commitizen', 'Commitlint'],
   // },
   // {
   //   topic: 'Webpack',
@@ -78,25 +78,5 @@ export default [
   // {
   //   topic: 'Accessibility',
   //   links: ['pa11y'],
-  // },
-  // {
-  //   topic: 'HTML',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'CSS',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'Javascript',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'Algortihms',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'Git',
-  //   links: [],
   // },
 ];
