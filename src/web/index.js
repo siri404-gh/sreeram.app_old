@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './components/App/App';
+import Routes from './Routes';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
 render(
   <ErrorBoundary>
-    <App />
+    <Routes />
   </ErrorBoundary>,
   document.getElementById('root')
 );
