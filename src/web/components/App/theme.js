@@ -13,6 +13,9 @@ export default createMuiTheme({
   //     dark: '#ba000d',
   //     contrastText: '#000',
   //   },
+    background: {
+      primary: '#f1f2f3',
+    },
   },
   typography: {
     fontSize: 12,
