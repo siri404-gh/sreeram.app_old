@@ -18,6 +18,6 @@ export default createMuiTheme({
     },
   },
   typography: {
-    fontSize: 12,
+    fontSize: 13,
   },
 });

@@ -38,16 +38,16 @@ class NestedList extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <List component="nav" className={classes.list}>
+      <List component="nav" className={classes.list} dense={true}>
         <ListItem className={classes.listItem} button onClick={() => this.handleClick()}>
           <ListItemText className={classes.listItemText} primary={this.props.title} />
           {this.state.open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={this.state.open} timeout="auto" unmountOnExit>
-          <List component="div" className={classes.nestedList} disablePadding>
+          <List component="div" className={classes.nestedList} disablePadding dense={true}>
             {this.props.links.map((link, i) =>
-              <ListItem key={i} button className={classes.nestedListItem}>
-                <ListItemText primary={link} className={classes.nestedListItemText}/>
+              <ListItem key={i} component='a' className={classes.nestedListItem} href={link.route}>
+                <ListItemText primary={link.name} className={classes.nestedListItemText}/>
               </ListItem>)}
           </List>
         </Collapse>
