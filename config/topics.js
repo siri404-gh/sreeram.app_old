@@ -2,8 +2,12 @@ export default [
   {
     topic: 'IDE',
     links: [{
-      name: 'VS Code extensions',
+      name: 'VS Code Extensions',
       route: '/post/ide/vs_code_extensions',
+    },
+    {
+      name: 'Editorconfig',
+      route: '/post/ide/editor_config',
     }],
   },
   // {
