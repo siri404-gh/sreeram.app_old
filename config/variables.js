@@ -2,7 +2,7 @@ module.exports = {
   navbar: {
     title: 'Boilerplate Project',
     tagline: 'Web Development, Supercharged!',
-    tabs: ['Home', 'About me'],
+    tabs: [],
   },
   defaultTopic: 'home',
   defaultPost: 'home',
