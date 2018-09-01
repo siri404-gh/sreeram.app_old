@@ -12,6 +12,7 @@ import styles from './styles';
 import theme from './theme';
 const {
   navbar: { title, tagline, tabs },
+  defaultTopic, defaultPost,
 } = variables;
 
 /**
@@ -56,7 +57,7 @@ class App extends Component {
             mobileOpen={this.state.mobileOpen}
             handleDrawerToggle={this.handleDrawerToggle.bind(this)}
           />
-          <Content topic={topic ? topic : 'home'} post={post ? post : 'home'}/>
+          <Content topic={topic ? topic : defaultTopic} post={post ? post : defaultPost }/>
         </div>
       </MuiThemeProvider>
     );
