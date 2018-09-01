@@ -2,7 +2,9 @@
 
 #### Sep 1, 2018 by Sreeram
 
-This plugin attempts to override user/workspace settings with settings found in .editorconfig files. Below is my configuration.
+## Summary
+
+This plugin attempts to override user/workspace settings with settings found in `.editorconfig` files. Below is my configuration.
 
 ## Understand
 

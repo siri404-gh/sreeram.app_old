@@ -2,13 +2,32 @@ export default [
   {
     topic: 'IDE',
     links: [{
-      name: 'VS Code Extensions',
+      name: 'Configure VS Code',
       route: '/post/ide/vs_code_extensions',
     },
     {
-      name: 'Editorconfig',
+      name: 'Initial commit',
+      route: '/post/ide/initial_commit',
+    },
+    {
+      name: 'Configure Editorconfig',
       route: '/post/ide/editor_config',
+    },
+    {
+      name: 'Configure Eslint',
+      route: '/post/ide/eslint_config',
     }],
+  },
+  {
+    topic: 'React',
+    links: [{
+      name: 'Create entry point',
+      route: '/post/react/entry_point',
+    },
+  {
+    name: 'Configure babel',
+    route: '/post/react/configure_babel',
+  }],
   },
   // {
   //   topic: 'Npm',
