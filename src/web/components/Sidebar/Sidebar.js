@@ -6,7 +6,6 @@ import Divider from '@material-ui/core/Divider';
 import NestedList from '../NestedList/NestedList';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { Link } from 'react-router-dom';
 import styles from './styles';
 import topics from '../../../../config/topics';
 
@@ -31,7 +30,7 @@ class Sidebar extends React.Component {
       <Hidden smDown>
         <div className={classes.toolbar} />
       </Hidden>
-        <ListItem component={Link} button className={classes.listItem} to={'/'} dense>
+        <ListItem component={'a'} button className={classes.listItem} href={'/'} dense>
           <ListItemText primary={'Home'} className={classes.listItemText}/>
         </ListItem>
         <Divider />

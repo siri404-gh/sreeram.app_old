@@ -7,7 +7,7 @@ const drawerWidth = 300;
  */
 export default theme => ({
   toolbar: {
-    minHeight: 54,
+    minHeight: 50,
   },
   drawerPaper: {
     width: drawerWidth,
