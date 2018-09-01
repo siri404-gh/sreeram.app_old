@@ -7,6 +7,9 @@ export default theme => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
   },
+  toolBar: {
+    minHeight: 1,
+  },
   navIconHide: {
     [theme.breakpoints.up('md')]: {
       display: 'none',

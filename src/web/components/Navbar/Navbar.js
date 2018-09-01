@@ -70,7 +70,7 @@ class Navbar extends React.Component {
 
     return (
       <AppBar className={classes.appBar}>
-        <Toolbar>
+        <Toolbar className={classes.toolBar}>
           <IconButton
             color="inherit"
             aria-label="Open drawer"
