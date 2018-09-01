@@ -8,6 +8,7 @@ export default theme => ({
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
+    wordBreak: 'break-word',
   },
   content: {
     flexGrow: 1,
