@@ -10,6 +10,13 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.md$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'raw-loader',
+        },
+      },
     ],
   },
   externals: {

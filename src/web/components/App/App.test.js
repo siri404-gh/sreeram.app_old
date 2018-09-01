@@ -7,7 +7,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<App />', () => {
   it('should render `#app`', () => {
-    const wrapper = mount(<App />);
+    const wrapper = mount(<App match={{ params: {} }} />);
     expect(wrapper.find('#app').length).toEqual(1);
   });
 });
