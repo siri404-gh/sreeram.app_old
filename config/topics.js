@@ -44,17 +44,21 @@ export default [
       route: '/post/webpack/bundle_analysis',
     },
     {
-      name: 'htmlWebpackPlugin',
+      name: 'HTML Webpack Plugin',
       route: '/post/webpack/html_webpack_plugin',
     },
     {
       name: 'Common config',
       route: '/post/webpack/common_config',
     },
-  {
-    name: 'Webpack Dev Server',
-    route: '/post/webpack/webpack_dev_server',
-  }],
+    {
+      name: 'Webpack Dev Server',
+      route: '/post/webpack/webpack_dev_server',
+    },
+    {
+      name: 'Sourcemaps',
+      route: '/post/webpack/sourcemaps',
+    }],
   },
   {
     topic: 'Documentation',

@@ -41,7 +41,7 @@ class NestedList extends React.Component {
     return (
       <List component="nav" className={classes.list}>
         <ListItem className={classes.listItem} button onClick={() => this.handleClick()}>
-          <ListItemText className={classes.listItemText} secondary={this.props.title} />
+          <ListItemText className={classes.listItemText} secondary={`${this.props.title} (${this.props.links.length})`} />
           {this.state.open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={this.state.open} timeout="auto" unmountOnExit>
