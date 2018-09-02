@@ -46,6 +46,10 @@ export default [
     {
       name: 'htmlWebpackPlugin',
       route: '/post/webpack/htmlWebpackPlugin',
+    },
+    {
+      name: 'Common config',
+      route: '/post/webpack/common_config',
     }],
   },
   {
