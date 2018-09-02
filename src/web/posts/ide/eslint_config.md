@@ -9,13 +9,19 @@ Integrates ESLint into VS Code. If you are new to ESLint check their documentati
 ## Install
 
 `npm i --save-dev eslint babel-eslint eslint-config-google eslint-config-jsx-a11y eslint-config-react`
+
 ## Configure
 
 Create a file calld `.eslintrc.js` at the root of the project with the following code
 
 ## Code
+
     module.exports = {
-      extends: ["eslint:recommended", "google", "plugin:react/recommended"],
+      extends: [
+        "eslint:recommended",
+        "google",
+        "plugin:react/recommended"
+      ],
       parser: "babel-eslint",
       parserOptions: {
         ecmaVersion: 6,
@@ -34,8 +40,14 @@ Create a file calld `.eslintrc.js` at the root of the project with the following
       },
       rules: {
         "react/prop-types": 0,
-        "max-len": ["error", { "code": 200 }],
-        "arrow-parens": ["error", "as-needed"],
+        "max-len": [
+          "error",
+          { "code": 200 }
+        ],
+        "arrow-parens": [
+          "error", 
+          "as-needed"
+        ],
         "require-jsdoc": [
           "error", {
             require: {
@@ -47,7 +59,10 @@ Create a file calld `.eslintrc.js` at the root of the project with the following
             }
           }
         ],
-        "object-curly-spacing": ["error", "always"]
+        "object-curly-spacing": [
+          "error",
+          "always"
+        ]
       }
     };
 

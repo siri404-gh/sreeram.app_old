@@ -16,13 +16,17 @@ Add these lines to your `webpack.prod.js` in the `plugins` section.
 
 ## Code
 
-    const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+    const BundleAnalyzerPlugin = 
+      require('webpack-bundle-analyzer')
+      .BundleAnalyzerPlugin;
 
     plugins: [
       new BundleAnalyzerPlugin({
         openAnalyzer: false,
         analyzerMode: 'static',
-        reportFilename: path.resolve(__dirname, `../dist/bundle.html`),
+        reportFilename: 
+          path.resolve(__dirname, 
+            `../dist/bundle.html`),
       }),
     ]
 

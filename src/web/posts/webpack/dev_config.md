@@ -16,20 +16,23 @@ Create a file called `webpack/webpack.config.js` and `webpack/webpack.dev.js` at
 
 ## Code for webpack.config.js
 
-    module.exports = env => require(`./webpack.${env}.js`);
+    module.exports = env => 
+      require(`./webpack.${env}.js`);
 
 
 ## Code for webpack.dev.js
 
     import path from 'path';
+    
     module.exports = {
       entry: {
         app: './src/web/index.js',
-        react: './node_modules/react/cjs/react.development.js',
       },
       output: {
-        path: path.resolve(__dirname, '../dist'),
-        filename: 'my-first-webpack.bundle.js',
+        path: 
+          path.resolve(__dirname,'../dist'),
+        filename: 
+          'my-first-webpack.bundle.js',
       },
       module: {
         rules: [

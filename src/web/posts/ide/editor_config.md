@@ -6,10 +6,13 @@
 
 This plugin attempts to override user/workspace settings with settings found in `.editorconfig` files. Below is my configuration.
 
+## Install
+
+Make sure you have installed the editorconfig extension for VS code.
+
 ## Configure
 
 Create a file called `.editorconfig` at the root of the project with the following code.
-
 
 ## Code
     # http://editorconfig.org

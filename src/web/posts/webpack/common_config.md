@@ -9,23 +9,24 @@ Now that we have the webpack dev and the webpack prod configurations, we have so
 ## Install
 `npm i --save-dev webpack-merge`
 
-
 ## Configure
 
 Create a file called `webpack/webpack.common.js` at the root and move any common code to this file. Also, make changes to the dev config and the prod config to include this.
 
-## webpack.common.js
+## Code - webpack.common.js
 
     const path = require('path');
     const webpack = require('webpack');
-    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    const HtmlWebpackPlugin = 
+      require('html-webpack-plugin');
 
     module.exports = {
       entry: {
         app: './src/web/index.js',
       },
       output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: 
+          path.resolve(__dirname,'../dist'),
         filename: '[name].bundle.js',
         publicPath: '/',
       },
@@ -58,7 +59,7 @@ Create a file called `webpack/webpack.common.js` at the root and move any common
       ],
     };
 
-## webpack.dev.js
+## Code - webpack.dev.js
     const merge = require('webpack-merge');
     import path from 'path';
 
@@ -66,7 +67,7 @@ Create a file called `webpack/webpack.common.js` at the root and move any common
       mode: 'development',
     });
 
-## webpack.prod.js
+## Code - webpack.prod.js
     const merge = require('webpack-merge');
     import path from 'path';
 

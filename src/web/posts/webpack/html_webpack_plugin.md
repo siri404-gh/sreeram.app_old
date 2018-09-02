@@ -16,7 +16,8 @@ Add the following lines of code to the plugins section in both `webpack.dev.js` 
 
 ## Code for webpack.dev.js
 
-    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    const HtmlWebpackPlugin = 
+      require('html-webpack-plugin');
 
     new HtmlWebpackPlugin({
       title: 'My website'

@@ -45,12 +45,16 @@ export default [
     },
     {
       name: 'htmlWebpackPlugin',
-      route: '/post/webpack/htmlWebpackPlugin',
+      route: '/post/webpack/html_webpack_plugin',
     },
     {
       name: 'Common config',
       route: '/post/webpack/common_config',
-    }],
+    },
+  {
+    name: 'Webpack Dev Server',
+    route: '/post/webpack/webpack_dev_server',
+  }],
   },
   {
     topic: 'Documentation',

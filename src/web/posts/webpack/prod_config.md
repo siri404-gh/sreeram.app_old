@@ -19,7 +19,8 @@ Create a file called `webpack/webpack.prod.js` at the root with the following co
         app: './src/web/index.js',
       },
       output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: 
+          path.resolve(__dirname,'../dist'),
         filename: 'bundle.js',
       },
       module: {
