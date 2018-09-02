@@ -27,6 +27,10 @@ export default [
   {
     name: 'Configure babel',
     route: '/post/react/configure_babel',
+  },
+  {
+    name: 'Hot Module Replacement',
+    route: '/post/react/hot_module_replacement',
   }],
   },
   {
@@ -58,6 +62,10 @@ export default [
     {
       name: 'Sourcemaps',
       route: '/post/webpack/sourcemaps',
+    },
+    {
+      name: 'Hot Module Replacement (HMR)',
+      route: '/post/webpack/hot_module_replacement',
     }],
   },
   {
