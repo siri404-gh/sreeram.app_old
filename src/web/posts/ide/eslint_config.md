@@ -6,7 +6,12 @@
 
 Integrates ESLint into VS Code. If you are new to ESLint check their documentation at https://eslint.org/.
 
-## Understand
+## Install
+
+`npm i --save-dev eslint babel-eslint eslint-config-google eslint-config-jsx-a11y eslint-config-react`
+## Configure
+
+Create a file calld `.eslintrc.js` at the root of the project with the following code
 
 ## Code
     module.exports = {
@@ -46,3 +51,6 @@ Integrates ESLint into VS Code. If you are new to ESLint check their documentati
       }
     };
 
+## Execute
+
+`eslint .`

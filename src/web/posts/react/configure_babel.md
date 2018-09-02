@@ -6,7 +6,11 @@
 
 Not all browsers support the newer features of Javascript. So, if we are to use some of the latest features, we need to make sure that we convert them to browser readable form. Compilers like babel do just that.
 
-## Steps
+## Install
+
+`npm i --save babel-core babel-loader babel-plugin-transform-object-rest-spread babel-preset-env babel-preset-react babel-plugin-add-react-displayname babel-plugin-istanbul babel-plugin-transform-class-properties babel-polyfill`
+
+## Configure
 
 Create a file called `.babelrc` at the root with the following code.
 

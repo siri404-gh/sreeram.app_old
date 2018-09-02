@@ -38,6 +38,10 @@ export default [
     {
       name: 'Production config',
       route: '/post/webpack/prod_config',
+    },
+    {
+      name: 'Bundle analysis',
+      route: '/post/webpack/bundle_analysis',
     }],
   },
   // {

@@ -6,9 +6,15 @@
 
 This the first file with source code. When we package the application, we will use this as the main entry point.
 
-## Steps
+## Install
+
+`npm i --save react react-dom` 
+
+## Configure
 
 Create a file in this path: `src/web/index.js` with the following code:
+
+## Code
 
     import React, {Component} from 'react';
     import {render} from 'react-dom';
