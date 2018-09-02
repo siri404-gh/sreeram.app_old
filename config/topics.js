@@ -40,8 +40,12 @@ export default [
       route: '/post/webpack/prod_config',
     },
     {
-      name: 'Bundle analysis',
+      name: 'Bundle analysis plugin',
       route: '/post/webpack/bundle_analysis',
+    },
+    {
+      name: 'htmlWebpackPlugin',
+      route: '/post/webpack/htmlWebpackPlugin',
     }],
   },
   {
