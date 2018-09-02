@@ -29,6 +29,13 @@ export default [
     route: '/post/react/configure_babel',
   }],
   },
+  {
+    topic: 'Webpack',
+    links: [{
+      name: 'Development config',
+      route: '/post/webpack/dev_config',
+    }],
+  },
   // {
   //   topic: 'Npm',
   //   links: ['Npm init', 'Package-lock.json', 'Semantic versioning'],
