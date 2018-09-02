@@ -14,6 +14,7 @@ export default theme => ({
     [theme.breakpoints.up('md')]: {
       position: 'relative',
     },
+    border: 'none',
   },
   listItem: {
     padding: 12,

@@ -14,7 +14,7 @@ export default createMuiTheme({
   //     contrastText: '#000',
   //   },
     background: {
-      primary: '#f1f2f3',
+      primary: '#f8f9fa',
     },
   },
   typography: {
