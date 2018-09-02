@@ -44,6 +44,13 @@ export default [
       route: '/post/webpack/bundle_analysis',
     }],
   },
+  {
+    topic: 'Documentation',
+    links: [{
+      name: 'React styleguidist',
+      route: '/post/documentation/react-styleguidist',
+    }],
+  },
   // {
   //   topic: 'Npm',
   //   links: ['Npm init', 'Package-lock.json', 'Semantic versioning'],
