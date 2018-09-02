@@ -21,7 +21,7 @@ import styles from './styles';
  */
 class Navbar extends React.Component {
   state = {
-    auth: true,
+    auth: false,
     anchorEl: null,
     value: 0,
   };
@@ -84,6 +84,7 @@ class Navbar extends React.Component {
           <Typography variant="subheading" color="inherit" className={classes.italics} noWrap>
             {tagline}
           </Typography>
+          <div className={classes.googleSearch} dangerouslySetInnerHTML={{ __html: '<gcse:searchbox-only></gcse:searchbox-only>' }} />
           <Hidden smDown implementation="css">
             <Tabs
               value={value}

@@ -14,6 +14,22 @@ const variables = require('../../../../config/variables');
 
 /**
  *
+ * @param {string} name
+ * @param {string} url
+ * @return {String}
+ */
+const getParameterByName = (name, url) => {
+  if (!url) url = window.location.href;
+  name = name.replace(/[[\]]/g, '\\$&');
+  let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+  const results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+};
+
+/**
+ *
  *
  * @param {*} props
  * @return {Component}
@@ -70,6 +86,7 @@ class PaperSheet extends React.Component {
   render() {
     const { classes, topic, post } = this.props;
     const steps = this.getSteps();
+    const queryParam = getParameterByName('q');
     const { activeStep } = this.state;
 
     return (
@@ -78,9 +95,9 @@ class PaperSheet extends React.Component {
         <Paper className={classes.root} elevation={1}>
           <Grid container spacing={0}>
             <Grid item lg={9}>
-              <Markdown className={classes.markdown} key={post.substring(0, 40)}>
+              {!queryParam && <Markdown className={classes.markdown} key={post.substring(0, 40)}>
                 {require(`../../posts/${topic}/${post}.md`)}
-              </Markdown>
+              </Markdown>}
             </Grid>
             <Grid item md={3}>
               <Hidden mdDown>
