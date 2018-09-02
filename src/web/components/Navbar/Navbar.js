@@ -94,7 +94,8 @@ class Navbar extends React.Component {
               classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}>
               {this.props.tabs.map((tab, i) => <Tab key={i} label={tab} classes={{ root: classes.tabRoot, selected: classes.tabSelected }}/>)}
             </Tabs>
-          </Hidden>
+          </Hidden>}
+          <div className={classes.googleSearch} dangerouslySetInnerHTML={{ __html: '<gcse:searchbox-only></gcse:searchbox-only>' }} />
           {auth && (
               <div>
                 <IconButton

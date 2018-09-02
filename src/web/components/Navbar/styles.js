@@ -51,8 +51,9 @@ export default theme => ({
   },
   tabSelected: {},
   googleSearch: {
-    minWidth: 300,
+    minWidth: 278,
     maxWidth: 400,
-    marginLeft: 20,
+    marginTop: 3,
+    marginLeft: 10,
   },
 });

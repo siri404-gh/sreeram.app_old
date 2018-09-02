@@ -75,6 +75,13 @@ export default [
       route: '/post/documentation/react-styleguidist',
     }],
   },
+  {
+    topic: 'Git',
+    links: [{
+      name: 'Enforce proper commit messages',
+      route: '/post/git/commitizen',
+    }],
+  },
   // {
   //   topic: 'Npm',
   //   links: ['Npm init', 'Package-lock.json', 'Semantic versioning'],
