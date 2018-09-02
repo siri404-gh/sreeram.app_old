@@ -34,6 +34,10 @@ export default [
     links: [{
       name: 'Development config',
       route: '/post/webpack/dev_config',
+    },
+    {
+      name: 'Production config',
+      route: '/post/webpack/prod_config',
     }],
   },
   // {
