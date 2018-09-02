@@ -4,6 +4,6 @@ module.exports = {
     tagline: 'Navbar tagline',
     tabs: ['Item 1', 'Item 2', 'Item 3'],
   },
-  defaultTopic: 'ide',
-  defaultPost: 'editor_config',
+  defaultTopic: 'home',
+  defaultPost: 'home',
 };
