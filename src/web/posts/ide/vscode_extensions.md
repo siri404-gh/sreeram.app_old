@@ -25,3 +25,15 @@ Visual Studio Code plugin that autocompletes npm modules in import statements.
 ## Relative path
 
 Now you can get the relative path to any file in the workspace.
+
+## Version Lens
+
+Shows package version information for npm, jspm, bower, dub and dotnet core in the Visual Studio Code editor.
+
+## vscode-icons
+
+Bring icons to your Visual Studio Code (minimum supported version: 1.8.1)
+
+## Document This
+
+"Document This" is a Visual Studio Code extension that automatically generates detailed JSDoc comments for both TypeScript and JavaScript files.

@@ -53,7 +53,3 @@ This tells webpack where to output the end product. Also specified is the name o
 ### Module
 
 You need to tell webpack how to compile files. We specify this in the `module` section. In our config, we are telling webpack to compile all `.js` files using `babel-loader`.
-
-## Github commit:
-
-https://github.com/sreerampr/sreeram.app/commit/5e64b0fe058dd97fde3038940bf03b157deef5ec

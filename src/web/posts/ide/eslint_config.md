@@ -46,6 +46,3 @@ Integrates ESLint into VS Code. If you are new to ESLint check their documentati
       }
     };
 
-
-## Github commit: 
-https://github.com/sreerampr/sreeram.app/commit/8dd075892a4e335da1852886ea93061b225e1d44

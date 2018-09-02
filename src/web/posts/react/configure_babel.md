@@ -22,7 +22,3 @@ Create a file called `.babelrc` at the root with the following code.
         "transform-object-rest-spread"
       ]
     }
-
-## Github commit:
-
-https://github.com/sreerampr/sreeram.app/commit/54dd4cea08fe9ec8b078bd0ebc075f916a6d273e

@@ -2,8 +2,8 @@ export default [
   {
     topic: 'IDE',
     links: [{
-      name: 'Configure VS Code',
-      route: '/post/ide/vs_code_extensions',
+      name: 'VS Code extensions',
+      route: '/post/ide/vscode_extensions',
     },
     {
       name: 'Initial commit',

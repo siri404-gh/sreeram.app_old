@@ -28,8 +28,3 @@ This plugin attempts to override user/workspace settings with settings found in 
 
     [COMMIT_EDITMSG]
     max_line_length = 0
-
-
-
-## Github commit url: 
-https://github.com/sreerampr/sreeram.app/commit/a64dceb80831571b16594a88892cfc4435b4b722
