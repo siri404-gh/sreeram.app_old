@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const variables = require('../config/variables');
-const { navbar: { title, tagline } } = variables;
+const { navbar: { title, tagline }, keywords } = variables;
 
 module.exports = {
   entry: {
@@ -78,6 +78,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title,
       description: tagline,
+      keywords,
       template: path.resolve(__dirname, 'template/template.html'),
       excludeChunks: ['polyfills'],
     }),
