@@ -125,6 +125,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'webpack/template/favicon.png', to: 'favicon.png' },
       { from: 'webpack/template/logo.png', to: 'logo.png' },
+      { from: 'webpack/template/sitemap.html', to: 'sitemap.html' },
     ]),
   ],
 };
