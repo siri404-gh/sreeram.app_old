@@ -78,6 +78,10 @@ export default [
   {
     topic: 'Git',
     links: [{
+      name: 'My favourite git aliases',
+      route: '/post/git/aliases',
+    },
+    {
       name: 'Enforce proper commit messages',
       route: '/post/git/commitizen',
     }],
