@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import Routes from './Routes';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
+import 'typeface-roboto';
 
 render(
   <ErrorBoundary>

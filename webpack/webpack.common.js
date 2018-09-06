@@ -33,6 +33,14 @@ module.exports = {
           loader: 'raw-loader',
         },
       },
+      {
+        test: /\.css$/,
+        use: {
+          loader: 'css-loader',
+        },
+      },
+      { test: /\.(svg|png|jpg|jpeg|gif)$/, loader: 'file-loader', options: { name: 'img/icons/[name].[ext]' } },
+      { test: /\.(woff|woff2|ttf|eot)$/, loader: 'file-loader', options: { name: 'fonts/[name].[ext]' } },
     ],
   },
   optimization: {
