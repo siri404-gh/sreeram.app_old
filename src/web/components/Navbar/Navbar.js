@@ -84,7 +84,6 @@ class Navbar extends React.Component {
           <Typography variant="subheading" color="inherit" className={classes.italics} noWrap>
             {tagline}
           </Typography>
-          <div className={classes.googleSearch} dangerouslySetInnerHTML={{ __html: '<gcse:searchbox-only></gcse:searchbox-only>' }} />
           <Hidden smDown implementation="css">
             <Tabs
               value={value}
@@ -94,7 +93,7 @@ class Navbar extends React.Component {
               classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}>
               {this.props.tabs.map((tab, i) => <Tab key={i} label={tab} classes={{ root: classes.tabRoot, selected: classes.tabSelected }}/>)}
             </Tabs>
-          </Hidden>}
+          </Hidden>
           <div className={classes.googleSearch} dangerouslySetInnerHTML={{ __html: '<gcse:searchbox-only></gcse:searchbox-only>' }} />
           {auth && (
               <div>
