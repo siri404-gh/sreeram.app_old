@@ -35,6 +35,15 @@ class App extends Component {
    * @memberof App
    */
   componentDidMount() {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }
+
+  /**
+   *
+   *
+   * @memberof App
+   */
+  componentDidMount() {
     if (!window.adsbygoogle) (window.adsbygoogle = window.adsbygoogle || []).push({});
   }
 
