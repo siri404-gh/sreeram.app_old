@@ -8,6 +8,5 @@ module.exports = {
       dns: 'empty',
       fs: 'empty',
     },
-    plugins: [],
   }),
 };
