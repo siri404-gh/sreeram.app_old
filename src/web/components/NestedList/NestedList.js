@@ -7,7 +7,7 @@ import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Divider from '@material-ui/core/Divider';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './styles';
 
 /**
@@ -39,16 +39,16 @@ class NestedList extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <List component="nav" className={classes.list} dense={true}>
+      <List component="nav" className={classes.list}>
         <ListItem className={classes.listItem} button onClick={() => this.handleClick()}>
-          <ListItemText className={classes.listItemText} primary={this.props.title} />
+          <ListItemText className={classes.listItemText} secondary={this.props.title} />
           {this.state.open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={this.state.open} timeout="auto" unmountOnExit>
-          <List component="div" className={classes.nestedList} disablePadding dense={true}>
+          <List component="div" className={classes.nestedList} disablePadding>
             {this.props.links.map((link, i) =>
-              <ListItem key={i} component={Link} className={classes.nestedListItem} to={link.route}>
-                <ListItemText primary={link.name} className={classes.nestedListItemText}/>
+              <ListItem key={i} component={NavLink} className={classes.nestedListItem} exact to={link.route} activeClassName={classes.active}>
+                <ListItemText secondary={link.name} className={classes.nestedListItemText}/>
               </ListItem>)}
           </List>
         </Collapse>

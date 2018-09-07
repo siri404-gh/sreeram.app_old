@@ -10,6 +10,7 @@ import Content from '../Content/Content';
 import variables from '../../../../config/variables';
 import styles from './styles';
 import theme from './theme';
+
 const {
   navbar: { title, tagline, tabs },
   defaultTopic, defaultPost,

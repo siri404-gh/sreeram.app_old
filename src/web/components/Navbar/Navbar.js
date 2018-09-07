@@ -78,7 +78,7 @@ class Navbar extends React.Component {
             className={classes.navIconHide}>
             <MenuIcon />
           </IconButton>
-          <Typography variant="title" color="inherit" className={classes.flex} noWrap>
+          <Typography variant="title" color="textPrimary" className={classes.flex} noWrap>
             {title}
           </Typography>
           <Typography variant="subheading" color="inherit" className={classes.italics} noWrap>

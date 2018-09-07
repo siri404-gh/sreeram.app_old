@@ -6,6 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import NestedList from '../NestedList/NestedList';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { NavLink } from 'react-router-dom';
 import styles from './styles';
 import topics from '../../../../config/topics';
 
@@ -30,8 +31,8 @@ class Sidebar extends React.Component {
       <Hidden smDown>
         <div className={classes.toolbar} />
       </Hidden>
-        <ListItem component={'a'} button className={classes.listItem} href={'/'} dense>
-          <ListItemText primary={'Home'} className={classes.listItemText}/>
+        <ListItem component={NavLink} button className={classes.listItem} exact to={'/'} dense activeClassName={classes.active}>
+          <ListItemText secondary={'Home'} className={classes.listItemText}/>
         </ListItem>
         <Divider />
         {topics.map((topic, i) => <NestedList key={i} title={topic.topic} links={topic.links}/>)}

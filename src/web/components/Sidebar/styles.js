@@ -20,4 +20,8 @@ export default theme => ({
     padding: 12,
     paddingLeft: 25,
   },
+  active: {
+    backgroundColor: '#ecf0f2',
+    borderLeft: 'solid 3px blue',
+  },
 });
