@@ -8,9 +8,9 @@ import Markdown from './Markdown';
 import Hidden from '@material-ui/core/Hidden';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
+const variables = require('../../../../config/variables');
 
 import topics from '../../../../config/topics';
-const variables = require('../../../../config/variables');
 
 /**
  *
@@ -95,9 +95,10 @@ class PaperSheet extends React.Component {
         <Paper className={classes.root} elevation={1}>
           <Grid container spacing={0}>
             <Grid item lg={9}>
+              {queryParam && <div dangerouslySetInnerHTML={{ __html: '<gcse:searchresults-only></gcse:searchresults-only>' }} />}
               {!queryParam && <Markdown className={classes.markdown} key={post.substring(0, 40)}>
-                {require(`../../posts/${topic}/${post}.md`)}
-              </Markdown>}
+              {require(`../../posts/${topic}/${post}.md`)}
+            </Markdown>}
             </Grid>
             <Grid item md={3}>
               <Hidden mdDown>
