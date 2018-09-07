@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
+import './app.less';
+
 // Component
 import Navbar from '../Navbar/Navbar';
 import Sidebar from '../Sidebar/Sidebar';
@@ -26,6 +28,15 @@ class App extends Component {
   state = {
     mobileOpen: false,
   };
+
+  /**
+   *
+   *
+   * @memberof App
+   */
+  componentDidMount() {
+    if (!window.adsbygoogle) (window.adsbygoogle = window.adsbygoogle || []).push({});
+  }
 
   /**
    *

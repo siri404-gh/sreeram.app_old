@@ -5,7 +5,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const variables = require('../config/variables');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const { navbar: { title, tagline }, keywords } = variables;
+
+const extractCSS = new ExtractTextPlugin('css.css');
+const extractLESS = new ExtractTextPlugin('less.css');
 
 module.exports = {
   entry: {
@@ -35,9 +40,14 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: {
-          loader: 'css-loader',
-        },
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader',
+        }),
+      },
+      {
+        test: /\.less$/i,
+        use: extractLESS.extract(['css-loader', 'less-loader']),
       },
       { test: /\.(svg|png|jpg|jpeg|gif)$/, loader: 'file-loader', options: { name: 'img/icons/[name].[ext]' } },
       { test: /\.(woff|woff2|ttf|eot)$/, loader: 'file-loader', options: { name: 'fonts/[name].[ext]' } },
@@ -73,6 +83,8 @@ module.exports = {
     process: 'process',
   },
   plugins: [
+    extractCSS,
+    extractLESS,
     new webpack.DefinePlugin({
       'process.env': {
         LOGROCKET_ID: JSON.stringify(process.env.LOGROCKET_ID),
