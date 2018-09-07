@@ -1,6 +1,6 @@
 # React Hot module replacement
 
-#### Sep 1, 2018 by Sreeram
+#### Sep 1, 2018 by Sreeram Padmanabhan
 
 ## Summary
 
@@ -43,6 +43,3 @@ Update the entry file in this path: `src/web/index.js` with the following code:
       <App />, 
       document.getElementById('root')
     );
-
-## Video
-[![Dan Abramov - Live React: Hot Reloading with Time Travel](https://img.youtube.com/vi/xsSnOQynTHs/0.jpg)](https://www.youtube.com/watch?v=xsSnOQynTHs "Dan Abramov - Live React: Hot Reloading with Time Travel")

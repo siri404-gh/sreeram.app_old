@@ -1,6 +1,6 @@
 # Initial Commit
 
-#### Sep 1, 2018 by Sreeram
+#### Sep 1, 2018 by Sreeram Padmanabhan
 
 ## Summary
 

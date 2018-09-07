@@ -1,6 +1,6 @@
 # Webpack Hot Module Replacement
 
-#### Sep 2, 2018 by Sreeram
+#### Sep 2, 2018 by Sreeram Padmanabhan
 
 ## Summary
 
