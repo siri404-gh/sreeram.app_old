@@ -34,15 +34,6 @@ class App extends Component {
    *
    * @memberof App
    */
-  componentDidMount() {
-    if (!window.adsbygoogle) (window.adsbygoogle = window.adsbygoogle || []).push({});
-  }
-
-  /**
-   *
-   *
-   * @memberof App
-   */
   handleDrawerToggle() {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   }

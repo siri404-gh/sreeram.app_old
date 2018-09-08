@@ -2,6 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Adsense from '../Adsense/Adsense';
 
 const styles = theme => ({
   listItem: {
@@ -44,4 +45,4 @@ const renderers = {
   paragraph: props => <Typography {...props} paragraph />,
 };
 
-export default props => <ReactMarkdown renderers={renderers} {...props} />;
+export default props => <div><ReactMarkdown renderers={renderers} {...props} /><Adsense /></div>;
