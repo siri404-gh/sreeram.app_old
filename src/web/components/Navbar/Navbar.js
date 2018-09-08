@@ -76,7 +76,7 @@ class Navbar extends React.Component {
             aria-label="Open drawer"
             onClick={this.props.handleDrawerToggle}
             className={classes.navIconHide}>
-            <MenuIcon />
+            <MenuIcon className={classes.menuIcon}/>
           </IconButton>
           <Typography variant="title" color="textPrimary" className={classes.flex} noWrap>
             {title}

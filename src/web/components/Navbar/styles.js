@@ -11,6 +11,9 @@ export default theme => ({
   toolBar: {
     minHeight: 1,
   },
+  menuIcon: {
+    marginLeft: -20,
+  },
   navIconHide: {
     [theme.breakpoints.up('md')]: {
       display: 'none',
