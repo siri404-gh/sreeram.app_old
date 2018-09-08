@@ -25,3 +25,5 @@ Add the following lines of code to the plugins section in both `webpack.dev.js` 
 ## Execute
 `webpack --env=dev --config=webpack/webpack.config.js`
 You will see an index.html file generated along with the bundle files.
+
+Commit and push.

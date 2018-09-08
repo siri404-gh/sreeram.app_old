@@ -33,3 +33,5 @@ Create a file called `.editorconfig` at the root of the project with the followi
 
     [COMMIT_EDITMSG]
     max_line_length = 0
+
+Commit and push.

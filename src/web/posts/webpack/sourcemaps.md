@@ -16,3 +16,5 @@ Add this to your webpack.dev.js and webpack.prod.js
 
 ## See in Action
 Open chrome console, go to the source tab and press ctrl(or cmd) + p and search for a source file.
+
+Commit and push.

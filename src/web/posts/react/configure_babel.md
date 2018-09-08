@@ -26,3 +26,5 @@ Create a file called `.babelrc` at the root with the following code.
         "transform-object-rest-spread"
       ]
     }
+
+Commit and push.

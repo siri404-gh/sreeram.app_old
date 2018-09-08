@@ -56,3 +56,6 @@ Create a file calld `.eslintrc.js` at the root of the project with the following
 ## Execute
 
 `eslint .`
+
+
+Commit and push.

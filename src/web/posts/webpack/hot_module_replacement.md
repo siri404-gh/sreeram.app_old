@@ -25,6 +25,8 @@ Add this to your webpack.dev.js
       new webpack.HotModuleReplacementPlugin(),
     ],
 
+Commit and push.
+
 ## See in Action
 When enabled, you can see the following in the browser console.
 

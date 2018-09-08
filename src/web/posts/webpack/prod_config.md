@@ -52,3 +52,5 @@ This tells webpack where to output the end product. Also specified is the name o
 ### Module
 
 You need to tell webpack how to compile files. We specify this in the `module` section. In our config, we are telling webpack to compile all `.js` files using `babel-loader`.
+
+Commit and push.

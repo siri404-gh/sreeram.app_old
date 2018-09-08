@@ -72,3 +72,5 @@ Create a file called `webpack/webpack.common.js` at the root and move any common
     module.exports = merge(commonConfig, {
       mode: 'production',
     });
+
+Commit and push.

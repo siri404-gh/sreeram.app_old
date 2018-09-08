@@ -24,3 +24,5 @@ Add this to your webpack.dev.js
 
 ## Execute
 `webpack-dev-server --open --env=dev --config=webpack/webpack.config.js`
+
+Commit and push.

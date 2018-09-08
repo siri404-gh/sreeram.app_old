@@ -2,8 +2,20 @@ export default [
   {
     topic: 'IDE',
     links: [{
+      name: 'Softwares',
+      route: '/post/ide/softwares',
+    },
+    {
       name: 'VS Code extensions',
       route: '/post/ide/vscode_extensions',
+    },
+    {
+      name: 'VS Code preferences',
+      route: '/post/ide/vscode_preferences',
+    },
+    {
+      name: 'My favourite git aliases',
+      route: '/post/ide/git_aliases',
     },
     {
       name: 'Initial commit',
@@ -77,10 +89,7 @@ export default [
   },
   {
     topic: 'Git',
-    links: [{
-      name: 'My favourite git aliases',
-      route: '/post/git/aliases',
-    },
+    links: [
     {
       name: 'Enforce proper commit messages',
       route: '/post/git/commitizen',

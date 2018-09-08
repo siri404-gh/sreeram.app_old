@@ -43,3 +43,26 @@ Bring icons to your Visual Studio Code (minimum supported version: 1.8.1)
 ## Document This
 
 "Document This" is a Visual Studio Code extension that automatically generates detailed JSDoc comments for both TypeScript and JavaScript files.
+
+## Git Blame
+
+See Git Blame information in the status bar for the currently selected line.
+
+## Git History
+
+View and search git log along with the graph and details, and a lot more
+
+## GitLens 
+
+Supercharges the Git capabilities built into Visual Studio Code. It helps you to visualize code authorship at a glance via Git blame annotations and code lens, seamlessly navigate and explore Git repositories, gain valuable insights via powerful comparison commands, and so much more.
+
+## Import Cost
+
+This extension will display inline in the editor the size of the imported package. The extension utilizes webpack with babili-webpack-plugin in order to detect the imported size.
+
+## Version Lens
+
+Shows package version information for npm, jspm, bower, dub and dotnet core in the Visual Studio Code editor.
+
+
+

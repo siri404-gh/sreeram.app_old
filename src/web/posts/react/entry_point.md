@@ -27,8 +27,6 @@ Create a file in this path: `src/web/index.js` with the following code:
 
     export default App;
     
-    render(
-      <App />, 
-      document.getElementById('root')
-    );
+    render(<App />, document.getElementById('root'));
 
+Commit and push.

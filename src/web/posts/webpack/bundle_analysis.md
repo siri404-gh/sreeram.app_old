@@ -31,3 +31,5 @@ Add these lines to your `webpack.prod.js` in the `plugins` section.
 ## Execute
 
 You can see a file called `bundle.html` in the dist folder once the prod build has been successfully completed.
+
+Commit and push.
