@@ -17,16 +17,14 @@ Create a file called `webpack/webpack.common.js` at the root and move any common
 
     const path = require('path');
     const webpack = require('webpack');
-    const HtmlWebpackPlugin = 
-      require('html-webpack-plugin');
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
 
     module.exports = {
       entry: {
         app: './src/web/index.js',
       },
       output: {
-        path: 
-          path.resolve(__dirname,'../dist'),
+        path: path.resolve(__dirname,'../dist'),
         filename: '[name].bundle.js',
         publicPath: '/',
       },

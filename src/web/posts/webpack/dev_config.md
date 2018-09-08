@@ -29,10 +29,8 @@ Create a file called `webpack/webpack.config.js` and `webpack/webpack.dev.js` at
         app: './src/web/index.js',
       },
       output: {
-        path: 
-          path.resolve(__dirname,'../dist'),
-        filename: 
-          'my-first-webpack.bundle.js',
+        path: path.resolve(__dirname,'../dist'),
+        filename: 'my-first-webpack.bundle.js',
       },
       module: {
         rules: [

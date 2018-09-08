@@ -17,8 +17,7 @@ Add this to your webpack.dev.js
 ## Code
 
     devServer: {
-      contentBase: 
-        path.join(__dirname, '../dist'),
+      contentBase: path.join(__dirname, '../dist'),
       compress: true,
       port: 9000,
     },

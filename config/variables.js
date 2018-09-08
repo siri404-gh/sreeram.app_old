@@ -1,6 +1,6 @@
 module.exports = {
   navbar: {
-    title: 'Web boilerplate project',
+    title: 'Web Boilerplate Project',
     tagline: 'Web development, supercharged!',
     tabs: [],
   },

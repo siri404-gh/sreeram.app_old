@@ -17,10 +17,8 @@ Create a file called `styleguide.config.js` at the root with the following code.
 ## Code
 
     module.exports = {
-      components:
-        'src/web/components/**/[A-Z]*.js',
-      webpackConfig: Object.assign({},
-        require('./webpack/webpack.prod'),
+      components: 'src/web/components/**/[A-Z]*.js',
+        webpackConfig: Object.assign({}, require('./webpack/webpack.prod'),
         {
           node: {
             net: 'empty',

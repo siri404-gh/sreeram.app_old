@@ -44,14 +44,4 @@ const renderers = {
   paragraph: props => <Typography {...props} paragraph />,
 };
 
-export default function Markdown(props) {
-  return <div>
-    <ReactMarkdown renderers={renderers} {...props} />
-    <ins className="adsbygoogle"
-      style={{ 'display': 'block' }}
-      data-ad-client="ca-pub-6831276331714408"
-      data-ad-slot="3912800171"
-      data-ad-format="auto"
-      data-full-width-responsive="true"></ins>
-  </div>;
-}
+export default props => <ReactMarkdown renderers={renderers} {...props} />;

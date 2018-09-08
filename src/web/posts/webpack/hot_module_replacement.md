@@ -15,8 +15,7 @@ Add this to your webpack.dev.js
     const webpack = require('webpack');
     ...
     devServer: {
-      contentBase: 
-        path.join(__dirname, '../dist'),
+      contentBase: path.join(__dirname, '../dist'),
       compress: true,
       port: 9000,
       hot: true,

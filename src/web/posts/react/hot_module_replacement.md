@@ -20,24 +20,13 @@ Update the entry file in this path: `src/web/index.js` with the following code:
     import {render} from 'react-dom';
     import { hot } from 'react-hot-loader';
 
-
-    /**
-    * General component description 
-    * in JSDoc format. 
-    * Markdown is *supported*.
-    */
-
     class App extends Component {
-      /**
-      * Renders "Amazing div"!
-      * @return {Component}
-      */
       render() {
         return <h1>Hello, World</h1>;
       }
     }
 
-  export default hot(module)(App);
+    export default hot(module)(App);
     
     render(
       <App />, 
