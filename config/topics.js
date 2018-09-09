@@ -126,6 +126,15 @@ export default [
       },
     ],
   },
+  {
+    topic: 'DevOps',
+    links: [
+      {
+        name: 'Dockerize the app',
+        route: '/post/devops/dockerize',
+      },
+    ],
+  },
   // {
   //   topic: 'Npm',
   //   links: ['Npm init', 'Package-lock.json', 'Semantic versioning'],

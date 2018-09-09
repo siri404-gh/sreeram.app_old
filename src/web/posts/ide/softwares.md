@@ -40,3 +40,5 @@ I prefer a Linux based machine rather than windows. SImply because web developme
 `Git` *2.15.2*
 
 `VS Code` *latest*
+
+`Docker for mac` *latest*
