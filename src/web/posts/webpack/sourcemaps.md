@@ -1,4 +1,4 @@
-# Soucemaps
+# Sourcemaps
 
 #### Sep 2, 2018 by Sreeram Padmanabhan
 

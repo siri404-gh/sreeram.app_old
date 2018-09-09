@@ -7,69 +7,69 @@ export default [
     },
     {
       name: 'VS Code extensions',
-      route: '/post/ide/vscode_extensions',
+      route: '/post/ide/vscode-extensions',
     },
     {
       name: 'VS Code preferences',
-      route: '/post/ide/vscode_preferences',
+      route: '/post/ide/vscode-preferences',
     },
     {
       name: 'My favourite git aliases',
-      route: '/post/ide/git_aliases',
+      route: '/post/ide/git-aliases',
     },
     {
       name: 'Initial commit',
-      route: '/post/ide/initial_commit',
+      route: '/post/ide/initial-commit',
     },
     {
       name: 'Configure Editorconfig',
-      route: '/post/ide/editor_config',
+      route: '/post/ide/editor-config',
     },
     {
       name: 'Configure Eslint',
-      route: '/post/ide/eslint_config',
+      route: '/post/ide/eslint-config',
     }],
   },
   {
     topic: 'React',
     links: [{
       name: 'Create entry point',
-      route: '/post/react/entry_point',
+      route: '/post/react/entry-point',
     },
   {
     name: 'Configure babel',
-    route: '/post/react/configure_babel',
+    route: '/post/react/configure-babel',
   },
   {
     name: 'Hot Module Replacement',
-    route: '/post/react/hot_module_replacement',
+    route: '/post/react/hot-module-replacement',
   }],
   },
   {
     topic: 'Webpack',
     links: [{
       name: 'Development config',
-      route: '/post/webpack/dev_config',
+      route: '/post/webpack/dev-config',
     },
     {
       name: 'Production config',
-      route: '/post/webpack/prod_config',
+      route: '/post/webpack/prod-config',
     },
     {
       name: 'Bundle analysis plugin',
-      route: '/post/webpack/bundle_analysis',
+      route: '/post/webpack/bundle-analysis',
     },
     {
       name: 'HTML Webpack Plugin',
-      route: '/post/webpack/html_webpack_plugin',
+      route: '/post/webpack/html-webpack-plugin',
     },
     {
       name: 'Common config',
-      route: '/post/webpack/common_config',
+      route: '/post/webpack/common-config',
     },
     {
       name: 'Webpack Dev Server',
-      route: '/post/webpack/webpack_dev_server',
+      route: '/post/webpack/webpack-dev-server',
     },
     {
       name: 'Sourcemaps',
@@ -77,7 +77,7 @@ export default [
     },
     {
       name: 'Hot Module Replacement (HMR)',
-      route: '/post/webpack/hot_module_replacement',
+      route: '/post/webpack/hot-module-replacement',
     }],
   },
   {
@@ -96,8 +96,17 @@ export default [
     },
     {
       name: 'Commit message linting',
-      route: '/post/git/commitlint_husky',
+      route: '/post/git/commitlint-husky',
     }],
+  },
+  {
+    topic: 'Progressive web apps',
+    links: [
+      {
+        name: 'Making your app a PWA',
+        route: '/post/pwa/progressive-web-apps',
+      },
+    ],
   },
   // {
   //   topic: 'Npm',
