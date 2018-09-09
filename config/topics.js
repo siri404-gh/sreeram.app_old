@@ -108,6 +108,24 @@ export default [
       },
     ],
   },
+  {
+    topic: 'Optimisation',
+    links: [
+      {
+        name: 'Code splitting',
+        route: '/post/optimisation/splitchunks',
+      },
+    ],
+  },
+  {
+    topic: 'CI-CD',
+    links: [
+      {
+        name: 'Travis integration',
+        route: '/post/ci-cd/travis-integration',
+      },
+    ],
+  },
   // {
   //   topic: 'Npm',
   //   links: ['Npm init', 'Package-lock.json', 'Semantic versioning'],
