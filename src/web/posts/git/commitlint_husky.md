@@ -27,6 +27,13 @@ The next step is to install husky to lint commits before they are created.  You 
 
 With this, any commit messages will be checked for lint errors.
 
+## Extra
+
+Add a badge to your repo like [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+    [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+
 ## How I do it in my projects
 
 In my projects, during a commit, I show a desktop notification 'Are you being a resposible commitizen?' Which is followed by another notification indicating if it passed or failed. I use the `notify` npm package to achieve this and below is my husky configuration.
