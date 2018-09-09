@@ -1,6 +1,6 @@
 export default [
   {
-    topic: 'IDE',
+    topic: 'IDE Setup',
     links: [{
       name: 'Softwares',
       route: '/post/ide/softwares',
@@ -31,7 +31,7 @@ export default [
     }],
   },
   {
-    topic: 'React',
+    topic: 'React view layer',
     links: [{
       name: 'Create entry point',
       route: '/post/react/entry-point',
@@ -46,7 +46,7 @@ export default [
   }],
   },
   {
-    topic: 'Webpack',
+    topic: 'Webpack Configurations',
     links: [{
       name: 'Development config',
       route: '/post/webpack/dev-config',
@@ -100,7 +100,7 @@ export default [
     }],
   },
   {
-    topic: 'Progressive web apps',
+    topic: 'Progressive Web Apps',
     links: [
       {
         name: 'Making your app a PWA',
@@ -109,7 +109,7 @@ export default [
     ],
   },
   {
-    topic: 'Optimisation',
+    topic: 'Optimising code',
     links: [
       {
         name: 'Code splitting',
@@ -118,12 +118,25 @@ export default [
     ],
   },
   {
-    topic: 'CI-CD',
+    topic: 'Continous Integration',
     links: [
       {
         name: 'Travis integration',
         route: '/post/ci-cd/travis-integration',
       },
+    ],
+  },
+  {
+    topic: 'Continous Deployment',
+    links: [
+    {
+      name: 'Deploy to Heroku',
+      route: '/post/ci-cd/travis-integration',
+    },
+    {
+      name: 'Deploy to Firebase',
+      route: '/post/ci-cd/travis-integration',
+    },
     ],
   },
   {

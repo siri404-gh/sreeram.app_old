@@ -50,7 +50,7 @@ export default props => (
   <div>
     <ReactMarkdown renderers={renderers} {...props} />
     <Hidden smDown>
-      <Adsense />
+      {process.env.NODE_ENV === 'production' && <Adsense />}
     </Hidden>
   </div>
 );
