@@ -12,7 +12,7 @@ export default theme => ({
   },
   content: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.primary,
+    backgroundColor: theme.background.primary,
     padding: theme.spacing.unit * 2,
   },
   toolbar: {
