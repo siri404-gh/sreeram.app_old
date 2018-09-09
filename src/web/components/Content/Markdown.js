@@ -49,8 +49,8 @@ const renderers = {
 export default props => (
   <div>
     <ReactMarkdown renderers={renderers} {...props} />
-    <Hidden smDown>
+    {/* <Hidden smDown>
       {process.env.NODE_ENV === 'production' && <Adsense />}
-    </Hidden>
+    </Hidden> */}
   </div>
 );

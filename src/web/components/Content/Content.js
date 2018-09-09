@@ -6,6 +6,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Markdown from './Markdown';
 import Hidden from '@material-ui/core/Hidden';
+import Adsense from '../Adsense/Adsense';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
 const variables = require('../../../../config/variables');
@@ -111,6 +112,7 @@ class PaperSheet extends React.Component {
                     );
                   })}
                 </Stepper>
+                {process.env.NODE_ENV === 'production' && <Adsense />}
               </Hidden>
             </Grid>
           </Grid>
