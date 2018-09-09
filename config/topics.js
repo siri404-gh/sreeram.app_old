@@ -91,8 +91,12 @@ export default [
     topic: 'Git',
     links: [
     {
-      name: 'Enforce proper commit messages',
+      name: 'Making your project commitizen friendly',
       route: '/post/git/commitizen',
+    },
+    {
+      name: 'Commit message linting',
+      route: '/post/git/commitlint_husky',
     }],
   },
   // {
