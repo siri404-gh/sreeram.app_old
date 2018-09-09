@@ -21,4 +21,11 @@ export default theme => ({
   markdown: {
     // padding: `${theme.spacing.unit * 1.5}px 0`,
   },
+  contentLeft: {
+    paddingRight: 10,
+    color: 'green',
+  },
+  contentRight: {
+    borderLeft: ' solid 1px #ecf0f2',
+  },
 });

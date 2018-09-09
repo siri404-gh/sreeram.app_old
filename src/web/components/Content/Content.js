@@ -94,13 +94,13 @@ class PaperSheet extends React.Component {
         <div className={classes.toolbar} />
         <Paper className={classes.root} elevation={1}>
           <Grid container spacing={0}>
-            <Grid item md={8} lg={9}>
+            <Grid item md={8} lg={9} className={classes.contentLeft}>
               {queryParam && <div dangerouslySetInnerHTML={{ __html: '<gcse:searchresults-only></gcse:searchresults-only>' }} />}
               {!queryParam && <Markdown className={classes.markdown} key={post.substring(0, 40)}>
               {require(`../../posts/${topic}/${post}.md`)}
             </Markdown>}
             </Grid>
-            <Grid item md={4} lg={3}>
+            <Grid item md={4} lg={3} className={classes.contentRight}>
               <Hidden smDown>
                 <Stepper activeStep={activeStep} orientation="vertical">
                   {steps.map((label, index) => {
