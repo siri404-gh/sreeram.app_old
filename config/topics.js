@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   {
     topic: 'IDE Setup',
     links: [{
@@ -122,7 +122,7 @@ export default [
     links: [
       {
         name: 'Travis integration',
-        route: '/post/ci-cd/travis-integration',
+        route: '/post/ci/travis-integration',
       },
     ],
   },
@@ -131,11 +131,11 @@ export default [
     links: [
     {
       name: 'Deploy to Heroku',
-      route: '/post/ci-cd/travis-integration',
+      route: '/post/cd/heroku-integration',
     },
     {
       name: 'Deploy to Firebase',
-      route: '/post/ci-cd/travis-integration',
+      route: '/post/cd/firebase-integration',
     },
     ],
   },
