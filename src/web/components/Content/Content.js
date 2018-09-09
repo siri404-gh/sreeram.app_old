@@ -96,7 +96,12 @@ class PaperSheet extends React.Component {
         <Paper className={classes.root} elevation={1}>
           <Grid container spacing={0}>
             <Grid item md={8} lg={9} className={classes.contentLeft}>
-              {queryParam && <div dangerouslySetInnerHTML={{ __html: '<gcse:searchresults-only></gcse:searchresults-only>' }} />}
+              {queryParam && <div>
+                <Markdown className={classes.markdown} key={'search'}>
+                {require(`../../posts/home/search.md`)}
+              </Markdown>
+              <div dangerouslySetInnerHTML={{ __html: '<gcse:searchresults-only></gcse:searchresults-only>' }} />
+            </div>}
               {!queryParam && <Markdown className={classes.markdown} key={post.substring(0, 40)}>
               {require(`../../posts/${topic}/${post}.md`)}
             </Markdown>}
