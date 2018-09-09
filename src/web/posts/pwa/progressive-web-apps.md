@@ -1,6 +1,6 @@
 # Progressive Web App
 
-## Service worker cacheing
+## Service worker caching
 
 ## Install
 `npm i --save workbox-webpack-plugin`
