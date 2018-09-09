@@ -7,6 +7,7 @@ export default theme => ({
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
     color: '#8c8c8c',
+    backgroundColor: '#ffffff',
   },
   toolBar: {
     minHeight: 1,
