@@ -79,7 +79,7 @@ class Navbar extends React.Component {
             <MenuIcon className={classes.menuIcon}/>
           </IconButton>
           <Hidden xsDown>
-            <Typography variant="title" color="textPrimary" className={classes.flex} noWrap>
+            <Typography variant="title" color="textSecondary" className={classes.flex} noWrap>
               {title}
             </Typography>
             <Typography variant="subheading" color="inherit" className={classes.italics} noWrap>

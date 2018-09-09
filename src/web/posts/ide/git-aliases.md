@@ -1,4 +1,4 @@
-# My favourite git aliases
+# My favourite Git aliases
 
 #### September 4, 2018 by Sreeram Padmanabhan
 
@@ -6,8 +6,6 @@
 
 Aliases are always helpful. They save a lot of time. Every day, at my work, I use git commands almost all them time and it can be a good thing to use git aliases. Over the past few years, they have made my job very easy.
 But, it comes with its problems too. I am so used to these that I tend to use them in other machines as well. Or even when I am inside a docker container or when I ssh into a machine. That can be very annoying. Below are the list of all my git aliases.
-
-## Code
 
     alias addncommit='gaa;git commit -m'
     alias amend='git commit --amend'

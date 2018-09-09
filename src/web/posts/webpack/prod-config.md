@@ -4,7 +4,7 @@
 
 ## Summary
 
-Now that we have seen how to setup the webpack dev config, lets setup the prod config. We need these 2 setups for many reasons. The dev config is used to bundle when you develop the app. The prod config is used to bundle the app when you deploy it to production. One for example, is that in dev config, you might have to have code minification disabled. Minification is where the code is minified and/or obfuscated into a non readable form by mangling, removing new line characters, comments etc. This helps a great deal when debugging issues. But in the prod config, you might need to have it enabled to reduce the file size of the shipped product.
+Now that we have seen how to setup the webpack dev config, lets setup the prod config. We need these 2 setups for many reasons. The dev config is used to bundle when you develop the app. The prod config is used to bundle the app when you deploy it to production. One example, is that in dev config, you might have to have code minification disabled. (Minification is where the code is minified and/or obfuscated into a non readable form by mangling, removing new line characters, comments etc.) This helps a great deal when debugging issues. But in the prod config, you might need to have it enabled to reduce the file size of the shipped product.
 
 ## Configure
 
@@ -19,8 +19,7 @@ Create a file called `webpack/webpack.prod.js` at the root with the following co
         app: './src/web/index.js',
       },
       output: {
-        path: 
-          path.resolve(__dirname,'../dist'),
+        path: path.resolve(__dirname,'../dist'),
         filename: 'bundle.js',
       },
       module: {

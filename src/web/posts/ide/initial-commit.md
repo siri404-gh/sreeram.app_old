@@ -9,6 +9,9 @@ This will create a file called `package.json` in the root of your repository wit
 
     npm init
     echo node_modules > .gitgnore
+
+Commit and push.
+
     git add .
     git commit -m 'Initial Commt'
     git push

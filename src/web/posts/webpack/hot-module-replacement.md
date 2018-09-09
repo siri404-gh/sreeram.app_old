@@ -8,7 +8,7 @@ We have seen how webpack-dev-server creates a local server to serve the bundled 
 
 ## Configure
 
-Add this to your webpack.dev.js
+Add this to your `webpack.dev.js`
 
 ## Code
 
@@ -30,26 +30,17 @@ Commit and push.
 ## See in Action
 When enabled, you can see the following in the browser console.
 
-`[HMR] Waiting for update signal from WDS...`
-
-`[WDS] Hot Module Replacement enabled.`
+    [HMR] Waiting for update signal from WDS...
+    [WDS] Hot Module Replacement enabled.
 
 Make some changes to the code, save it and see it automatically update the live app instantly and you can see the following in the console.
 
-`[WDS] App updated. Recompiling...`
-
-`[WDS] App hot update...`
-
-`[HMR] Checking for updates on the server...`
-
-`[HMR] Updated modules:`
-
-`[HMR]  - ./src/web/posts/webpack/hot_module_relacement.md`
-
-`[HMR]  - ./src/web/posts sync recursive ^\.\/.*\.md$`
-
-`[HMR]  - ./src/web/components/Content/Content.js`
-
-`[HMR]  - ./src/web/components/App/App.js`
-
-`[HMR] App is up to date.`
+    [WDS] App updated. Recompiling...
+    [WDS] App hot update...
+    [HMR] Checking for updates on the server...
+    [HMR] Updated modules:
+    [HMR]  - ./src/web/posts/webpack/hot_module_relacement.md
+    [HMR]  - ./src/web/posts sync recursive ^\.\/.*\.md$
+    [HMR]  - ./src/web/components/Content/Content.js
+    [HMR]  - ./src/web/components/App/App.js
+    [HMR] App is up to date.

@@ -2,21 +2,20 @@
 
 #### Sep 1, 2018 by Sreeram Padmanabhan
 
+Given below is my VS Code preference JSON. 
+
     // Place your settings in this file to overwrite the default settings
     {
-        "window.zoomLevel": -1,
         "workbench.startupEditor": "none",
-        "workbench.sideBar.location": "left",
-        "workbench.statusBar.visible": true,
+        "workbench.statusBar.visible": false,
         "workbench.activityBar.visible": true,
         "workbench.iconTheme": "vscode-icons",
         "workbench.editor.enablePreview": false,
         "workbench.colorCustomizations": {
-            "editor.background": "#020202",
-            "terminal.background": "#231226",
-            "sideBar.background": "#1d2024",
+            "editor.background": "#000000",
+            "terminal.background": "#121226",
+            "sideBar.background": "#1c2127",
             "activityBar.background": "#000000",
-            "statusBar.background": "#030000",
         },
         "editor.fontSize": 12,
         "editor.fontFamily": "lucida sans",

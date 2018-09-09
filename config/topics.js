@@ -1,9 +1,9 @@
 module.exports = [
   {
-    topic: 'IDE Setup',
+    topic: 'Initial Setup',
     links: [{
-      name: 'Softwares',
-      route: '/post/ide/softwares',
+      name: 'Development Environment',
+      route: '/post/ide/development-environement',
     },
     {
       name: 'VS Code extensions',
@@ -14,9 +14,17 @@ module.exports = [
       route: '/post/ide/vscode-preferences',
     },
     {
-      name: 'My favourite git aliases',
-      route: '/post/ide/git-aliases',
+      name: 'My favourite aliases',
+      route: '/post/ide/aliases',
     },
+    {
+      name: 'My favourite Git aliases',
+      route: '/post/ide/git-aliases',
+    }],
+  },
+  {
+    topic: 'IDE Setup',
+    links: [
     {
       name: 'Initial commit',
       route: '/post/ide/initial-commit',
@@ -45,10 +53,10 @@ module.exports = [
     route: '/post/react/hot-module-replacement',
   }],
   },
-  {
-    topic: 'Redux data layer',
-    links: [], // ['Redux thunk', 'Redux middlewares'],
-  },
+  // {
+  //   topic: 'Redux data layer',
+  //   links: [], // ['Redux thunk', 'Redux middlewares'],
+  // },
   {
     topic: 'Webpack Configurations', // 'Polyfills', 'Clean Webpack Plugin', 'Compression Plugin', 'Webpack Visualizer'],
     links: [{
@@ -156,56 +164,56 @@ module.exports = [
       },
     ],
   },
-  {
-    topic: 'Unit Testing',
-    links: [], // ['Karma & Jasmine', 'Enzyme', 'Sinon, Spy'],
-  },
-  {
-    topic: 'Code Coverage',
-    links: [], // ['Sonar analysis', 'Code Climate', 'Codecov', 'Codacy'],
-  },
-  {
-    topic: 'Backend',
-    links: [], // ['Express', 'Serverside Rendering'],
-  },
-  {
-    topic: 'HTML',
-    links: [],
-  },
-  {
-    topic: 'CSS',
-    links: [],
-  },
-  {
-    topic: 'Javascript',
-    links: [],
-  },
-  {
-    topic: 'Algorthms',
-    links: [],
-  },
-  {
-    topic: 'Accessibility',
-    links: [],
-  },
-  {
-    topic: 'Performance',
-    links: [], // ['Lighthouse', 'Imgbot'],
-  },
-  {
-    topic: 'Integration Testing',
-    links: [], // ['Cypress'],
-  },
-  {
-    topic: 'Cross Browser Testing',
-    links: [], // ['Browserstack'],
-  },
-  {
-    topic: 'Material Design',
-    links: [], // ['Material-UI'],
-  },
-  {
-    topic: 'Monitoring Tools',
-    links: [], // ['Logrocket', 'Dependency management (Greenkeeper)', 'Airbrake', 'Sentry', 'LGTM', 'Google Analytics'],
-  },
+  // {
+  //   topic: 'Unit Testing',
+  //   links: [], // ['Karma & Jasmine', 'Enzyme', 'Sinon, Spy'],
+  // },
+  // {
+  //   topic: 'Code Coverage',
+  //   links: [], // ['Sonar analysis', 'Code Climate', 'Codecov', 'Codacy'],
+  // },
+  // {
+  //   topic: 'Backend',
+  //   links: [], // ['Express', 'Serverside Rendering'],
+  // },
+  // {
+  //   topic: 'HTML',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'CSS',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'Javascript',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'Algorthms',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'Accessibility',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'Performance',
+  //   links: [], // ['Lighthouse', 'Imgbot'],
+  // },
+  // {
+  //   topic: 'Integration Testing',
+  //   links: [], // ['Cypress'],
+  // },
+  // {
+  //   topic: 'Cross Browser Testing',
+  //   links: [], // ['Browserstack'],
+  // },
+  // {
+  //   topic: 'Material Design',
+  //   links: [], // ['Material-UI'],
+  // },
+  // {
+  //   topic: 'Monitoring Tools',
+  //   links: [], // ['Logrocket', 'Dependency management (Greenkeeper)', 'Airbrake', 'Sentry', 'LGTM', 'Google Analytics'],
+  // },
 ];

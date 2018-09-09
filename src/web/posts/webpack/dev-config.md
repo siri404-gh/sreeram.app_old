@@ -16,9 +16,7 @@ Create a file called `webpack/webpack.config.js` and `webpack/webpack.dev.js` at
 
 ## Code for webpack.config.js
 
-    module.exports = env => 
-      require(`./webpack.${env}.js`);
-
+    module.exports = env => require(`./webpack.${env}.js`);
 
 ## Code for webpack.dev.js
 
@@ -62,6 +60,5 @@ This tells webpack where to output the end product. Also specified is the name o
 ### Module
 
 You need to tell webpack how to compile files. We specify this in the `module` section. In our config, we are telling webpack to compile all `.js` files using `babel-loader`.
-
 
 Commit and push.

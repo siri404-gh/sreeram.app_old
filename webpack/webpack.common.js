@@ -7,7 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const variables = require('../config/variables');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const { navbar: { title, tagline }, keywords, ogDescription, ogFbAppId, ogImage, ogTitle, ogType, ogUrl } = variables;
+const { navbar: { title }, keywords, ogDescription, ogFbAppId, ogImage, ogTitle, ogType, ogUrl } = variables;
 
 const extractCSS = new ExtractTextPlugin('css.css');
 const extractLESS = new ExtractTextPlugin('less.css');
@@ -97,7 +97,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       title,
-      description: tagline,
+      description: ogDescription,
       keywords,
       ogImage,
       ogUrl,

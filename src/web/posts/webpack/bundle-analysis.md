@@ -22,9 +22,7 @@ Add these lines to your `webpack.prod.js` in the `plugins` section.
       new BundleAnalyzerPlugin({
         openAnalyzer: false,
         analyzerMode: 'static',
-        reportFilename: 
-          path.resolve(__dirname, 
-            `../dist/bundle.html`),
+        reportFilename: path.resolve(__dirname, `../dist/bundle.html`),
       }),
     ]
 
