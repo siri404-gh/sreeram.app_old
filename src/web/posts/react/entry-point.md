@@ -3,8 +3,7 @@
 #### Sep 1, 2018 by Sreeram Padmanabhan
 
 ## Summary
-
-This will be the first file with source code. When we package the application, we will use this as the main entry point. A bundler like webpack will start from here, create a dependency tree and package it.
+In the previous 2 chapters, we saw how to setup your development environment and configure your editor for work. We also pushed the code into our repo. In this chapter, we will write our first line of the actual source code. Create a file called `src/web/index.js`. When we package the application, we will use this as the main entry point. A bundler like webpack will bundle the entire source code starting from here by creating a dependency tree, going inside each to extend the tree. We need to bundle the source code for many reasons. One of them is that we will be using the latest features of Javascript to write the code. But, not all browser vendors might not have implemented them. Or, people might be using an older version of the browser. Hence, it is important to convert it to ES5 which most browsers understand.
 
 ## Install
 

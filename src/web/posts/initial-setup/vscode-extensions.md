@@ -37,7 +37,7 @@ Now you can get the relative path to any file in the workspace.
 
 Shows package version information for npm, jspm, bower, dub and dotnet core in the Visual Studio Code editor.
 
-## vscode-icons
+## Vscode-icons
 
 Bring icons to your Visual Studio Code (minimum supported version: 1.8.1)
 
@@ -65,5 +65,6 @@ This extension will display inline in the editor the size of the imported packag
 
 Shows package version information for npm, jspm, bower, dub and dotnet core in the Visual Studio Code editor.
 
+## Jsx
 
-
+React JSX Support for Visual Studio Code

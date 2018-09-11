@@ -1,25 +1,26 @@
 module.exports = [
   {
     topic: 'Initial Setup',
+    description: 'Setting up of project',
     links: [{
       name: 'Development Environment',
-      route: '/post/ide/development-environement',
+      route: '/post/initial-setup/development-environement',
     },
     {
       name: 'VS Code extensions',
-      route: '/post/ide/vscode-extensions',
+      route: '/post/initial-setup/vscode-extensions',
     },
     {
       name: 'VS Code preferences',
-      route: '/post/ide/vscode-preferences',
+      route: '/post/initial-setup/vscode-preferences',
     },
     {
       name: 'My favourite aliases',
-      route: '/post/ide/aliases',
+      route: '/post/initial-setup/aliases',
     },
     {
       name: 'My favourite Git aliases',
-      route: '/post/ide/git-aliases',
+      route: '/post/initial-setup/git-aliases',
     }],
   },
   {

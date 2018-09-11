@@ -2,7 +2,11 @@
 
 #### Sep 1, 2018 by Sreeram Padmanabhan
 
-I tend to use state of the art softwares and hardwares to my development work. For web development which involves frontend, backend, devops, testing work, I prefer the below software specs. This will save a lot of time in the long run. Like for eg, the speed of your code build depends on your machine specs. 
+## About this chapter
+
+In this chapter, you will learn how to set your development environment up. 
+
+I personally tend to use state of the art softwares and hardwares for my development work. For Web development which involves frontend, backend, devops, testing work, I prefer the below software specs. Using these will save a lot of time in the long run and without these, its easy to get frustrated. Like for eg, the speed of your code build depends on your build process and machine specs. A faster machine and an efficient build process ensure a faster feedback and encourages a fail fast, fail often mechanism. As someone great said, *Good code comes from a good habitat.*
 
 ## OS
 

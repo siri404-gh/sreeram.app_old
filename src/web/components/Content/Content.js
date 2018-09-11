@@ -4,8 +4,10 @@ import Grid from '@material-ui/core/Grid';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
+import StepContent from '@material-ui/core/StepContent';
 import Markdown from './Markdown';
 import Hidden from '@material-ui/core/Hidden';
+import Typography from '@material-ui/core/Typography';
 import Adsense from '../Adsense/Adsense';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
@@ -37,7 +39,8 @@ const getParameterByName = (name, url) => {
  */
 class PaperSheet extends React.Component {
   state = {
-    activeStep: 0,
+    activeStep: -1,
+    mainActiveStep: -1,
   };
 
   /**
@@ -48,14 +51,19 @@ class PaperSheet extends React.Component {
   componentDidUpdate(prevProps) {
     const { topic, post } = this.props;
     if (this.props.post !== prevProps.post) {
-      let activeStep = 0;
-      topics.forEach(t => {
+      let activeStep = -1;
+      let mainActiveStep = -1;
+      topics.forEach((t, j) => {
         t.links.forEach((tl, i) => {
-          if (tl.route === `/post/${topic}/${post}`) activeStep = i;
+          if (tl.route === `/post/${topic}/${post}`) {
+            activeStep = i;
+            mainActiveStep = j;
+          }
         });
       });
       this.setState({
         activeStep,
+        mainActiveStep,
       });
       document.title = post.charAt(0).toUpperCase() + (post.slice(1, post.length)).replace(/_/g, ' ') + ' - ' + variables.navbar.title;
     }
@@ -88,7 +96,7 @@ class PaperSheet extends React.Component {
     const { classes, topic, post } = this.props;
     const steps = this.getSteps();
     const queryParam = getParameterByName('q');
-    const { activeStep } = this.state;
+    const { activeStep, mainActiveStep } = this.state;
 
     return (
       <main className={classes.content}>
@@ -108,14 +116,22 @@ class PaperSheet extends React.Component {
             </Grid>
             <Grid item md={4} lg={3} className={classes.contentRight}>
               <Hidden smDown>
-                <Stepper activeStep={activeStep} orientation="vertical">
-                  {steps.map((label, index) => {
-                    return (
-                      <Step key={label}>
-                        <StepLabel>{label}</StepLabel>
-                      </Step>
-                    );
-                  })}
+                <Typography className={classes.progressHeader}>Your progress in this chapter</Typography>
+                <Stepper activeStep={mainActiveStep} orientation="vertical">
+                  {topics.map((topic, i) => <Step key={i}>
+                    <StepLabel>{topic.topic}</StepLabel>
+                    <StepContent>
+                      <Stepper activeStep={activeStep} orientation="vertical">
+                        {steps.map((label, index) => {
+                          return (
+                            <Step key={label}>
+                              <StepLabel className={classes.innerActiveStep}>{label}</StepLabel>
+                            </Step>
+                          );
+                        })}
+                      </Stepper>
+                    </StepContent>
+                  </Step>)}
                 </Stepper>
                 {process.env.NODE_ENV === 'production' && <Adsense />}
               </Hidden>

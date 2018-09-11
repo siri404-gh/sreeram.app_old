@@ -8,11 +8,11 @@ Integrates ESLint into VS Code. If you are new to ESLint check their documentati
 
 ## Install
 
-`npm i --save-dev eslint babel-eslint eslint-config-google eslint-config-jsx-a11y eslint-config-react`
+`npm i --save-dev eslint babel-eslint eslint-config-google eslint-plugin-jsx-a11y eslint-config-react`
 
 ## Configure
 
-Create a file calld `.eslintrc.js` at the root of the project with the following code
+Create a file called `.eslintrc.js` at the root of the project with the following code
 
 ## Code
 
