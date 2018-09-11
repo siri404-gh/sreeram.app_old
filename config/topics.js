@@ -89,7 +89,7 @@ module.exports = [
       route: '/post/webpack/sourcemaps',
     },
     {
-      name: 'Hot Module Replacement (HMR)',
+      name: 'Hot Module Replacement',
       route: '/post/webpack/hot-module-replacement',
     }],
   },

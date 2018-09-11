@@ -103,7 +103,7 @@ class PaperSheet extends React.Component {
         <div className={classes.toolbar} />
         <Paper className={classes.root} elevation={1}>
           <Grid container spacing={0}>
-            <Grid item md={8} lg={9} className={classes.contentLeft}>
+            <Grid item md={7} lg={6} xl={7} className={classes.contentLeft}>
               {queryParam && <div>
                 <Markdown className={classes.markdown} key={'search'}>
                 {require(`../../posts/home/search.md`)}
@@ -114,14 +114,14 @@ class PaperSheet extends React.Component {
               {require(`../../posts/${topic}/${post}.md`)}
             </Markdown>}
             </Grid>
-            <Grid item md={4} lg={3} className={classes.contentRight}>
+            <Grid item md={5} lg={4} xl={3} className={classes.contentRight}>
               <Hidden smDown>
-                <Typography className={classes.progressHeader}>Your progress in this chapter</Typography>
+                <Typography className={classes.progressHeader}>Your progress</Typography>
                 <Stepper activeStep={mainActiveStep} orientation="vertical">
                   {topics.map((topic, i) => <Step key={i}>
                     <StepLabel>{topic.topic}</StepLabel>
                     <StepContent>
-                      <Stepper activeStep={activeStep} orientation="vertical">
+                      <Stepper className={classes.innerStepper} activeStep={activeStep} orientation="vertical">
                         {steps.map((label, index) => {
                           return (
                             <Step key={label}>
@@ -133,9 +133,13 @@ class PaperSheet extends React.Component {
                     </StepContent>
                   </Step>)}
                 </Stepper>
-                {process.env.NODE_ENV === 'production' && <Adsense />}
               </Hidden>
             </Grid>
+            <Hidden mdDown>
+              {<Grid item lg={2} xl={2}>
+                {process.env.NODE_ENV === 'production' && <div><Adsense /> <br /> <Adsense /></div>}
+              </Grid>}
+            </Hidden>
           </Grid>
         </Paper>
       </main>

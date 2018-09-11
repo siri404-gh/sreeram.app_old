@@ -36,4 +36,8 @@ export default theme => ({
   innerActiveStep: {
     fontWeight: 'normal',
   },
+  innerStepper: {
+    padding: 5,
+    paddingTop: 15,
+  },
 });
