@@ -24,17 +24,16 @@ export default theme => ({
   contentLeft: {
     paddingRight: 10,
     color: 'green',
+    overflow: 'hidden',
   },
   contentRight: {
-    borderLeft: ' solid 1px #ecf0f2',
+    // borderLeft: ' solid 1px #ecf0f2',
   },
   progressHeader: {
     fontSize: 18,
-    textAlign: 'center',
-    fontWeight: 'bold',
+    marginLeft: 30,
   },
   innerActiveStep: {
-    fontWeight: 'normal',
   },
   innerStepper: {
     padding: 5,

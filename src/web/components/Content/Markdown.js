@@ -7,7 +7,10 @@ import Adsense from "../Adsense/Adsense";
 
 const styles = theme => ({
   listItem: {
-    marginTop: theme.spacing.unit
+    marginTop: theme.spacing.unit,
+  },
+  typography: {
+    fontWeight: theme.typography.fontWeightLight,
   }
 });
 
@@ -43,7 +46,7 @@ const renderers = {
       <Typography component="span" {...props} />
     </li>
   )),
-  paragraph: props => <Typography {...props} paragraph />
+  paragraph: withStyles(styles)(({ classes, tight, ordered, ...props }) => <Typography {...props} paragraph className={classes.typography}/>),
 };
 
 export default props => (

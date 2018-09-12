@@ -2,7 +2,7 @@
 
 #### Sep 1, 2018 by Sreeram Padmanabhan
 
-Hey, I am Sreeram Padmanabhan, or simply Sree. I am a Web developer and this is my Web Boilerplate project. If you have ever felt that Web development has become very complex these days with all the frameworks, tooling, the config, the languages, the number of different browsers, testing, etc and want to understand the core tenets of each, you have come to the right place. This project is about creating a flexible frontend boilerplate website using the lastest web technologies. From that boilerplate, you can extend it to create your own website with zero or minimal configuration. Infact, this very website is made using the boilerplate.
+Hey, I am Sreeram Padmanabhan, or simply Sree. I am a Web developer and this is my Web Boilerplate project. This deals with how to create your own website from scratch. If you have ever felt that Web development has become very complex these days with all the frameworks, tooling, the config, the languages, the number of different browsers, testing, etc and want to understand the core tenets of each, you have come to the right place. This project is about creating a flexible frontend boilerplate website using the lastest web technologies. From that boilerplate, you can extend it to create your own website with zero or minimal configuration. Infact, this very website is made using the boilerplate.
 
 Navigate through the links in the left sidebar to learn about each topics. What I assume is that you'd follow the topics in order from top to bottom. Also, I assume that you know the basics of HTML, CSS and Javascript.
 

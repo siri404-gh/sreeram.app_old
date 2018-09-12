@@ -35,7 +35,6 @@ export default theme => ({
   tabRoot: {
     'textTransform': 'initial',
     'minWidth': 72,
-    'fontWeight': theme.typography.fontWeightRegular,
     'marginRight': theme.spacing.unit * 3,
     '&:hover': {
       color: '#40a9ff',
@@ -43,7 +42,6 @@ export default theme => ({
     },
     '&$tabSelected': {
       color: '#1890ff',
-      fontWeight: theme.typography.fontWeightMedium,
     },
     '&:focus': {
       color: '#40a9ff',

@@ -12,7 +12,6 @@ export default theme => ({
     paddingLeft: 25,
   },
   listItemText: {
-    fontWeight: 'bold',
   },
   nestedList: {
   },
