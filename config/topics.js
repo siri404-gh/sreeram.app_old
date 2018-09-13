@@ -49,19 +49,23 @@ module.exports = [
       name: 'Create entry point',
       route: '/post/react/entry-point',
     },
-  {
-    name: 'Configure babel',
-    route: '/post/react/configure-babel',
+    {
+      name: 'Configure babel',
+      route: '/post/react/configure-babel',
+    },
+    {
+      name: 'Hot Module Replacement',
+      route: '/post/react/hot-module-replacement',
+    },
+    {
+      name: 'React Router',
+      route: '/post/react/react-router',
+    },
+    {
+      name: 'React Native',
+      route: '/post/react/react-native',
+    }],
   },
-  {
-    name: 'Hot Module Replacement',
-    route: '/post/react/hot-module-replacement',
-  }],
-  },
-  // {
-  //   topic: 'Redux data layer',
-  //   links: [], // ['Redux thunk', 'Redux middlewares'],
-  // },
   {
     topic: 'Webpack Configurations', // 'Polyfills', 'Clean Webpack Plugin', 'Compression Plugin', 'Webpack Visualizer'],
     links: [{
@@ -98,8 +102,27 @@ module.exports = [
     }],
   },
   {
+    topic: 'Redux data layer',
+    links: [{
+      name: 'What is Redux?',
+      route: '/post/redux/what-is-redux',
+    },
+    {
+      name: 'Redux thunk',
+      route: '/post/redux/redux-thunk',
+    },
+    {
+      name: 'Redux middlewares',
+      route: '/post/redux/redux-middlewares',
+    }],
+  },
+  {
     topic: 'Documentation',
     links: [{
+      name: 'JSdoc',
+      route: '/post/documentation/jsdoc',
+    },
+    {
       name: 'React styleguidist',
       route: '/post/documentation/react-styleguidist',
     }],
@@ -114,11 +137,23 @@ module.exports = [
     {
       name: 'Commit message linting',
       route: '/post/git/commitlint-husky',
+    },
+    {
+      name: 'Branching strategy',
+      route: '/post/git/branching-strategy',
+    },
+    {
+      name: 'Rebase vs Merge',
+      route: '/post/git/rebase-vs-merge',
     }],
   },
   {
     topic: 'Progressive Web Apps',
     links: [
+      {
+        name: 'Service workers',
+        route: '/post/pwa/service-workers',
+      },
       {
         name: 'Making your app a PWA',
         route: '/post/pwa/progressive-web-apps',
@@ -129,8 +164,16 @@ module.exports = [
     topic: 'Optimising code',
     links: [
       {
+        name: 'Multiple entry points',
+        route: '/post/optimisation/multiple-entry-points',
+      },
+      {
         name: 'Code splitting',
         route: '/post/optimisation/splitchunks',
+      },
+      {
+        name: 'Gzip compression',
+        route: '/post/optimisation/gzip-compression',
       },
     ],
   },
@@ -169,56 +212,56 @@ module.exports = [
       },
     ],
   },
-  // {
-  //   topic: 'Unit Testing',
-  //   links: [], // ['Karma & Jasmine', 'Enzyme', 'Sinon, Spy'],
-  // },
-  // {
-  //   topic: 'Code Coverage',
-  //   links: [], // ['Sonar analysis', 'Code Climate', 'Codecov', 'Codacy'],
-  // },
-  // {
-  //   topic: 'Backend',
-  //   links: [], // ['Express', 'Serverside Rendering'],
-  // },
-  // {
-  //   topic: 'HTML',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'CSS',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'Javascript',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'Algorthms',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'Accessibility',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'Performance',
-  //   links: [], // ['Lighthouse', 'Imgbot'],
-  // },
-  // {
-  //   topic: 'Integration Testing',
-  //   links: [], // ['Cypress'],
-  // },
-  // {
-  //   topic: 'Cross Browser Testing',
-  //   links: [], // ['Browserstack'],
-  // },
-  // {
-  //   topic: 'Material Design',
-  //   links: [], // ['Material-UI'],
-  // },
-  // {
-  //   topic: 'Monitoring Tools',
-  //   links: [], // ['Logrocket', 'Dependency management (Greenkeeper)', 'Airbrake', 'Sentry', 'LGTM', 'Google Analytics'],
-  // },
+  {
+    topic: 'Unit Testing',
+    links: [], // ['Karma & Jasmine', 'Enzyme', 'Sinon, Spy'],
+  },
+  {
+    topic: 'Code Coverage',
+    links: [], // ['Sonar analysis', 'Code Climate', 'Codecov', 'Codacy'],
+  },
+  {
+    topic: 'Backend',
+    links: [], // ['Express', 'Serverside Rendering'],
+  },
+  {
+    topic: 'Performance',
+    links: [], // ['Lighthouse', 'Imgbot'],
+  },
+  {
+    topic: 'Integration Testing',
+    links: [], // ['Cypress'],
+  },
+  {
+    topic: 'Cross Browser Testing',
+    links: [], // ['Browserstack'],
+  },
+  {
+    topic: 'Material Design',
+    links: [], // ['Material-UI'],
+  },
+  {
+    topic: 'Monitoring Tools',
+    links: [], // ['Logrocket', 'Dependency management (Greenkeeper)', 'Airbrake', 'Sentry', 'LGTM', 'Google Analytics'],
+  },
+  {
+    topic: 'HTML',
+    links: [],
+  },
+  {
+    topic: 'CSS',
+    links: [],
+  },
+  {
+    topic: 'Javascript',
+    links: [],
+  },
+  {
+    topic: 'Algorthms',
+    links: [],
+  },
+  {
+    topic: 'Accessibility',
+    links: [],
+  },
 ];

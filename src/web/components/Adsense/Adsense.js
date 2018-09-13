@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 /**
  *
  *
@@ -25,15 +24,12 @@ export default class Adsense extends React.Component {
    * @memberof Adsense
    */
   render() {
-    return (
-      <ins
-        className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-client="ca-pub-6831276331714408"
-        data-ad-slot="3912800171"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      />
-    );
+    return <ins
+      className="adsbygoogle"
+      style={{ display: 'block' }}
+      data-ad-client="ca-pub-6831276331714408"
+      data-ad-slot="3912800171"
+      data-ad-format="auto"
+      data-full-width-responsive="true" />;
   }
 }

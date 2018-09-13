@@ -7,7 +7,7 @@ const drawerWidth = 275;
  */
 export default theme => ({
   toolbar: {
-    minHeight: 50,
+    minHeight: 48,
   },
   drawerPaper: {
     width: drawerWidth,
@@ -15,9 +15,10 @@ export default theme => ({
       position: 'relative',
     },
     border: 'none',
+    overflow: 'hidden',
   },
   listItem: {
-    padding: 12,
+    padding: 10,
     paddingLeft: 25,
   },
   active: {

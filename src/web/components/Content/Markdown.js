@@ -9,8 +9,9 @@ const styles = theme => ({
   listItem: {
     marginTop: theme.spacing.unit,
   },
-  typography: {
+  paragraph: {
     fontWeight: theme.typography.fontWeightLight,
+    textAlign: 'justify',
   }
 });
 
@@ -46,7 +47,7 @@ const renderers = {
       <Typography component="span" {...props} />
     </li>
   )),
-  paragraph: withStyles(styles)(({ classes, tight, ordered, ...props }) => <Typography {...props} paragraph className={classes.typography}/>),
+  paragraph: withStyles(styles)(({ classes, tight, ordered, ...props }) => <Typography {...props} paragraph className={classes.paragraph}/>),
 };
 
 export default props => (

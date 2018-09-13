@@ -54,13 +54,15 @@ class App extends Component {
             handleDrawerToggle={this.handleDrawerToggle.bind(this)}
             title={title}
             tagline={tagline}
-            tabs={tabs}
-          />
+            tabs={tabs} />
           <Sidebar
             mobileOpen={this.state.mobileOpen}
             handleDrawerToggle={this.handleDrawerToggle.bind(this)}
-          />
-          <Content topic={topic ? topic : defaultTopic} post={post ? post : defaultPost }/>
+            post={post}
+            topic={topic} />
+          <Content
+            topic={topic ? topic : defaultTopic}
+            post={post ? post : defaultPost }/>
         </div>
       </MuiThemeProvider>
     );

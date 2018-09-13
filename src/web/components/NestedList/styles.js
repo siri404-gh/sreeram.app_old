@@ -8,7 +8,7 @@ export default theme => ({
     padding: 0,
   },
   listItem: {
-    padding: 12,
+    padding: 5,
     paddingLeft: 25,
   },
   listItemText: {
@@ -17,7 +17,7 @@ export default theme => ({
   },
   nestedListItem: {
     paddingLeft: 40,
-    padding: 12,
+    padding: 8,
   },
   nestedListItemText: {
   },

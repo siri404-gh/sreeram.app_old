@@ -13,16 +13,16 @@ export default theme => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.background.primary,
-    padding: theme.spacing.unit * 2,
+    padding: theme.spacing.unit * (window.innerWidth < 600 ? 0 : 2),
   },
   toolbar: {
     minHeight: 48,
   },
   markdown: {
-    // padding: `${theme.spacing.unit * 1.5}px 0`,
+    padding: `${theme.spacing.unit * 0}px 0`,
   },
   contentLeft: {
-    paddingRight: 10,
+    // paddingRight: 15,
     color: 'green',
     overflow: 'hidden',
   },
@@ -31,7 +31,7 @@ export default theme => ({
   },
   progressHeader: {
     fontSize: 18,
-    marginLeft: 30,
+    marginLeft: 15,
   },
   innerActiveStep: {
   },
@@ -41,6 +41,12 @@ export default theme => ({
   },
   innerStepper: {
     padding: 5,
-    paddingTop: 15,
+    paddingTop: 5,
+  },
+  step: {
+    marginTop: -8,
+  },
+  stepper: {
+    paddingLeft: 20,
   },
 });

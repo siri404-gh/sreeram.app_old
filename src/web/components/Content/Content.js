@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
-import StepContent from '@material-ui/core/StepContent';
+// import StepContent from '@material-ui/core/StepContent';
 import Markdown from './Markdown';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
@@ -34,6 +34,13 @@ const getParameterByName = (name, url) => {
 
 /**
  *
+ * @param {string} word
+ * @return {String}
+ */
+const capitalize = word => word.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1, word.length).replace(/_/g, ' ')).join(' ');
+
+/**
+ *
  *
  * @param {*} props
  * @return {Component}
@@ -43,6 +50,28 @@ class PaperSheet extends React.Component {
     activeStep: -1,
     mainActiveStep: -1,
   };
+
+  /**
+   *
+   * @param {*} topic
+   * @param {*} post
+   * @return {String}
+   * @memberof PaperSheet
+   */
+  createTitle(topic, post) {
+    if (post === 'home') return variables.navbar.title;
+    return capitalize(topic) + ' | ' + capitalize(post) + ' | ' + variables.navbar.title;
+  }
+
+  /**
+   *
+   * @param {object} prevProps
+   * @memberof PaperSheet
+   */
+  componentDidMount() {
+    const { topic, post } = this.props;
+    document.title = this.createTitle(topic, post);
+  }
 
   /**
    *
@@ -66,8 +95,70 @@ class PaperSheet extends React.Component {
         activeStep,
         mainActiveStep,
       });
-      document.title = post.charAt(0).toUpperCase() + (post.slice(1, post.length)).replace(/_/g, ' ') + ' - ' + variables.navbar.title;
+      document.title = this.createTitle(topic, post);
     }
+  }
+
+
+  /**
+   *
+   *
+   * @return {Component}
+   * @memberof PaperSheet
+   */
+  getGoogleSearchResults() {
+    const { classes } = this.props;
+    return <div>
+      <Markdown className={classes.markdown} key={'search'}>
+        {require(`../../posts/home/search.md`)}
+      </Markdown>
+      <div dangerouslySetInnerHTML={{ __html: '<gcse:searchresults-only></gcse:searchresults-only>' }} />
+    </div>;
+  }
+
+  /**
+   *
+   *
+   * @return {Component}
+   * @memberof PaperSheet
+   */
+  getPost() {
+    const { classes, topic, post } = this.props;
+    return <Markdown className={classes.markdown} key={post.substring(0, 40)}>
+      {require(`../../posts/${topic}/${post}.md`)}
+    </Markdown>;
+  }
+
+  /**
+   *
+   *
+   * @return {Component}
+   * @memberof PaperSheet
+   */
+  getProgress() {
+    const { classes } = this.props;
+    const { /* activeStep,*/ mainActiveStep } = this.state;
+    return <Hidden smDown>
+      <Typography className={classes.progressHeader}>Your progress</Typography>
+      <Stepper className={classes.stepper} activeStep={mainActiveStep} orientation="vertical">
+        {topics.map((topic, i) => <Step key={i} className={classes.step}>
+          <StepLabel className={classes.stepLabel}>
+            <NavLink to={topic.links[0] ? topic.links[0].route : '/'} className={classes.innerActiveStepLink}>{topic.topic}</NavLink>
+          </StepLabel>
+          {/* <StepContent>
+            <Stepper className={classes.innerStepper} activeStep={activeStep} orientation="vertical">
+              {topic.links.map((link, index) => {
+                return (
+                  <Step key={link.name}>
+                    <StepLabel className={classes.innerActiveStep}><NavLink to={link.route} className={classes.innerActiveStepLink}>{link.name}</NavLink></StepLabel>
+                  </Step>
+                );
+              })}
+            </Stepper>
+          </StepContent> */}
+        </Step>)}
+      </Stepper>
+    </Hidden>;
   }
 
   /**
@@ -77,50 +168,24 @@ class PaperSheet extends React.Component {
    * @memberof PaperSheet
    */
   render() {
-    const { classes, topic, post } = this.props;
+    const { classes } = this.props;
     const queryParam = getParameterByName('q');
-    const { activeStep, mainActiveStep } = this.state;
 
     return (
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Paper className={classes.root} elevation={1}>
           <Grid container spacing={0}>
-            <Grid item md={7} lg={6} xl={7} className={classes.contentLeft}>
-              {queryParam && <div>
-                <Markdown className={classes.markdown} key={'search'}>
-                {require(`../../posts/home/search.md`)}
-              </Markdown>
-              <div dangerouslySetInnerHTML={{ __html: '<gcse:searchresults-only></gcse:searchresults-only>' }} />
-            </div>}
-              {!queryParam && <Markdown className={classes.markdown} key={post.substring(0, 40)}>
-              {require(`../../posts/${topic}/${post}.md`)}
-            </Markdown>}
+            <Grid item xs={12} sm={12} md={queryParam ? 12 : 8} lg={queryParam ? 10 : 7} xl={queryParam ? 11 : 9} className={classes.contentLeft}>
+              {queryParam && this.getGoogleSearchResults()}
+              {!queryParam && this.getPost()}
             </Grid>
-            <Grid item md={5} lg={4} xl={3} className={classes.contentRight}>
-              <Hidden smDown>
-                <Typography className={classes.progressHeader}>Your progress</Typography>
-                <Stepper activeStep={mainActiveStep} orientation="vertical">
-                  {topics.map((topic, i) => <Step key={i}>
-                    <StepLabel><NavLink to={topic.links[0].route} className={classes.innerActiveStepLink}>{topic.topic}</NavLink></StepLabel>
-                    <StepContent>
-                      <Stepper className={classes.innerStepper} activeStep={activeStep} orientation="vertical">
-                        {topic.links.map((link, index) => {
-                          return (
-                            <Step key={link.name}>
-                              <StepLabel className={classes.innerActiveStep}><NavLink to={link.route} className={classes.innerActiveStepLink}>{link.name}</NavLink></StepLabel>
-                            </Step>
-                          );
-                        })}
-                      </Stepper>
-                    </StepContent>
-                  </Step>)}
-                </Stepper>
-              </Hidden>
-            </Grid>
+            {!queryParam && <Grid item md={!queryParam && 4} lg={!queryParam && 3} xl={!queryParam && 2} className={classes.contentRight}>
+              {this.getProgress()}
+            </Grid>}
             <Hidden mdDown>
-              {<Grid item lg={2} xl={2}>
-                {process.env.NODE_ENV === 'production' && <div><Adsense /> <br /> <Adsense /></div>}
+              {<Grid item lg={2} xl={1}>
+                {process.env.NODE_ENV === 'production' && <Adsense />}
               </Grid>}
             </Hidden>
           </Grid>

@@ -11,9 +11,9 @@ export default theme => ({
   },
   toolBar: {
     minHeight: 1,
+    marginLeft: window.innerWidth < 600 ? -20 : -10,
   },
   menuIcon: {
-    marginLeft: -20,
   },
   navIconHide: {
     [theme.breakpoints.up('md')]: {
@@ -52,6 +52,6 @@ export default theme => ({
     minWidth: 300,
     maxWidth: 400,
     marginTop: 3,
-    marginLeft: -5,
+    // marginLeft: -5,
   },
 });
