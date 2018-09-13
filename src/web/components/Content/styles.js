@@ -35,6 +35,10 @@ export default theme => ({
   },
   innerActiveStep: {
   },
+  innerActiveStepLink: {
+    textDecoration: 'none',
+    color: 'inherit',
+  },
   innerStepper: {
     padding: 5,
     paddingTop: 15,

@@ -9,6 +9,7 @@ import Markdown from './Markdown';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import Adsense from '../Adsense/Adsense';
+import { NavLink } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
 const variables = require('../../../../config/variables');
@@ -72,29 +73,11 @@ class PaperSheet extends React.Component {
   /**
    *
    *
-   * @return {array} array
-   * @memberof PaperSheet
-   */
-  getSteps() {
-    const { topic } = this.props;
-    let ret = [];
-    topics.forEach(t => {
-      t.links.forEach(tl => {
-        if (tl.route.split('/')[2] === topic) ret.push(tl.name);
-      });
-    });
-    return ret;
-  }
-
-  /**
-   *
-   *
    * @return {Component}
    * @memberof PaperSheet
    */
   render() {
     const { classes, topic, post } = this.props;
-    const steps = this.getSteps();
     const queryParam = getParameterByName('q');
     const { activeStep, mainActiveStep } = this.state;
 
@@ -119,13 +102,13 @@ class PaperSheet extends React.Component {
                 <Typography className={classes.progressHeader}>Your progress</Typography>
                 <Stepper activeStep={mainActiveStep} orientation="vertical">
                   {topics.map((topic, i) => <Step key={i}>
-                    <StepLabel>{topic.topic}</StepLabel>
+                    <StepLabel><NavLink to={topic.links[0].route} className={classes.innerActiveStepLink}>{topic.topic}</NavLink></StepLabel>
                     <StepContent>
                       <Stepper className={classes.innerStepper} activeStep={activeStep} orientation="vertical">
-                        {steps.map((label, index) => {
+                        {topic.links.map((link, index) => {
                           return (
-                            <Step key={label}>
-                              <StepLabel className={classes.innerActiveStep}>{label}</StepLabel>
+                            <Step key={link.name}>
+                              <StepLabel className={classes.innerActiveStep}><NavLink to={link.route} className={classes.innerActiveStepLink}>{link.name}</NavLink></StepLabel>
                             </Step>
                           );
                         })}
