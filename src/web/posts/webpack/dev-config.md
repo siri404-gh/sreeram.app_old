@@ -4,11 +4,13 @@
 
 ## Summary
 
-Because browsers dont support the latest features of Javascript, we use babel to compile our JS to ES5 format. Now, Webpack is a packaging tool used to do that. It bundles your source code to create an output file. You need to specify the configuration in a file called `webpack.config.js`. You can also have multiple config files for different environments. For eg, `webpack.dev.js` for Development and `webpack.prod.js` for production. You just need to specify which environment to build for via command line. In this case, we have a `webpack.config.js` and a `webpack.dev.js` and we invoke it using `webpack --env=dev -c webpack/webpack.config.js`.
+In the previous 3 chapters, we saw how to setup the development environment, we pushed the initial set of code, we configured editorconfig, eslint, we created the entry point, configured babel and hot module replacement and we saw why we should compile and bundle the source code.
+
+Because browsers dont support the latest features of Javascript, we use babel to compile our JS to ES5 format. We can tell webpack to do that. It compiles the code using babel bundles it to create an output file. You need to specify the configuration in a file called `webpack.config.js`. You can also have multiple config files for different environments. For eg, `webpack.dev.js` for Development and `webpack.prod.js` for production. You just need to specify which environment to build for via command line. In this case, we have a `webpack.config.js` and a `webpack.dev.js` and we invoke it using `webpack --env=dev -c webpack/webpack.config.js`.
 
 ## Install
 
-`npm i --save-dev webpack`
+`npm i --save-dev webpack webpack-cli`
 
 ## Configure
 
@@ -21,7 +23,7 @@ Create a file called `webpack/webpack.config.js` and `webpack/webpack.dev.js` at
 ## Code for webpack.dev.js
 
     import path from 'path';
-    
+
     module.exports = {
       entry: {
         app: './src/web/index.js',
@@ -45,6 +47,7 @@ Create a file called `webpack/webpack.config.js` and `webpack/webpack.dev.js` at
     };
 
 ## Execute
+
 `webpack --env=dev --config=webpack/webpack.config.js`
 
 ## Concepts

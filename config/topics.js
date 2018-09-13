@@ -1,46 +1,46 @@
 module.exports = [
   {
-    topic: 'Initial Setup',
+    topic: 'Development Environment',
     description: 'Setting up of project',
     links: [{
-      name: 'Development Environment',
-      route: '/post/initial-setup/development-environement',
+      name: 'System requirements',
+      route: '/post/development-environment/system-requirements',
     },
     {
       name: 'VS Code extensions',
-      route: '/post/initial-setup/vscode-extensions',
+      route: '/post/development-environment/vscode-extensions',
     },
     {
       name: 'VS Code preferences',
-      route: '/post/initial-setup/vscode-preferences',
+      route: '/post/development-environment/vscode-preferences',
     },
     {
       name: 'Command line shortcuts',
-      route: '/post/initial-setup/aliases',
+      route: '/post/development-environment/aliases',
     },
     {
       name: 'Git aliases',
-      route: '/post/initial-setup/git-aliases',
+      route: '/post/development-environment/git-aliases',
     },
     {
       name: 'Browser extensions',
-      route: '/post/initial-setup/browser-extensions',
+      route: '/post/development-environment/browser-extensions',
     }],
   },
   {
-    topic: 'IDE Setup',
+    topic: 'Initial Setup',
     links: [
     {
       name: 'Initial commit',
-      route: '/post/ide/initial-commit',
+      route: '/post/initial-setup/initial-commit',
     },
     {
       name: 'Configure Editorconfig',
-      route: '/post/ide/editor-config',
+      route: '/post/initial-setup/editor-config',
     },
     {
       name: 'Configure Eslint',
-      route: '/post/ide/eslint-config',
+      route: '/post/initial-setup/eslint-config',
     }],
   },
   {

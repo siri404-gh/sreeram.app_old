@@ -1,6 +1,6 @@
-# Create an entry point
+# 3.2 Configure Babel
 
-#### Sep 1, 2018 by Sreeram Padmanabhan
+#### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 
 ## Summary
 
@@ -28,3 +28,5 @@ Create a file called `.babelrc` at the root with the following code.
     }
 
 Commit and push.
+
+Now, lets implement the bundling process.
