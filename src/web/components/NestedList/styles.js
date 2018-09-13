@@ -24,5 +24,6 @@ export default theme => ({
   active: {
     backgroundColor: '#e8eaed',
     borderLeft: 'solid 3px #3367d6',
+    fontWeight: 500,
   },
 });

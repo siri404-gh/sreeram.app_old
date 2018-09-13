@@ -1,6 +1,6 @@
-# My favourite Git aliases
+# 1.5 My favourite Git aliases
 
-#### September 4, 2018 by Sreeram Padmanabhan
+#### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 
 ## Summary
 

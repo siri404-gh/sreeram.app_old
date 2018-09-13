@@ -1,8 +1,8 @@
-# VS Code preferences
+# 1.3 VS Code preferences
 
-#### Sep 1, 2018 by Sreeram Padmanabhan
+#### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 
-Given below is my VS Code preference JSON. 
+Given below is my VS Code preferences JSON file. Use this to give VS Code a dark theme with smaller font. Allows you to see many things at once. Or you could tweak this later.
 
     // Place your settings in this file to overwrite the default settings
     {

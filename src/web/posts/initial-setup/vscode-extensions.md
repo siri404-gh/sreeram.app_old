@@ -1,6 +1,6 @@
-# VS Code Extensions
+# 1.2 Visual Studio Code Extensions
 
-#### Sep 1, 2018 by Sreeram Padmanabhan
+#### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 
 ## Summary
 
