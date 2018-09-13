@@ -15,23 +15,10 @@ Make sure you have installed the editorconfig extension for VS code.
 Create a file called `.editorconfig` at the root of the project with the following code.
 
 ## Code
-    # http://editorconfig.org
-    root = true
-
+    ; Unix-style newlines
     [*]
     charset = utf-8
-    end_of_line = lf
+    end_of_line = LF
     indent_size = 2
     indent_style = space
-    insert_final_newline = true
-    max_line_length = 100
     trim_trailing_whitespace = true
-
-    [*.md]
-    max_line_length = 0
-    trim_trailing_whitespace = false
-
-    [COMMIT_EDITMSG]
-    max_line_length = 0
-
-Commit and push.
