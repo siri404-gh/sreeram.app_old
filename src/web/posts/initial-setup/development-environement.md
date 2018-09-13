@@ -1,12 +1,12 @@
-# Development Environment
+# 1.1 Development Environment
 
-#### Sep 1, 2018 by Sreeram Padmanabhan
+#### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 
 ## About this chapter
 
-In this chapter, we will set our development environment up. 
+In this chapter, we will set our Development Environment up. We will look at your machine specs, the softwares you need to have, and all the extensions and shortcuts which will make your work faster.
 
-I personally tend to use state of the art softwares and hardwares for my development work. For Web development which involves frontend, backend, devops, testing work, I prefer the below software specs. Using these will save a lot of time in the long run and without these, its easy to get frustrated. Like for eg, the speed of your code build depends on your build process and machine specs. A faster machine and an efficient build process ensure a faster feedback and encourages a fail fast, fail often mechanism. As someone great said, *Good code comes from a good habitat.*
+I personally tend to use state of the art softwares and hardwares for my development work. For Web development which involves frontend, backend, devops, testing work, I prefer the below software specs. Using these will save a lot of time in the long run and without these, its easy to get frustrated. Like for eg, the speed of your code build depends on your build process and machine specs. A faster machine and an efficient build process ensure a faster feedback and encourages a fail fast, fail often mechanism.
 
 ## OS
 
@@ -22,21 +22,25 @@ I personally tend to use state of the art softwares and hardwares for my develop
 
 ## Browsers
 
-**Google Chrome** *latest*
+ - **Google Chrome** *latest*
 
-**Mozilla Firefox** *latest*
+ - **Mozilla Firefox** *latest*
 
-**Safari** *11.1.2*
+ - **Safari** *11.1.2*
 
+## Editor
+
+- **VS Code** *latest*
 
 ## Others
 
-**Nodejs** *latest*
+- **Nodejs** *latest*
 
-**npm** *latest*
+- **Npm** *latest*
 
-**Git** *latest*
+- **Git** *latest*
 
-**VS Code** *latest*
 
-**Docker for mac** *latest*
+- **Docker for mac** *latest*
+
+- **VirtualBox VM** *latest*

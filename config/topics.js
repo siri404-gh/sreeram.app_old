@@ -15,12 +15,16 @@ module.exports = [
       route: '/post/initial-setup/vscode-preferences',
     },
     {
-      name: 'My favourite aliases',
+      name: 'Command line shortcuts',
       route: '/post/initial-setup/aliases',
     },
     {
-      name: 'My favourite Git aliases',
+      name: 'Git aliases',
       route: '/post/initial-setup/git-aliases',
+    },
+    {
+      name: 'Browser extensions',
+      route: '/post/initial-setup/browser-extensions',
     }],
   },
   {
