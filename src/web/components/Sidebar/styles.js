@@ -21,7 +21,7 @@ export default theme => ({
     paddingLeft: 25,
   },
   active: {
-    backgroundColor: '#ecf0f2',
+    backgroundColor: '#e8eaed',
     borderLeft: 'solid 3px blue',
   },
 });

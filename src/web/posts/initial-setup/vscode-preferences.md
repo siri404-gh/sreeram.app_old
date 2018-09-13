@@ -9,7 +9,6 @@ Given below is my VS Code preference JSON.
         "workbench.startupEditor": "none",
         "workbench.statusBar.visible": false,
         "workbench.activityBar.visible": true,
-        "workbench.iconTheme": "vscode-icons",
         "workbench.editor.enablePreview": false,
         "workbench.colorCustomizations": {
             "editor.background": "#000000",
@@ -71,4 +70,6 @@ Given below is my VS Code preference JSON.
         "update.enableWindowsBackgroundUpdates": false,
         "eslint.alwaysShowStatus": true,
         "update.channel": "none",
+        "window.zoomLevel": -1,
+        "workbench.iconTheme": "material-icon-theme",
     }

@@ -22,7 +22,7 @@ export default theme => ({
   nestedListItemText: {
   },
   active: {
-    backgroundColor: '#ecf0f2',
+    backgroundColor: '#e8eaed',
     borderLeft: 'solid 3px #3367d6',
   },
 });
