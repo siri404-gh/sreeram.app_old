@@ -9,7 +9,7 @@ import App from './components/App/App';
  * @return {Component}
  */
 const Routes = () => (
-  <BrowserRouter>
+  <BrowserRouter history>
     <Switch>
       <Route exact path="/" component={App} />
       <Route path="/post/:topic/:post" component={App} />
