@@ -63,6 +63,24 @@ class PaperSheet extends React.Component {
     return capitalize(topic) + ' | ' + capitalize(post) + ' | ' + variables.navbar.title;
   }
 
+
+  /**
+   *
+   *
+   * @param {*} title
+   * @param {*} description
+   * @memberof PaperSheet
+   */
+  setSeoProps(title, description) {
+    const { topic, post } = this.props;
+    if (post === 'home') {
+      document.querySelector('meta[name=\'Description\']').setAttribute('content', variables.ogDescription);
+    } else {
+      document.title = title;
+      document.querySelector('meta[name=\'Description\']').setAttribute('content', capitalize(topic) + ' - ' + capitalize(post) + '. ' + variables.ogDescription);
+    }
+  }
+
   /**
    *
    * @param {object} prevProps
@@ -70,7 +88,7 @@ class PaperSheet extends React.Component {
    */
   componentDidMount() {
     const { topic, post } = this.props;
-    document.title = this.createTitle(topic, post);
+    this.setSeoProps(this.createTitle(topic, post));
   }
 
   /**
@@ -95,7 +113,7 @@ class PaperSheet extends React.Component {
         activeStep,
         mainActiveStep,
       });
-      document.title = this.createTitle(topic, post);
+      this.setSeoProps(this.createTitle(topic, post));
     }
   }
 
