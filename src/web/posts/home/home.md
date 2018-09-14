@@ -16,7 +16,7 @@ You will learn all about creating your own development environment, writing your
 
 ## End to end flow
 
-All I do is write code and push it to Github. CI-CD does the rest. Travis just builds it. I felt that its slower than Circle CI. CIrcle CI is where most of the heavy lifting is done for this boilerplate. So once code is pushed to Github, Circle CI takes it, runs the following in under 5 minutes.
+All you will do is write code and push it to Github. CI-CD does the rest. Travis just builds it. I felt that its slower than Circle CI. CIrcle CI is where most of the heavy lifting is done for this boilerplate. So once code is pushed to Github, Circle CI takes it, runs the following in under 5 minutes.
 
 - Lint check using Eslint.
 - Unit test using Karma, Jasmine and Chromeheadless.
@@ -28,6 +28,7 @@ All I do is write code and push it to Github. CI-CD does the rest. Travis just b
 - Deploy to a Staging server
 - Performance tests using Lighthouse
 - Deploy to Production if all of the above pass.
+- Deploy to Heroku/Firebase/Bluemix
 
 ## A bit about me
 

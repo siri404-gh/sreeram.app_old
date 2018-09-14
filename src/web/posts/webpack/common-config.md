@@ -1,10 +1,10 @@
-# Webpack Common Config
+# 4.6 Webpack Common Config
 
-#### Sep 2, 2018 by Sreeram Padmanabhan
+#### Sep 2, 2018 by Sreeram Padmanabhan, Last updated on Sep 14, 2018
 
 ## Summary
 
-Now that we have the webpack dev and the webpack prod configurations, we have some duplicate code in either of them. We can move these to a file called webpack.common.js and include this during runtime. So when we run the dev buid, we run common + dev and when we run the prod build, we run common + prod.
+Now that we have the webpack dev and the webpack prod configurations, we have some duplicate code in either of them. Lets move these to a file called `webpack.common.js` and include this during build time. So when we run the dev buid, it will run common + dev and when we run the prod build, it will run common + prod.
 
 ## Install
 `npm i --save-dev webpack-merge`
@@ -16,7 +16,6 @@ Create a file called `webpack/webpack.common.js` at the root and move any common
 ## Code - webpack.common.js
 
     const path = require('path');
-    const webpack = require('webpack');
     const HtmlWebpackPlugin = require('html-webpack-plugin');
 
     module.exports = {
@@ -24,7 +23,7 @@ Create a file called `webpack/webpack.common.js` at the root and move any common
         app: './src/web/index.js',
       },
       output: {
-        path: path.resolve(__dirname,'../dist'),
+        path: path.resolve(__dirname, '../dist'),
         filename: '[name].bundle.js',
         publicPath: '/',
       },
@@ -52,14 +51,14 @@ Create a file called `webpack/webpack.common.js` at the root and move any common
       },
       plugins: [
         new HtmlWebpackPlugin({
-          title: 'My Website,
+          title: 'My Website',
         }),
       ],
     };
 
 ## Code - webpack.dev.js
     const merge = require('webpack-merge');
-    import path from 'path';
+    import commonConfig from './webpack.common';
 
     module.exports = merge(commonConfig, {
       mode: 'development',
@@ -67,10 +66,32 @@ Create a file called `webpack/webpack.common.js` at the root and move any common
 
 ## Code - webpack.prod.js
     const merge = require('webpack-merge');
-    import path from 'path';
+    const path = require('path');
+    const commonConfig = require('./webpack.common');
+    const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+    const Visualizer = require('webpack-visualizer-plugin');
 
     module.exports = merge(commonConfig, {
       mode: 'production',
+      plugins: [
+        new BundleAnalyzerPlugin({
+          openAnalyzer: false,
+          analyzerMode: 'static',
+          reportFilename: path.resolve(__dirname, `../dist/bundle.html`),
+        }),
+        new Visualizer({
+          filename: './visualizer.html',
+        }),
+      ],
     });
+
+## Execute
+
+`./node_modules/.bin/webpack --env=prod --config=webpack/webpack.config.js`
+
+or
+
+`npx webpack --env=prod --config=webpack/webpack.config.js`
+
 
 Commit and push.

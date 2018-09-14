@@ -81,5 +81,6 @@ Run it.
 
 `npm run lint`
 
+Also, you could create a file called `.eslintignore` to include files for which you dont want these rules imposed.
 
 Commit and push.

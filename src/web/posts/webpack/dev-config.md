@@ -1,6 +1,6 @@
-# Webpack Dev Config
+# 4.1 Webpack Dev Config
 
-#### Sep 2, 2018 by Sreeram Padmanabhan
+#### Sep 2, 2018 by Sreeram Padmanabhan, Last updated on Sep 14, 2018
 
 ## Summary
 
@@ -29,7 +29,7 @@ Create a file called `webpack/webpack.config.js` and `webpack/webpack.dev.js` at
         app: './src/web/index.js',
       },
       output: {
-        path: path.resolve(__dirname,'../dist'),
+        path: path.resolve(__dirname, '../dist'),
         filename: 'my-first-webpack.bundle.js',
       },
       module: {
@@ -48,7 +48,15 @@ Create a file called `webpack/webpack.config.js` and `webpack/webpack.dev.js` at
 
 ## Execute
 
-`webpack --env=dev --config=webpack/webpack.config.js`
+`./node_modules/.bin/webpack --env=dev --config=webpack/webpack.config.js`
+
+or
+
+`npx webpack --env=dev --config=webpack/webpack.config.js`
+
+The output will look like this. Notice the build time, asset name and the asset size. These are important.
+
+![webpack dev output](/images/webpack_dev_output.png "webpack dev output")
 
 ## Concepts
 
@@ -58,7 +66,9 @@ This is the entry file to tell webpack where to start the packaging from. In our
 
 ### Output
 
-This tells webpack where to output the end product. Also specified is the name of the file to be output as. So, all the code in our `src/web/index.js` will be output as `dist/my-first-webpack-bundle.js`. If you look at both the codes, they will look vastly different.
+This tells webpack where to output the end product. Also specified is the name of the file to be output as. So, all the code in our `src/web/index.js` will be output as `dist/my-first-webpack-bundle.js`. If you look at both the codes, they will look vastly different. It will look something like this given below.
+
+![webpack dev code](/images/webpack_dev_code.png "webpack dev code")
 
 ### Module
 

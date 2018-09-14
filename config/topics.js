@@ -81,6 +81,10 @@ module.exports = [
       route: '/post/webpack/bundle-analysis',
     },
     {
+      name: 'Webpack Visualizer plugin',
+      route: '/post/webpack/webpack-visualizer',
+    },
+    {
       name: 'HTML Webpack Plugin',
       route: '/post/webpack/html-webpack-plugin',
     },
