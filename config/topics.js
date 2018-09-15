@@ -216,56 +216,56 @@ module.exports = [
       },
     ],
   },
-  {
-    topic: 'Unit Testing',
-    links: [], // ['Karma & Jasmine', 'Enzyme', 'Sinon, Spy'],
-  },
-  {
-    topic: 'Code Coverage',
-    links: [], // ['Sonar analysis', 'Code Climate', 'Codecov', 'Codacy'],
-  },
-  {
-    topic: 'Backend',
-    links: [], // ['Express', 'Serverside Rendering'],
-  },
-  {
-    topic: 'Performance',
-    links: [], // ['Lighthouse', 'Imgbot'],
-  },
-  {
-    topic: 'Integration Testing',
-    links: [], // ['Cypress'],
-  },
-  {
-    topic: 'Cross Browser Testing',
-    links: [], // ['Browserstack'],
-  },
-  {
-    topic: 'Material Design',
-    links: [], // ['Material-UI'],
-  },
-  {
-    topic: 'Monitoring Tools',
-    links: [], // ['Logrocket', 'Dependency management (Greenkeeper)', 'Airbrake', 'Sentry', 'LGTM', 'Google Analytics'],
-  },
-  {
-    topic: 'HTML',
-    links: [],
-  },
-  {
-    topic: 'CSS',
-    links: [],
-  },
-  {
-    topic: 'Javascript',
-    links: [],
-  },
-  {
-    topic: 'Algorthms',
-    links: [],
-  },
-  {
-    topic: 'Accessibility',
-    links: [],
-  },
+  // {
+  //   topic: 'Unit Testing',
+  //   links: [], // ['Karma & Jasmine', 'Enzyme', 'Sinon, Spy'],
+  // },
+  // {
+  //   topic: 'Code Coverage',
+  //   links: [], // ['Sonar analysis', 'Code Climate', 'Codecov', 'Codacy'],
+  // },
+  // {
+  //   topic: 'Backend',
+  //   links: [], // ['Express', 'Serverside Rendering'],
+  // },
+  // {
+  //   topic: 'Performance',
+  //   links: [], // ['Lighthouse', 'Imgbot'],
+  // },
+  // {
+  //   topic: 'Integration Testing',
+  //   links: [], // ['Cypress'],
+  // },
+  // {
+  //   topic: 'Cross Browser Testing',
+  //   links: [], // ['Browserstack'],
+  // },
+  // {
+  //   topic: 'Material Design',
+  //   links: [], // ['Material-UI'],
+  // },
+  // {
+  //   topic: 'Monitoring Tools',
+  //   links: [], // ['Logrocket', 'Dependency management (Greenkeeper)', 'Airbrake', 'Sentry', 'LGTM', 'Google Analytics'],
+  // },
+  // {
+  //   topic: 'HTML',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'CSS',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'Javascript',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'Algorthms',
+  //   links: [],
+  // },
+  // {
+  //   topic: 'Accessibility',
+  //   links: [],
+  // },
 ];

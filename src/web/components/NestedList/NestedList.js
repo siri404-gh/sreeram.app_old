@@ -57,7 +57,7 @@ class NestedList extends React.Component {
         <Collapse in={this.state.open} timeout="auto" unmountOnExit>
           <List component="div" className={classes.nestedList} disablePadding>
             {this.props.links.map((link, i) => {
-              const innerLinkClasses = link.route.split('/')[3] === currentPost ? classes.activeListItem : classes.listItem;
+              const innerLinkClasses = link.route.split('/')[3] === currentPost ? classes.activeListItem : classes.nestedListItem;
               return <ListItem key={i} component={'a'} className={innerLinkClasses} href={link.route}>
                 <ListItemText secondary={link.name} className={classes.nestedListItemText}/>
               </ListItem>;

@@ -23,7 +23,7 @@ export default theme => ({
   },
   activeListItem: {
     padding: 5,
-    paddingLeft: 25,
+    paddingLeft: 40,
     backgroundColor: '#e8eaed',
     borderLeft: 'solid 3px #3367d6',
   },
