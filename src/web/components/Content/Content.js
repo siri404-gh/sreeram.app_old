@@ -192,6 +192,7 @@ class PaperSheet extends React.Component {
           </StepContent> */}
         </Step>)}
       </Stepper>
+      {process.env.NODE_ENV === 'production' && <Adsense />}
     </Hidden>;
   }
 
@@ -219,7 +220,7 @@ class PaperSheet extends React.Component {
             </Grid>}
             <Hidden mdDown>
               {<Grid item lg={2} xl={1}>
-                {process.env.NODE_ENV === 'production' && <Adsense />}
+                {/* {process.env.NODE_ENV === 'production' && <Adsense />} */}
               </Grid>}
             </Hidden>
           </Grid>
