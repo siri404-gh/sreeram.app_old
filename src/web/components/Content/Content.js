@@ -9,7 +9,7 @@ import Markdown from './Markdown';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import Adsense from '../Adsense/Adsense';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
 const variables = require('../../../../config/variables');
@@ -177,7 +177,7 @@ class PaperSheet extends React.Component {
       <Stepper className={classes.stepper} activeStep={mainActiveStep} orientation="vertical">
         {topics.map((topic, i) => <Step key={i} className={classes.step}>
           <StepLabel className={classes.stepLabel}>
-            <NavLink to={topic.links[0] ? topic.links[0].route : '/'} className={classes.innerActiveStepLink}>{topic.topic}</NavLink>
+            <a href={topic.links[0] ? topic.links[0].route : '/'} className={classes.innerActiveStepLink}>{topic.topic}</a>
           </StepLabel>
           {/* <StepContent>
             <Stepper className={classes.innerStepper} activeStep={activeStep} orientation="vertical">
