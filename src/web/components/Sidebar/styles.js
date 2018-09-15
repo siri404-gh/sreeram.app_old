@@ -21,7 +21,9 @@ export default theme => ({
     padding: 10,
     paddingLeft: 25,
   },
-  active: {
+  activeListitem: {
+    padding: 10,
+    paddingLeft: 25,
     backgroundColor: '#e8eaed',
     borderLeft: 'solid 3px blue',
   },

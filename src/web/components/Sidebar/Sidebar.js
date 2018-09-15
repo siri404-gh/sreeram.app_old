@@ -24,18 +24,21 @@ class Sidebar extends React.Component {
    * @memberof Sidebar
    */
   render() {
-    const { classes, theme } = this.props;
+    const { classes, theme, topic: currentTopic, post: currentPost } = this.props;
 
     const drawer = (
       <div>
-      <Hidden smDown>
-        <div className={classes.toolbar} />
-      </Hidden>
-        <ListItem component={NavLink} button className={classes.listItem} exact to={'/'} dense activeClassName={classes.active}>
+        <Hidden smDown>
+          <div className={classes.toolbar} />
+        </Hidden>
+        <ListItem component={NavLink} button className={classes.listItem} exact to={'/'} dense activeClassName={classes.activeListItem}>
           <ListItemText secondary={'Home'} className={classes.listItemText}/>
         </ListItem>
         <Divider />
-        {topics.map((topic, i) => <NestedList key={i} title={topic.topic} links={topic.links}/>)}
+        {topics.map((topic, i) => {
+          const activeTopic = topic.links[0] && topic.links[0].route ? topic.links[0].route.split('/')[2] : 'blah';
+          return <NestedList key={i} title={topic.topic} links={topic.links} open={activeTopic === currentTopic} currentPost={currentPost}/>;
+        })}
       </div>
     );
 

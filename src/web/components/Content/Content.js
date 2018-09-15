@@ -88,7 +88,23 @@ class PaperSheet extends React.Component {
    */
   componentDidMount() {
     const { topic, post } = this.props;
-    this.setSeoProps(this.createTitle(topic, post));
+    // if (this.props.post !== prevProps.post) {
+      let activeStep = -1;
+      let mainActiveStep = -1;
+      topics.forEach((t, j) => {
+        t.links.forEach((tl, i) => {
+          if (tl.route === `/post/${topic}/${post}`) {
+            activeStep = i;
+            mainActiveStep = j;
+          }
+        });
+      });
+      this.setState({
+        activeStep,
+        mainActiveStep,
+      });
+      this.setSeoProps(this.createTitle(topic, post));
+    // }
   }
 
   /**

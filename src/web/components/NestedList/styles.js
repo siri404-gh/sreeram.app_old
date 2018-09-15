@@ -21,9 +21,10 @@ export default theme => ({
   },
   nestedListItemText: {
   },
-  active: {
+  activeListItem: {
+    padding: 5,
+    paddingLeft: 25,
     backgroundColor: '#e8eaed',
     borderLeft: 'solid 3px #3367d6',
-    fontWeight: 500,
   },
 });
