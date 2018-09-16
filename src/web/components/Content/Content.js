@@ -192,7 +192,6 @@ class PaperSheet extends React.Component {
           </StepContent> */}
         </Step>)}
       </Stepper>
-      {process.env.NODE_ENV === 'production' && <Adsense />}
     </Hidden>;
   }
 
@@ -211,16 +210,16 @@ class PaperSheet extends React.Component {
         <div className={classes.toolbar} />
         <Paper className={classes.root} elevation={1}>
           <Grid container spacing={0}>
-            <Grid item xs={12} sm={12} md={queryParam ? 12 : 8} lg={queryParam ? 10 : 7} xl={queryParam ? 11 : 9} className={classes.contentLeft}>
+            <Grid item xs={12} sm={12} md={queryParam ? 12 : 8} lg={queryParam ? 10 : 7} xl={queryParam ? 11 : 7} className={classes.contentLeft}>
               {queryParam && this.getGoogleSearchResults()}
               {!queryParam && this.getPost()}
             </Grid>
-            {!queryParam && <Grid item md={!queryParam && 4} lg={!queryParam && 3} xl={!queryParam && 2} className={classes.contentRight}>
+            {!queryParam && <Grid item md={!queryParam && 4} lg={!queryParam && 3} xl={!queryParam && 3} className={classes.contentRight}>
               {this.getProgress()}
             </Grid>}
             <Hidden mdDown>
-              {<Grid item lg={2} xl={1}>
-                {/* {process.env.NODE_ENV === 'production' && <Adsense />} */}
+              {<Grid item lg={2} xl={2}>
+                {process.env.NODE_ENV === 'production' && <Adsense />}
               </Grid>}
             </Hidden>
           </Grid>
