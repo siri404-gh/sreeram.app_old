@@ -256,10 +256,17 @@ module.exports = [
   //   topic: 'CSS',
   //   links: [],
   // },
-  // {
-  //   topic: 'Javascript',
-  //   links: [],
-  // },
+  {
+    topic: 'Javascript Concepts',
+    links: [{
+      name: 'Callback hell',
+      route: '/post/javascript-concepts/callback-hell',
+    },
+    {
+      name: 'Promises',
+      route: '/post/javascript-concepts/promises',
+    }],
+  },
   // {
   //   topic: 'Algorthms',
   //   links: [],
