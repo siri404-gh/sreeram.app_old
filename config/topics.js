@@ -44,7 +44,7 @@ module.exports = [
     }],
   },
   {
-    topic: 'React view layer', // ['React Router', 'React Native']
+    topic: 'React view layer',
     links: [{
       name: 'Create entry point',
       route: '/post/react/entry-point',
@@ -67,7 +67,7 @@ module.exports = [
     }],
   },
   {
-    topic: 'Webpack Configurations', // 'Polyfills', 'Clean Webpack Plugin', 'Compression Plugin', 'Webpack Visualizer'],
+    topic: 'Webpack Configurations', // 'Polyfills', 'Clean Webpack Plugin',
     links: [{
       name: 'Development config',
       route: '/post/webpack/dev-config',
@@ -165,7 +165,7 @@ module.exports = [
     ],
   },
   {
-    topic: 'Optimising code',
+    topic: 'Optimising code', // 'Compression Plugin',
     links: [
       {
         name: 'Multiple entry points',

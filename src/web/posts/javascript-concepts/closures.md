@@ -46,7 +46,7 @@ Lets change the lexical scope to move the counter variable inside the add functi
     add();
     add();
 
-In this case, after the 3rd call of add(), the value of the counter is 1, because its initiated on every call. So, this doesnt serve our purpose completely.
+In this case, after the 3rd call of add(), the value of the counter is 1, because its initiated on every call. So, this defeats the whole purpose of the counter.
 
 So, if there is a way to keep the variable lexically scoped, and at the same time, initiate the counter to 0 only once, it will solve our problem. So how would we do that? The way to do it is by creating closures. How do we do that?
 
