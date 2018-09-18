@@ -259,6 +259,10 @@ module.exports = [
   {
     topic: 'Javascript Concepts',
     links: [{
+      name: 'Closures in Javascript',
+      route: '/post/javascript-concepts/closures',
+    },
+    {
       name: 'Callback hell',
       route: '/post/javascript-concepts/callback-hell',
     },
