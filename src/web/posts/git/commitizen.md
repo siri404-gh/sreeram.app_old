@@ -16,15 +16,16 @@ Next, initialize your project to use the cz-conventional-changelog adapter by ty
 
 Add the below config code to your package.json. This sets `cz-conventionl-changelog` as the adaptor.
 
-    config": {
+    "config": {
       "commitizen": {
-        "path": "cz-conventional-changelog"
+        "path": "./node_modules/cz-conventional-changelog"
       }
     }
 
 Add this to npm script
 
     "scripts": {
+      ...
       "commit": "git-cz"
     }
 

@@ -33,8 +33,9 @@ Create a file called `styleguide.config.js` at the root with the following code.
 
 ## Execute
 
-`styleguidist server`
-`styleguidist eject`
+`npx styleguidist server` - Serves a static website locally.
+
+`npx styleguidist build` - Emits a static website.
 
 ## Note
 

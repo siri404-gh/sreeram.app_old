@@ -1,6 +1,6 @@
 # 4.7 Webpack Dev Server
 
-#### Sep 2, 2018 by Sreeram Padmanabhan, Last updated on Sep 14, 2018
+#### Sep 2, 2018 by Sreeram Padmanabhan, Last updated on Sep 18, 2018
 
 ## Summary
 
@@ -28,6 +28,25 @@ Add this to your webpack.dev.js
       compress: true,
       port: 9000,
     },
+
+Webpack-dev-server opens an express server internally and serves at the specified port.
+
+When compress is set to false, it sends the raw files across. If you look closely at the image below, there is no compression.
+
+![webpack-dev-server-no-compress-network](/images/webpack-dev-server-no-compress-network.png "webpack-dev-server-no-compress-network")
+
+And the headers in the response is like below.
+
+![webpack-dev-server-no-compress-header](/images/webpack-dev-server-no-compress-header.png "webpack-dev-server-no-compress-header")
+
+
+When its set to true, it gzip compresses the files and sends a `content-Encoding: gzip` header along with the responses.
+
+![webpack-dev-server-compress-network](/images/webpack-dev-server-compress-network.png "webpack-dev-server-compress-network")
+
+And the headers in the response is like below.
+
+![webpack-dev-server-compress-header](/images/webpack-dev-server-compress-header.png "webpack-dev-server-compress-header")
 
 ## Execute
 `npx webpack-dev-server --open --env=dev --config=webpack/webpack.config.js`

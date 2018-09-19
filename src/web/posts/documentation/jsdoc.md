@@ -1,6 +1,6 @@
 # JSDOC Configuration
 
-#### Sep 15, 2018 by Sreeram Padmanabhan
+#### Sep 15, 2018 by Sreeram Padmanabhan, Last updated on Sep 18, 2018
 
 ## Summary
 

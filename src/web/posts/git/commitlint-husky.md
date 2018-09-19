@@ -10,7 +10,7 @@ In the previous post, we saw how we can use commitizen to lint our commit messag
 `npm install --save-dev @commitlint/config-conventional @commitlint/cli`
 
 ## Install husky
-`npm install --save-dev husky`
+`npm install --save-dev husky@next`
 
 
 ## Configure
@@ -21,7 +21,7 @@ The next step is to install husky to lint commits before they are created.  You 
       "husky": {
         "hooks": {
           "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }  
+        }
       }
     }
 
