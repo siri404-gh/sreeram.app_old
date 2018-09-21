@@ -103,7 +103,11 @@ module.exports = [
     {
       name: 'Hot Module Replacement',
       route: '/post/webpack/hot-module-replacement',
-    }],
+    },
+  {
+    name: 'Clean Webpack Plugin',
+    route: '/post/webpack/clean-webpack-plugin',
+  }],
   },
   {
     topic: 'Redux data layer',
@@ -152,24 +156,27 @@ module.exports = [
     }],
   },
   {
-    topic: 'Progressive Web Apps',
-    links: [
-      {
-        name: 'Service workers',
-        route: '/post/pwa/service-workers',
-      },
-      {
-        name: 'Making your app a PWA',
-        route: '/post/pwa/progressive-web-apps',
-      },
-    ],
-  },
-  {
     topic: 'Optimising code', // 'Compression Plugin',
     links: [
       {
-        name: 'Multiple entry points',
-        route: '/post/optimisation/multiple-entry-points',
+        name: 'Tree Shaking',
+        route: '/post/optimisation/tree-shaking',
+      },
+      {
+        name: 'Production Mode',
+        route: '/post/optimisation/production-mode',
+      },
+      {
+        name: 'Uglification',
+        route: '/post/optimisation/uglification',
+      },
+      {
+        name: 'Minification',
+        route: '/post/optimisation/minification',
+      },
+      {
+        name: 'Split vendor libraries',
+        route: '/post/optimisation/split-vendor-libraries',
       },
       {
         name: 'Code splitting',
@@ -216,13 +223,44 @@ module.exports = [
       },
     ],
   },
+  {
+    topic: 'Unit Testing',
+    links: [{
+      name: 'Integrating Karma + Jasmine',
+      route: '/post/unit-testing/karma-jasmine',
+    }], // ['Enzyme', 'Sinon, Spy'],
+  },
+  {
+    topic: 'Cross Browser Testing',
+    links: [{
+      name: 'Browserstack Tests',
+      route: '/post/cross-browser-testing/browserstack-tests',
+    },
+    {
+      name: 'Saucelabs Tests',
+      route: '/post/cross-browser-testing/saucelabs-tests',
+  }],
+  },
   // {
-  //   topic: 'Unit Testing',
-  //   links: [], // ['Karma & Jasmine', 'Enzyme', 'Sinon, Spy'],
+  //   topic: 'Cross Browser Testing',
+  //   links: [], // ['Browserstack'],
   // },
   // {
   //   topic: 'Code Coverage',
   //   links: [], // ['Sonar analysis', 'Code Climate', 'Codecov', 'Codacy'],
+  // },
+  // {
+  //   topic: 'Progressive Web Apps',
+  //   links: [
+  //     {
+  //       name: 'Service workers',
+  //       route: '/post/pwa/service-workers',
+  //     },
+  //     {
+  //       name: 'Making your app a PWA',
+  //       route: '/post/pwa/progressive-web-apps',
+  //     },
+  //   ],
   // },
   // {
   //   topic: 'Backend',
@@ -235,10 +273,6 @@ module.exports = [
   // {
   //   topic: 'Integration Testing',
   //   links: [], // ['Cypress'],
-  // },
-  // {
-  //   topic: 'Cross Browser Testing',
-  //   links: [], // ['Browserstack'],
   // },
   // {
   //   topic: 'Material Design',

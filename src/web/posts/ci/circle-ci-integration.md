@@ -3,7 +3,7 @@
 #### Sep 1, 2018 by Sreeram Padmanabhan
 
 ## Register
-Register at circleci.com and allow it access to your repo.
+Register at circleci.com and grant it access to your repo.
 
 ## Install
 Create a file called `.circleci/config.yml` and add the following code.
@@ -37,3 +37,5 @@ Create a file called `.circleci/config.yml` and add the following code.
       build:
         jobs:
           - build
+
+Once you push code, it triggers a Circle CI job.

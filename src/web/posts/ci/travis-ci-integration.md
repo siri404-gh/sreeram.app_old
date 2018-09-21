@@ -2,8 +2,10 @@
 
 #### Sep 1, 2018 by Sreeram Padmanabhan
 
+## Summary
+
 ## Register
-Register at travis-ci.com and allow travis access to your repo.
+Register at travis-ci.com and grant travis access to your repo.
 
 ## Install
 Create a file called `.travis.yml` and add the following code.
@@ -26,3 +28,5 @@ Create a file called `.travis.yml` and add the following code.
         script:
           - npm run build
         name: Build
+
+Once you push code, it triggers a travis job.
