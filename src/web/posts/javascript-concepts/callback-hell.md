@@ -1,10 +1,10 @@
-# Callback Hell
+# 3.2 Callback Hell
 
 #### Sep 16, 2018 by Sreeram Padmanabhan
 
 ## Summary
 
-Callbacks are functions we want called after the execution of some function. Like the name suggests, callbacks mean - Call after something. And callback hell is something we get into when we have a lot of nested callbacks. To understand this, lets do this case study. Lets create a function, which will get a random word from an API (Datamuse) and using that word, it will fetch its image from another API (GiphyAPI). Lets assume that the word is elephant.
+Javascript is a programming language with first-class functions. This means that you can treat functions like variables. You can assign them to variables, pass it as arguments, return as value etc. Callbacks are functions we want called after the execution of some function. We pass them as arguments to other functions. Like the name suggests, callbacks mean - Call back after something. And callback hell is something we get into when we have a lot of nested callbacks. To understand this, lets do this case study. Lets create a function, which will get a random word from an API (Datamuse) and using that word, lets fetch an image from another API (GiphyAPI). Lets assume that the word is 'elephant'.
 
 ## Case study
 
@@ -35,7 +35,7 @@ Then, we will use that function for our purposes.
       });
     }
 
-3) If you notice, the code gets intended more and more into what is called as a Pyramid of doom or Callback hell. But, we still havent handled the error scenario (like when the network call fails). Lets add that to the code.
+3) If you notice, the code gets intended more and more into what is called as a Pyramid of doom or Callback hell. We still havent handled the error scenario (like when the network call fails). Lets add that to the code.
 
     function loadImageWithWord(word) {
       get(wordApi + word, function(wordData) {
@@ -49,8 +49,8 @@ Then, we will use that function for our purposes.
       });
     }
 
-4) So the code is now unreadable. And this is just a simple example. We will solve this problem using promises in the next chapter.
-
-5) Finally, lets invoke this by:
+4) Finally, lets invoke this by:
 
     loadImageWithWord('elep?ant');
+
+5) After all of the above, the code has become unreadable. And this is just a simple example. We will solve this problem using promises in the next chapter.

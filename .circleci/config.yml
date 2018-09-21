@@ -39,9 +39,9 @@ jobs:
       - run:
           name: Build
           command: npm run build:firebase && cp -a dist/. mycache
-      - run:
-          name: Styleguide
-          command: npm run styleguide:eject && mv styleguide mycache/styleguide
+      # - run:
+      #     name: Styleguide
+      #     command: npm run styleguide:eject && mv styleguide mycache/styleguide
       # - run:
       #     name: PR performance
       #     command: npm run lighthouse:pr -- https://$HEROKU_APP_NAME.herokuapp.com

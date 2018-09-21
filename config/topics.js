@@ -1,5 +1,40 @@
 module.exports = [
   {
+    topic: 'Fun with HTML',
+    links: [],
+  },
+  {
+    topic: 'Fun with CSS',
+    links: [],
+  },
+  {
+    topic: 'Javascript Concepts',
+    links: [{
+      name: 'Closures in Javascript',
+      route: '/post/javascript-concepts/closures',
+    },
+    {
+      name: 'Callback hell',
+      route: '/post/javascript-concepts/callback-hell',
+    },
+    {
+      name: 'Promises',
+      route: '/post/javascript-concepts/promises',
+    },
+  {
+    name: 'Async/Await',
+    route: '/post/javascript-concepts/async-await',
+  }],
+  },
+  {
+    topic: 'Algorithms',
+    links: [],
+  },
+  {
+    topic: 'Programs I like',
+    links: [],
+  },
+  {
     topic: 'Development Environment',
     description: 'Setting up of project',
     links: [{
@@ -67,7 +102,7 @@ module.exports = [
     }],
   },
   {
-    topic: 'Webpack Configurations', // 'Polyfills', 'Clean Webpack Plugin',
+    topic: 'Webpack Configurations', // 'Polyfills',
     links: [{
       name: 'Development config',
       route: '/post/webpack/dev-config',
@@ -156,7 +191,7 @@ module.exports = [
     }],
   },
   {
-    topic: 'Optimising code', // 'Compression Plugin',
+    topic: 'Optimising code',
     links: [
       {
         name: 'Tree Shaking',
@@ -189,32 +224,6 @@ module.exports = [
     ],
   },
   {
-    topic: 'Continous Integration',
-    links: [
-      {
-        name: 'Travis CI integration',
-        route: '/post/ci/travis-ci-integration',
-      },
-      {
-        name: 'Circle CI integration',
-        route: '/post/ci/circle-ci-integration',
-      },
-    ],
-  },
-  {
-    topic: 'Continous Deployment', // ['Heroku Node App', 'Heroku docker container', 'Heroku pipelines', 'Firebase Hosting', 'Firebase functions'],
-    links: [
-    {
-      name: 'Deploy to Heroku',
-      route: '/post/cd/heroku-integration',
-    },
-    {
-      name: 'Deploy to Firebase',
-      route: '/post/cd/firebase-integration',
-    },
-    ],
-  },
-  {
     topic: 'DevOps',
     links: [
       {
@@ -242,75 +251,70 @@ module.exports = [
   }],
   },
   // {
-  //   topic: 'Cross Browser Testing',
-  //   links: [], // ['Browserstack'],
-  // },
-  // {
   //   topic: 'Code Coverage',
   //   links: [], // ['Sonar analysis', 'Code Climate', 'Codecov', 'Codacy'],
   // },
-  // {
-  //   topic: 'Progressive Web Apps',
-  //   links: [
-  //     {
-  //       name: 'Service workers',
-  //       route: '/post/pwa/service-workers',
-  //     },
-  //     {
-  //       name: 'Making your app a PWA',
-  //       route: '/post/pwa/progressive-web-apps',
-  //     },
-  //   ],
-  // },
-  // {
-  //   topic: 'Backend',
-  //   links: [], // ['Express', 'Serverside Rendering'],
-  // },
-  // {
-  //   topic: 'Performance',
-  //   links: [], // ['Lighthouse', 'Imgbot'],
-  // },
-  // {
-  //   topic: 'Integration Testing',
-  //   links: [], // ['Cypress'],
-  // },
-  // {
-  //   topic: 'Material Design',
-  //   links: [], // ['Material-UI'],
-  // },
-  // {
-  //   topic: 'Monitoring Tools',
-  //   links: [], // ['Logrocket', 'Dependency management (Greenkeeper)', 'Airbrake', 'Sentry', 'LGTM', 'Google Analytics'],
-  // },
-  // {
-  //   topic: 'HTML',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'CSS',
-  //   links: [],
-  // },
   {
-    topic: 'Javascript Concepts',
-    links: [{
-      name: 'Closures in Javascript',
-      route: '/post/javascript-concepts/closures',
-    },
-    {
-      name: 'Callback hell',
-      route: '/post/javascript-concepts/callback-hell',
-    },
-    {
-      name: 'Promises',
-      route: '/post/javascript-concepts/promises',
-    }],
+    topic: 'Progressive Web Apps',
+    links: [
+      {
+        name: 'Service workers',
+        route: '/post/pwa/service-workers',
+      },
+      {
+        name: 'Making your app a PWA',
+        route: '/post/pwa/progressive-web-apps',
+      },
+    ],
   },
-  // {
-  //   topic: 'Algorthms',
-  //   links: [],
-  // },
-  // {
-  //   topic: 'Accessibility',
-  //   links: [],
-  // },
+  {
+    topic: 'Backend',
+    links: [], // ['Express', 'Serverside Rendering'],
+  },
+  {
+    topic: 'Performance',
+    links: [], // ['Lighthouse', 'Imgbot'],
+  },
+  {
+    topic: 'Integration Testing',
+    links: [], // ['Cypress'],
+  },
+  {
+    topic: 'Material Design',
+    links: [], // ['Material-UI'],
+  },
+  {
+    topic: 'Continous Integration',
+    links: [
+      {
+        name: 'Travis CI integration',
+        route: '/post/ci/travis-ci-integration',
+      },
+      {
+        name: 'Circle CI integration',
+        route: '/post/ci/circle-ci-integration',
+      },
+    ],
+  },
+  {
+    topic: 'Continous Deployment', // ['Heroku Node App', 'Heroku docker container', 'Heroku pipelines', 'Firebase Hosting', 'Firebase functions'],
+    links: [
+    {
+      name: 'Deploy to Heroku',
+      route: '/post/cd/heroku-integration',
+    },
+    {
+      name: 'Deploy to Firebase',
+      route: '/post/cd/firebase-integration',
+    },
+    ],
+  },
+  {
+    topic: 'Monitoring Tools',
+    links: [], // ['Logrocket', 'Dependency management (Greenkeeper)', 'Airbrake', 'Sentry', 'LGTM', 'Google Analytics'],
+  },
+  {
+    topic: 'Accessibility',
+    links: [],
+  },
 ];
