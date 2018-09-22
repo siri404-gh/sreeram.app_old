@@ -28,6 +28,7 @@ export default theme => ({
   },
   contentRight: {
     // borderLeft: ' solid 1px #ecf0f2',
+    paddingLeft: 20,
   },
   progressHeader: {
     fontSize: 18,

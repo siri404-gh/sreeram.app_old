@@ -63,7 +63,6 @@ class PaperSheet extends React.Component {
     return capitalize(topic) + ' | ' + capitalize(post) + ' | ' + variables.navbar.title;
   }
 
-
   /**
    *
    *
@@ -81,58 +80,46 @@ class PaperSheet extends React.Component {
     }
   }
 
+
   /**
    *
-   * @param {object} prevProps
+   *
    * @memberof PaperSheet
    */
   componentDidMount() {
-    const { topic, post } = this.props;
-    // if (this.props.post !== prevProps.post) {
-      let activeStep = -1;
-      let mainActiveStep = -1;
-      topics.forEach((t, j) => {
-        t.links.forEach((tl, i) => {
-          if (tl.route === `/post/${topic}/${post}`) {
-            activeStep = i;
-            mainActiveStep = j;
-          }
-        });
-      });
-      this.setState({
-        activeStep,
-        mainActiveStep,
-      });
-      this.setSeoProps(this.createTitle(topic, post));
-    // }
+    this.setActiveSteps();
   }
 
   /**
    *
-   * @param {object} prevProps
+   *
    * @memberof PaperSheet
    */
-  componentDidUpdate(prevProps) {
+  setActiveSteps() {
     const { topic, post } = this.props;
-    if (this.props.post !== prevProps.post) {
       let activeStep = -1;
       let mainActiveStep = -1;
       topics.forEach((t, j) => {
-        t.links.forEach((tl, i) => {
-          if (tl.route === `/post/${topic}/${post}`) {
-            activeStep = i;
+        if (typeof t.route === 'string') {
+          if (t.route === `/post/${topic}/${post}`) {
+            activeStep = j;
             mainActiveStep = j;
           }
-        });
+        } else {
+          t.route.forEach((tl, i) => {
+            if (tl.route === `/post/${topic}/${post}`) {
+              activeStep = i;
+              mainActiveStep = j;
+            }
+          });
+        }
       });
       this.setState({
         activeStep,
         mainActiveStep,
       });
       this.setSeoProps(this.createTitle(topic, post));
-    }
   }
-
 
   /**
    *
@@ -177,7 +164,7 @@ class PaperSheet extends React.Component {
       <Stepper className={classes.stepper} activeStep={mainActiveStep} orientation="vertical">
         {topics.map((topic, i) => <Step key={i} className={classes.step}>
           <StepLabel className={classes.stepLabel}>
-            <a href={topic.links[0] ? topic.links[0].route : '/'} className={classes.innerActiveStepLink}>{topic.topic}</a>
+            <a href={topic.route[0] ? topic.route[0].route : '/'} className={classes.innerActiveStepLink}>{topic.topic}</a>
           </StepLabel>
           {/* <StepContent>
             <Stepper className={classes.innerStepper} activeStep={activeStep} orientation="vertical">
@@ -219,7 +206,7 @@ class PaperSheet extends React.Component {
             </Grid>}
             <Hidden mdDown>
               {<Grid item lg={2} xl={2}>
-                {process.env.NODE_ENV === 'production' && <Adsense />}
+                {process.env.NODE_ENV === 'production' && <Adsense pubID={variables.google.adsense.pubID} adSlot={variables.google.adsense.adSlot}/>}
               </Grid>}
             </Hidden>
           </Grid>

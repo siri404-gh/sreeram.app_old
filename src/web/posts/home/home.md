@@ -2,11 +2,11 @@
 
 #### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 
+![Sreeram Padmanabhan](https://avatars0.githubusercontent.com/u/8502281?s=460&v=4 "Sreeram Padmanabhan")
+
 Hey, I am Sreeram Padmanabhan. Some friends call me Sree. I am a Web Developer and this is my Web Boilerplate project. Its a comprehensive tutorial on how to create your own website from scratch. This website will be performant, will look pleasing, will be responsive, accessible and will be search engine optimised. It will use the latest web technologies which most enterprise companies use today.
 
-At the end of this tutorial, you will have a boilerplate project from which you can build any application you want and deploy to the Web, Mobile or even as a Desktop app with zero or minimal configuration. Infact, this very website was made using the boilerplate.
-
-Navigate through the links in the left sidebar to learn about each topic.
+At the end of this tutorial, you will have a boilerplate project from which you can build any application you want and deploy to the Web, Mobile or even as a Desktop app with zero or minimal configuration. Infact, this very website was made using the boilerplate. Navigate through the links in the left sidebar to learn more about each topic.
 
 ## What you need to know
 
@@ -14,7 +14,7 @@ You need to the basics of Web Development like HTML, CSS, Javascript, Git, Unix 
 
 ## What you will learn
 
-You will learn all about creating your own development environment, writing your first line of code, following good practices, writing tests, automation tests, deployment to staging/ production etc.
+You will start with some cool concepts of HTML CSS and Javascript. You will then learn all about creating your own Development environment, writing your first line of code, following good practices, writing unit tests, automation tests, deployment to staging/production and monitoring.
 
 ## End to end flow
 
@@ -33,8 +33,6 @@ All you will do is write code and push it to Github. CI-CD does the rest. Travis
 - Deploy to Heroku/Firebase/Bluemix
 
 ## A bit about me
-
-![Sreeram Padmanabhan](https://avatars0.githubusercontent.com/u/8502281?s=460&v=4 "Sreeram Padmanabhan")
 
 My story unfolds in 2005 when my friends at school had this forum for my class which created a buzz. It was used for all the class gossips. They also were making money using Google Adsense. Me, although being new to computers, always wanted to do something like that. Thats when I found Blogger. I didnt have to know anything technical to use Blogger. I also enrolled in Adsense but never really got paid because my blog wasnt very popular.
 

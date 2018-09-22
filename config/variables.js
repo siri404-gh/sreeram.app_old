@@ -3,6 +3,7 @@ module.exports = {
     title: 'The Web Boilerplate Project',
     tagline: 'Web development, supercharged!',
     tabs: [],
+    search: true,
   },
   defaultTopic: 'home',
   defaultPost: 'home',
@@ -13,4 +14,10 @@ module.exports = {
   ogDescription: 'Beginner to expert level tutorials on how to create your own performant, accessible, aesthetic website from scatch for free.',
   ogType: 'website',
   ogFbAppId: '297023651089707',
+  google: {
+    adsense: {
+      pubID: '6831276331714408',
+      adSlot: '3912800171',
+    },
+  },
 };

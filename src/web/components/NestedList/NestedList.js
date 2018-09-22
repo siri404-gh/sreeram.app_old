@@ -59,7 +59,7 @@ class NestedList extends React.Component {
             {this.props.links.map((link, i) => {
               const innerLinkClasses = link.route.split('/')[3] === currentPost ? classes.activeListItem : classes.nestedListItem;
               return <ListItem key={i} component={'a'} className={innerLinkClasses} href={link.route}>
-                <ListItemText secondary={link.name} className={classes.nestedListItemText}/>
+                <ListItemText secondary={link.topic} className={classes.nestedListItemText}/>
               </ListItem>;
             })}
           </List>

@@ -1,320 +1,324 @@
 module.exports = [
   {
+    topic: 'Home',
+    route: '/',
+  },
+  {
     topic: 'Fun with HTML',
-    links: [],
+    route: [],
   },
   {
     topic: 'Fun with CSS',
-    links: [],
+    route: [],
   },
   {
     topic: 'Javascript Concepts',
-    links: [{
-      name: 'Closures in Javascript',
+    route: [{
+      topic: 'Closures in Javascript',
       route: '/post/javascript-concepts/closures',
     },
     {
-      name: 'Callback hell',
+      topic: 'Callback hell',
       route: '/post/javascript-concepts/callback-hell',
     },
     {
-      name: 'Promises',
+      topic: 'Promises',
       route: '/post/javascript-concepts/promises',
     },
-  {
-    name: 'Async/Await',
-    route: '/post/javascript-concepts/async-await',
-  }],
+    {
+      topic: 'Async/Await',
+      route: '/post/javascript-concepts/async-await',
+    }],
   },
   {
     topic: 'Algorithms',
-    links: [],
+    route: [],
   },
   {
     topic: 'Programs I like',
-    links: [],
+    route: [],
   },
   {
     topic: 'Development Environment',
     description: 'Setting up of project',
-    links: [{
-      name: 'System requirements',
+    route: [{
+      topic: 'System requirements',
       route: '/post/development-environment/system-requirements',
     },
     {
-      name: 'VS Code extensions',
+      topic: 'VS Code extensions',
       route: '/post/development-environment/vscode-extensions',
     },
     {
-      name: 'VS Code preferences',
+      topic: 'VS Code preferences',
       route: '/post/development-environment/vscode-preferences',
     },
     {
-      name: 'Command line shortcuts',
+      topic: 'Command line shortcuts',
       route: '/post/development-environment/aliases',
     },
     {
-      name: 'Git aliases',
+      topic: 'Git aliases',
       route: '/post/development-environment/git-aliases',
     },
     {
-      name: 'Browser extensions',
+      topic: 'Browser extensions',
       route: '/post/development-environment/browser-extensions',
     }],
   },
   {
     topic: 'Initial Setup',
-    links: [
-    {
-      name: 'Initial commit',
-      route: '/post/initial-setup/initial-commit',
-    },
-    {
-      name: 'Configure Editorconfig',
-      route: '/post/initial-setup/editor-config',
-    },
-    {
-      name: 'Configure Eslint',
-      route: '/post/initial-setup/eslint-config',
-    }],
+    route: [
+      {
+        topic: 'Initial commit',
+        route: '/post/initial-setup/initial-commit',
+      },
+      {
+        topic: 'Configure Editorconfig',
+        route: '/post/initial-setup/editor-config',
+      },
+      {
+        topic: 'Configure Eslint',
+        route: '/post/initial-setup/eslint-config',
+      }],
   },
   {
     topic: 'React view layer',
-    links: [{
-      name: 'Create entry point',
+    route: [{
+      topic: 'Create entry point',
       route: '/post/react/entry-point',
     },
     {
-      name: 'Configure babel',
+      topic: 'Configure babel',
       route: '/post/react/configure-babel',
     },
     {
-      name: 'Hot Module Replacement',
+      topic: 'Hot Module Replacement',
       route: '/post/react/hot-module-replacement',
     },
     {
-      name: 'React Router',
+      topic: 'React Router',
       route: '/post/react/react-router',
     },
     {
-      name: 'React Native',
+      topic: 'React Native',
       route: '/post/react/react-native',
     }],
   },
   {
     topic: 'Webpack Configurations', // 'Polyfills',
-    links: [{
-      name: 'Development config',
+    route: [{
+      topic: 'Development config',
       route: '/post/webpack/dev-config',
     },
     {
-      name: 'Production config',
+      topic: 'Production config',
       route: '/post/webpack/prod-config',
     },
     {
-      name: 'Bundle analysis plugin',
+      topic: 'Bundle analysis plugin',
       route: '/post/webpack/bundle-analysis',
     },
     {
-      name: 'Webpack Visualizer plugin',
+      topic: 'Webpack Visualizer plugin',
       route: '/post/webpack/webpack-visualizer',
     },
     {
-      name: 'HTML Webpack Plugin',
+      topic: 'HTML Webpack Plugin',
       route: '/post/webpack/html-webpack-plugin',
     },
     {
-      name: 'Common config',
+      topic: 'Common config',
       route: '/post/webpack/common-config',
     },
     {
-      name: 'Webpack Dev Server',
+      topic: 'Webpack Dev Server',
       route: '/post/webpack/webpack-dev-server',
     },
     {
-      name: 'Sourcemaps',
+      topic: 'Sourcemaps',
       route: '/post/webpack/sourcemaps',
     },
     {
-      name: 'Hot Module Replacement',
+      topic: 'Hot Module Replacement',
       route: '/post/webpack/hot-module-replacement',
     },
-  {
-    name: 'Clean Webpack Plugin',
-    route: '/post/webpack/clean-webpack-plugin',
-  }],
+    {
+      topic: 'Clean Webpack Plugin',
+      route: '/post/webpack/clean-webpack-plugin',
+    }],
   },
   {
     topic: 'Redux data layer',
-    links: [{
-      name: 'What is Redux?',
+    route: [{
+      topic: 'What is Redux?',
       route: '/post/redux/what-is-redux',
     },
     {
-      name: 'Redux thunk',
+      topic: 'Redux thunk',
       route: '/post/redux/redux-thunk',
     },
     {
-      name: 'Redux middlewares',
+      topic: 'Redux middlewares',
       route: '/post/redux/redux-middlewares',
     }],
   },
   {
     topic: 'Documentation',
-    links: [{
-      name: 'JSdoc',
+    route: [{
+      topic: 'JSdoc',
       route: '/post/documentation/jsdoc',
     },
     {
-      name: 'React styleguidist',
+      topic: 'React styleguidist',
       route: '/post/documentation/react-styleguidist',
     }],
   },
   {
     topic: 'Git',
-    links: [
-    {
-      name: 'Making your project commitizen friendly',
-      route: '/post/git/commitizen',
-    },
-    {
-      name: 'Commit message linting',
-      route: '/post/git/commitlint-husky',
-    },
-    {
-      name: 'Branching strategy',
-      route: '/post/git/branching-strategy',
-    },
-    {
-      name: 'Rebase vs Merge',
-      route: '/post/git/rebase-vs-merge',
-    }],
+    route: [
+      {
+        topic: 'Making your project commitizen friendly',
+        route: '/post/git/commitizen',
+      },
+      {
+        topic: 'Commit message linting',
+        route: '/post/git/commitlint-husky',
+      },
+      {
+        topic: 'Branching strategy',
+        route: '/post/git/branching-strategy',
+      },
+      {
+        topic: 'Rebase vs Merge',
+        route: '/post/git/rebase-vs-merge',
+      }],
   },
   {
     topic: 'Optimising code',
-    links: [
+    route: [
       {
-        name: 'Tree Shaking',
+        topic: 'Tree Shaking',
         route: '/post/optimisation/tree-shaking',
       },
       {
-        name: 'Production Mode',
+        topic: 'Production Mode',
         route: '/post/optimisation/production-mode',
       },
       {
-        name: 'Uglification',
+        topic: 'Uglification',
         route: '/post/optimisation/uglification',
       },
       {
-        name: 'Minification',
+        topic: 'Minification',
         route: '/post/optimisation/minification',
       },
       {
-        name: 'Split vendor libraries',
+        topic: 'Split vendor libraries',
         route: '/post/optimisation/split-vendor-libraries',
       },
       {
-        name: 'Code splitting',
+        topic: 'Code splitting',
         route: '/post/optimisation/splitchunks',
       },
       {
-        name: 'Gzip compression',
+        topic: 'Gzip compression',
         route: '/post/optimisation/gzip-compression',
       },
     ],
   },
   {
     topic: 'DevOps',
-    links: [
+    route: [
       {
-        name: 'Dockerize the app',
+        topic: 'Dockerize the app',
         route: '/post/devops/dockerize',
       },
     ],
   },
   {
     topic: 'Unit Testing',
-    links: [{
-      name: 'Integrating Karma + Jasmine',
+    route: [{
+      topic: 'Integrating Karma + Jasmine',
       route: '/post/unit-testing/karma-jasmine',
     }], // ['Enzyme', 'Sinon, Spy'],
   },
   {
     topic: 'Cross Browser Testing',
-    links: [{
-      name: 'Browserstack Tests',
+    route: [{
+      topic: 'Browserstack Tests',
       route: '/post/cross-browser-testing/browserstack-tests',
     },
     {
-      name: 'Saucelabs Tests',
+      topic: 'Saucelabs Tests',
       route: '/post/cross-browser-testing/saucelabs-tests',
-  }],
+    }],
   },
   // {
   //   topic: 'Code Coverage',
-  //   links: [], // ['Sonar analysis', 'Code Climate', 'Codecov', 'Codacy'],
+  //   route: [], // ['Sonar analysis', 'Code Climate', 'Codecov', 'Codacy'],
   // },
   {
     topic: 'Progressive Web Apps',
-    links: [
+    route: [
       {
-        name: 'Service workers',
+        topic: 'Service workers',
         route: '/post/pwa/service-workers',
       },
       {
-        name: 'Making your app a PWA',
+        topic: 'Making your app a PWA',
         route: '/post/pwa/progressive-web-apps',
       },
     ],
   },
   {
     topic: 'Backend',
-    links: [], // ['Express', 'Serverside Rendering'],
+    route: [], // ['Express', 'Serverside Rendering'],
   },
   {
     topic: 'Performance',
-    links: [], // ['Lighthouse', 'Imgbot'],
+    route: [], // ['Lighthouse', 'Imgbot'],
   },
   {
     topic: 'Integration Testing',
-    links: [], // ['Cypress'],
+    route: [], // ['Cypress'],
   },
   {
     topic: 'Material Design',
-    links: [], // ['Material-UI'],
+    route: [], // ['Material-UI'],
   },
   {
     topic: 'Continous Integration',
-    links: [
+    route: [
       {
-        name: 'Travis CI integration',
+        topic: 'Travis CI integration',
         route: '/post/ci/travis-ci-integration',
       },
       {
-        name: 'Circle CI integration',
+        topic: 'Circle CI integration',
         route: '/post/ci/circle-ci-integration',
       },
     ],
   },
   {
     topic: 'Continous Deployment', // ['Heroku Node App', 'Heroku docker container', 'Heroku pipelines', 'Firebase Hosting', 'Firebase functions'],
-    links: [
-    {
-      name: 'Deploy to Heroku',
-      route: '/post/cd/heroku-integration',
-    },
-    {
-      name: 'Deploy to Firebase',
-      route: '/post/cd/firebase-integration',
-    },
+    route: [
+      {
+        topic: 'Deploy to Heroku',
+        route: '/post/cd/heroku-integration',
+      },
+      {
+        topic: 'Deploy to Firebase',
+        route: '/post/cd/firebase-integration',
+      },
     ],
   },
   {
     topic: 'Monitoring Tools',
-    links: [], // ['Logrocket', 'Dependency management (Greenkeeper)', 'Airbrake', 'Sentry', 'LGTM', 'Google Analytics'],
+    route: [], // ['Logrocket', 'Dependency management (Greenkeeper)', 'Airbrake', 'Sentry', 'LGTM', 'Google Analytics'],
   },
   {
     topic: 'Accessibility',
-    links: [],
+    route: [],
   },
 ];

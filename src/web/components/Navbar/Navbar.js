@@ -36,7 +36,6 @@ class Navbar extends React.Component {
     this.setState({ anchorEl: event.currentTarget });
   }
 
-
   /**
    *
    *
@@ -69,14 +68,14 @@ class Navbar extends React.Component {
     const open = Boolean(anchorEl);
 
     return (
-      <AppBar className={classes.appBar}>
+      <AppBar id="bp-navbar" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
           <IconButton
             color="inherit"
             aria-label="Open drawer"
             onClick={this.props.handleDrawerToggle}
             className={classes.navIconHide}>
-            <MenuIcon className={classes.menuIcon}/>
+            <MenuIcon className={classes.menuIcon} />
           </IconButton>
           <Hidden xsDown>
             <Typography variant="title" color="textSecondary" className={classes.flex} noWrap>
@@ -93,39 +92,37 @@ class Navbar extends React.Component {
               indicatorColor="primary"
               textColor="primary"
               classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}>
-              {this.props.tabs.map((tab, i) => <Tab key={i} label={tab} classes={{ root: classes.tabRoot, selected: classes.tabSelected }}/>)}
+              {this.props.tabs.map((tab, i) => <Tab key={i} label={tab} classes={{ root: classes.tabRoot, selected: classes.tabSelected }} />)}
             </Tabs>
           </Hidden>}
-          <div className={classes.googleSearch} dangerouslySetInnerHTML={{ __html: '<gcse:searchbox-only></gcse:searchbox-only>' }} />
-          {auth && (
-              <div>
-                <IconButton
-                  aria-owns={open ? 'menu-appbar' : null}
-                  aria-haspopup="true"
-                  onClick={this.handleMenu.bind(this)}
-                  color="inherit"
-                >
-                  <AccountCircle />
-                </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  open={open}
-                  onClose={() => this.handleClose()}
-                >
-                  <MenuItem onClick={this.handleClose.bind(this)}>Profile</MenuItem>
-                  <MenuItem onClick={this.handleClose.bind(this)}>My account</MenuItem>
-                </Menu>
-              </div>
-            )}
+          {this.props.search && <div className={classes.googleSearch} dangerouslySetInnerHTML={{ __html: '<gcse:searchbox-only></gcse:searchbox-only>' }} />}
+          {auth &&
+            <div>
+              <IconButton
+                aria-owns={open ? 'menu-appbar' : null}
+                aria-haspopup="true"
+                onClick={this.handleMenu.bind(this)}
+                color="inherit">
+                <AccountCircle />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={() => this.handleClose()}>
+                <MenuItem onClick={this.handleClose.bind(this)}>Profile</MenuItem>
+                <MenuItem onClick={this.handleClose.bind(this)}>My account</MenuItem>
+              </Menu>
+            </div>
+          }
         </Toolbar>
       </AppBar>
     );

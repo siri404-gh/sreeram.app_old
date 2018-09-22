@@ -51,6 +51,7 @@ module.exports = {
       },
       { test: /\.(svg|png|jpg|jpeg|gif)$/, loader: 'file-loader', options: { name: 'img/icons/[name].[ext]' } },
       { test: /\.(woff|woff2|ttf|eot)$/, loader: 'file-loader', options: { name: 'fonts/[name].[ext]' } },
+      { test: /\.ejs$/, loader: 'ejs-compiled-loader?htmlmin' },
     ],
   },
   optimization: {
@@ -105,7 +106,7 @@ module.exports = {
       ogDescription,
       ogType,
       ogFbAppId,
-      template: path.resolve(__dirname, 'template/template.html'),
+      template: path.resolve(__dirname, './template/template.ejs'),
       excludeChunks: ['polyfills'],
     }),
     new CleanWebpackPlugin(['dist'], {

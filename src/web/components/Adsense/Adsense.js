@@ -27,8 +27,8 @@ export default class Adsense extends React.Component {
     return <ins
       className="adsbygoogle"
       style={{ display: 'block' }}
-      data-ad-client="ca-pub-6831276331714408"
-      data-ad-slot="3912800171"
+      data-ad-client={`ca-pub-${this.props.pubID}`}
+      data-ad-slot={this.props.adSlot}
       data-ad-format="auto"
       data-full-width-responsive="true" />;
   }

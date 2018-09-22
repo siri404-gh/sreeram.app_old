@@ -14,7 +14,7 @@ import styles from './styles';
 import theme from './theme';
 
 const {
-  navbar: { title, tagline, tabs },
+  navbar: { title, tagline, tabs, search },
   defaultTopic, defaultPost,
 } = variables;
 
@@ -54,7 +54,8 @@ class App extends Component {
             handleDrawerToggle={this.handleDrawerToggle.bind(this)}
             title={title}
             tagline={tagline}
-            tabs={tabs} />
+            tabs={tabs}
+            search={search} />
           <Sidebar
             mobileOpen={this.state.mobileOpen}
             handleDrawerToggle={this.handleDrawerToggle.bind(this)}

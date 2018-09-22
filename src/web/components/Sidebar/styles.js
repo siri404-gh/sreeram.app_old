@@ -15,10 +15,13 @@ export default theme => ({
       position: 'relative',
     },
     border: 'none',
-    overflow: 'hidden',
   },
   listItem: {
     padding: 10,
+    paddingLeft: 25,
+  },
+  nestedListItem: {
+    padding: 5,
     paddingLeft: 25,
   },
   activeListitem: {
