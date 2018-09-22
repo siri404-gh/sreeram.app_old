@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: https://www.google.com*
+Disallow: https://pagead2*
+Disallow: https://googleads*

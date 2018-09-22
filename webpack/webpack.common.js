@@ -134,6 +134,7 @@ module.exports = {
       { from: 'webpack/template/logo.png', to: 'logo.png' },
       { from: 'webpack/template/og_image.jpg', to: 'og_image.jpg' },
       { from: 'webpack/template/sitemap.html', to: 'sitemap.html' },
+      { from: 'webpack/template/robots.txt', to: 'robots.txt' },
       { from: 'webpack/template/images', to: 'images' },
     ]),
   ],
