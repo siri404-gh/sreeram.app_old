@@ -1,4 +1,4 @@
-# 1.6 Browser Extensions
+# 6.6 Browser Extensions
 
 #### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 

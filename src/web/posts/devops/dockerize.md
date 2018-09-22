@@ -1,4 +1,4 @@
-# Dockerize the app with Docker
+# 14.1 Dockerize the app with Docker
 
 ## Install
 Make sure Docker is installed in your machine.

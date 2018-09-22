@@ -1,4 +1,4 @@
-# Clean Webpack Plugin
+# 9.10 Clean Webpack Plugin
 
 #### Sep 20, 2018 by Sreeram Padmanabhan
 

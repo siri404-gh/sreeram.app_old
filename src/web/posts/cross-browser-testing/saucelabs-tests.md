@@ -1,4 +1,4 @@
-# Automated Cross browser testing in Saucelabs
+# 16.2 Automated Cross browser testing in Saucelabs
 
 #### Sep 20, 2018 by Sreeram Padmanabhan
 

@@ -1,4 +1,4 @@
-# 4.7 Webpack Dev Server
+# 9.7 Webpack Dev Server
 
 #### Sep 2, 2018 by Sreeram Padmanabhan, Last updated on Sep 18, 2018
 

@@ -1,4 +1,4 @@
-# 2.3 Configure Eslint
+# 7.3 Configure Eslint
 
 #### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 

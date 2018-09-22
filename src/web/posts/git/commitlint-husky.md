@@ -1,4 +1,4 @@
-# Enforce commit linting
+# 12.2 Enforce commit linting
 
 ## Summary
 

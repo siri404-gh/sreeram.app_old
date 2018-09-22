@@ -1,4 +1,4 @@
-# 4.5 HTML Webpack Plugin
+# 9.5 HTML Webpack Plugin
 
 #### Sep 2, 2018 by Sreeram Padmanabhan, Last updated on Sep 14, 2018
 

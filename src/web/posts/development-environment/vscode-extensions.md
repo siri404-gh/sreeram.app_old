@@ -1,14 +1,14 @@
-# 1.2 Visual Studio Code Extensions
+# 6.2 Visual Studio Code Extensions
 
 #### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 
 ## Summary
 
-Over the past few years of using Visual Studio Code, it has grown so much to my liking thanks to the ease of use and the flexibility it offers. 
-There is something new to learn all the time and its smooth as silk. Also, the community of users is growing and it has a large extension base which makes using this a pleasurable experience over Atom or Sublime text. 
-They are updated constantly and the rating system enables you to choose the best one for you. 
+Over the past few years of using Visual Studio Code, it has grown so much to my liking thanks to the ease of use and the flexibility it offers.
+There is something new to learn all the time and its smooth as silk. Also, the community of users is growing and it has a large extension base which makes using this a pleasurable experience over Atom or Sublime text.
+They are updated constantly and the rating system enables you to choose the best one for you.
 
-One problem I often face is that these extensions are constantly updated and you need to restart the application for the update to take effect. 
+One problem I often face is that these extensions are constantly updated and you need to restart the application for the update to take effect.
 Add that to the VS Code updates and it can be a bit annoying to have it restart a few times every day.
 
 In this post, I shall put down here my favourite extensions which have helped me in creating this project.
@@ -53,7 +53,7 @@ See Git Blame information in the status bar for the currently selected line.
 
 View and search git log along with the graph and details, and a lot more
 
-## GitLens 
+## GitLens
 
 Supercharges the Git capabilities built into Visual Studio Code. It helps you to visualize code authorship at a glance via Git blame annotations and code lens, seamlessly navigate and explore Git repositories, gain valuable insights via powerful comparison commands, and so much more.
 

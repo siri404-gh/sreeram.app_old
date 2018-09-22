@@ -1,4 +1,4 @@
-# 1.3 VS Code preferences
+# 6.3 VS Code preferences
 
 #### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 

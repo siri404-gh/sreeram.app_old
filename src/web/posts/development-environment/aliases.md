@@ -1,4 +1,4 @@
-# 1.4 My favourite aliases
+# 6.4 My favourite aliases
 
 #### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 

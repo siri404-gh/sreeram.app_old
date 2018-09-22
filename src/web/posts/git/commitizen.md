@@ -1,4 +1,4 @@
-# Commit linting using Commitlint
+# 12.1 Commit linting using Commitizen
 
 ## Summary
 

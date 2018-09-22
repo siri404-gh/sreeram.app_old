@@ -1,4 +1,4 @@
-# 3.2 Configure Babel
+# 8.2 Configure Babel
 
 #### Sep 1, 2018 by Sreeram Padmanabhan, Last updated on Sep 13, 2018
 
