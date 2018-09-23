@@ -1,4 +1,18 @@
 {
-  "presets": ["env", "react"],
-  "plugins": ["react-hot-loader/babel", "istanbul", "add-react-displayname", "transform-class-properties", "transform-object-rest-spread"]
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          ">1%"
+        ]
+      }
+    }],
+    "react"],
+  "plugins": [
+    "react-hot-loader/babel",
+    "istanbul",
+    "add-react-displayname",
+    "transform-class-properties",
+    "transform-object-rest-spread"
+  ]
 }

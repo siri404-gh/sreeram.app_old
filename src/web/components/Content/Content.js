@@ -145,8 +145,9 @@ class PaperSheet extends React.Component {
    */
   getPost() {
     const { classes, topic, post } = this.props;
+    const ppost = require(`../../posts/${topic}/${post}.md`);
     return <Markdown className={classes.markdown} key={post.substring(0, 40)}>
-      {require(`../../posts/${topic}/${post}.md`)}
+      {ppost || null}
     </Markdown>;
   }
 
