@@ -39,6 +39,10 @@ module.exports = [
     route: [],
   },
   {
+    topic: 'Functional Programming',
+    route: [],
+  },
+  {
     topic: 'Development Environment',
     description: 'Setting up of project',
     route: [{

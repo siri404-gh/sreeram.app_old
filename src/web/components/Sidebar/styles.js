@@ -20,12 +20,8 @@ export default theme => ({
     padding: 10,
     paddingLeft: 25,
   },
-  nestedListItem: {
-    padding: 5,
-    paddingLeft: 25,
-  },
   activeListitem: {
-    padding: 10,
+    // padding: 10,
     paddingLeft: 25,
     backgroundColor: '#e8eaed',
     borderLeft: 'solid 3px blue',

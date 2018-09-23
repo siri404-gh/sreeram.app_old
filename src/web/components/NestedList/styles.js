@@ -22,7 +22,6 @@ export default theme => ({
   nestedListItemText: {
   },
   activeListItem: {
-    padding: 5,
     paddingLeft: 40,
     backgroundColor: '#e8eaed',
     borderLeft: 'solid 3px #3367d6',

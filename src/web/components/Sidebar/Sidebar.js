@@ -33,8 +33,8 @@ class Sidebar extends React.Component {
       {topics.map((topic, i) => {
         if (typeof topic.route === 'string') {
           return <div key={i}>
-            <ListItem component={'a'} className={classes.nestedListItem} href={topic.route}>
-              <ListItemText secondary={topic.topic} className={classes.nestedListItemText} />
+            <ListItem component={'a'} className={classes.listItem} href={topic.route}>
+              <ListItemText secondary={topic.topic} className={classes.listItemText} />
             </ListItem>
             <Divider />
           </div>;

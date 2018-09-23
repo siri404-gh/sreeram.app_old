@@ -73,6 +73,7 @@ class PaperSheet extends React.Component {
   setSeoProps(title, description) {
     const { topic, post } = this.props;
     if (post === 'home') {
+      document.title = variables.navbar.title;
       document.querySelector('meta[name=\'Description\']').setAttribute('content', variables.ogDescription);
     } else {
       document.title = title;
