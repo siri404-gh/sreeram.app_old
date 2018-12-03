@@ -206,11 +206,11 @@ class PaperSheet extends React.Component {
             {!queryParam && <Grid item md={!queryParam && 4} lg={!queryParam && 3} xl={!queryParam && 3} className={classes.contentRight}>
               {this.getProgress()}
             </Grid>}
-            <Hidden mdDown>
+            {/* <Hidden mdDown>
               {<Grid item lg={2} xl={2}>
                 {process.env.NODE_ENV === 'production' && <Adsense pubID={variables.google.adsense.pubID} adSlot={variables.google.adsense.adSlot}/>}
               </Grid>}
-            </Hidden>
+            </Hidden> */}
           </Grid>
         </Paper>
       </main>
