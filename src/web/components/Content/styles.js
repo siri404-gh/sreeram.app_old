@@ -13,7 +13,7 @@ export default theme => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.background.primary,
-    padding: theme.spacing.unit * (window.innerWidth < 600 ? 0 : 2),
+    padding: theme.spacing.unit * (window.innerWidth < 600 ? 1 : 2),
   },
   toolbar: {
     minHeight: 48,

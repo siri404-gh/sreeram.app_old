@@ -162,7 +162,7 @@ class PaperSheet extends React.Component {
     const { classes } = this.props;
     const { /* activeStep,*/ mainActiveStep } = this.state;
     return <Hidden smDown>
-      <Typography className={classes.progressHeader}>Your progress</Typography>
+      <Typography className={classes.progressHeader}>Picture List</Typography>
       <Stepper className={classes.stepper} activeStep={mainActiveStep} orientation="vertical">
         {topics.map((topic, i) => <Step key={i} className={classes.step}>
           <StepLabel className={classes.stepLabel}>

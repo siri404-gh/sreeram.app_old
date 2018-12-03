@@ -1,7 +1,7 @@
 module.exports = {
   navbar: {
-    title: 'The Web Boilerplate Project',
-    tagline: 'Web development, supercharged!',
+    title: 'Sreeram Padmanabhan',
+    tagline: 'Web developer, Traveller, Made in 🇮🇳',
     tabs: [],
     search: true,
   },
