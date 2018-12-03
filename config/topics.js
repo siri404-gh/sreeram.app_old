@@ -17,7 +17,12 @@ module.exports = [
       {
         topic: 'View of the Ghats',
         route: '/post/india/western-ghats',
-      }],
+      },
+      {
+        topic: 'Ponmudi Hills',
+        route: '/post/india/ponmudi-hills',
+      },
+    ],
   },
   {
     topic: 'London',
@@ -28,7 +33,8 @@ module.exports = [
     {
       topic: 'The Anthologist',
       route: '/post/london/anthologist',
-    }],
+    },
+  ],
   },
   // {
   //   topic: 'Fun with HTML',
