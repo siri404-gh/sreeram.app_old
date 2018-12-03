@@ -38,6 +38,18 @@ module.exports = [
       topic: 'The Anthologist',
       route: '/post/london/anthologist',
     },
+    {
+      topic: 'The Anthologist',
+      route: '/post/london/anthologist',
+    },
+    {
+      topic: 'Aerial view of Barbican',
+      route: '/post/london/view-of-barbican-from-office',
+    },
+    {
+      topic: 'Winter Wonderland 2017',
+      route: '/post/london/winter-wonderland-2017',
+    },
   ],
   },
   // {
