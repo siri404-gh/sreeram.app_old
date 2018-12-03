@@ -4,12 +4,23 @@ module.exports = [
     route: '/',
   },
   {
-    topic: 'Alapuzha, India',
-    route: '/post/india/alapuzha',
+    topic: 'India',
+    route: [
+      {
+        topic: 'Alapuzha, India',
+        route: '/post/india/alapuzha',
+      },
+      {
+        topic: 'Kalakad, India',
+        route: '/post/india/kalakad',
+      }],
   },
   {
-    topic: 'Kalakad, India',
-    route: '/post/india/kalakad',
+    topic: 'London',
+    route: [{
+      topic: 'St Pauls Cathedral',
+      route: '/post/london/st-pauls-cathedral',
+    }],
   },
   // {
   //   topic: 'Fun with HTML',
@@ -18,25 +29,6 @@ module.exports = [
   // {
   //   topic: 'Fun with CSS',
   //   route: [],
-  // },
-  // {
-  //   topic: 'Javascript Concepts',
-  //   route: [{
-  //     topic: 'Closures in Javascript',
-  //     route: '/post/javascript-concepts/closures',
-  //   },
-  //   {
-  //     topic: 'Callback hell',
-  //     route: '/post/javascript-concepts/callback-hell',
-  //   },
-  //   {
-  //     topic: 'Promises',
-  //     route: '/post/javascript-concepts/promises',
-  //   },
-  //   {
-  //     topic: 'Async/Await',
-  //     route: '/post/javascript-concepts/async-await',
-  //   }],
   // },
   // {
   //   topic: 'Algorithms',
