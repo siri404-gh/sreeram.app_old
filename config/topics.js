@@ -13,6 +13,10 @@ module.exports = [
       {
         topic: 'Kalakad, India',
         route: '/post/india/kalakad',
+      },
+      {
+        topic: 'View of the Ghats',
+        route: '/post/india/western-ghats',
       }],
   },
   {
