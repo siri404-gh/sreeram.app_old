@@ -20,6 +20,10 @@ module.exports = [
     route: [{
       topic: 'St Pauls Cathedral',
       route: '/post/london/st-pauls-cathedral',
+    },
+    {
+      topic: 'The Anthologist',
+      route: '/post/london/anthologist',
     }],
   },
   // {
