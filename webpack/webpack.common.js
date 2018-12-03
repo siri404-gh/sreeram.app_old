@@ -1,3 +1,4 @@
+/*eslint-disable */
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -6,7 +7,6 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const variables = require('../config/variables');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
 
 const { navbar: { title }, keywords, ogDescription, ogFbAppId, ogImage, ogTitle, ogType, ogUrl } = variables;
 
@@ -56,23 +56,44 @@ module.exports = {
     ],
   },
   optimization: {
+    runtimeChunk: 'single',
     splitChunks: {
-      /**
-       * @param {*} module
-       * @return {string}
-       */
-      name(module) {
-        return 'vendor';
-      },
-        /**
-       * @param {*} chunk
-       * @return {string}
-       */
-      chunks(chunk) {
-        return chunk.name !== 'polyfills';
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 0,
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name(module) {
+            const index = 1;
+            // get the name. E.g. node_modules/packageName/not/this/part.js
+            // or node_modules/packageName
+            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[index];
+            // npm package names are URL-safe, but some servers don't like @ symbols
+            return `npm/npm-${packageName.replace('@', '')}`;
+          },
+        },
       },
     },
   },
+  // {
+  //   splitChunks: {
+  //     /**
+  //      * @param {*} module
+  //      * @return {string}
+  //      */
+  //     name(module) {
+  //       return 'vendor';
+  //     },
+  //       /**
+  //      * @param {*} chunk
+  //      * @return {string}
+  //      */
+  //     chunks(chunk) {
+  //       return chunk.name !== 'polyfills';
+  //     },
+  //   },
+  // },
   externals: {
     request: {
       commonjs: 'request',
@@ -138,14 +159,5 @@ module.exports = {
       { from: 'webpack/template/robots.txt', to: 'robots.txt' },
       { from: 'webpack/template/images', to: 'images' },
     ]),
-    new WorkboxPlugin.GenerateSW({
-      // these options encourage the ServiceWorkers to get in there fast
-      // and not allow any straggling "old" SWs to hang around
-      clientsClaim: true,
-      skipWaiting: true,
-      precacheManifestFilename: 'wb-manifest.[manifestHash].js',
-      include: [/\.html$/, /\.js$/, /\.jpg$/, /\.png$/, /\.css$/],
-      navigateFallback: '/',
-    }),
   ],
 };
