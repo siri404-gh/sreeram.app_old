@@ -8,7 +8,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Markdown from './Markdown';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
-import Adsense from '../Adsense/Adsense';
+// import Adsense from '../Adsense/Adsense';
 // import { NavLink } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './styles';
