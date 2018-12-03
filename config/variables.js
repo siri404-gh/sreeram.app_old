@@ -1,7 +1,7 @@
 module.exports = {
   navbar: {
     title: 'Sreeram Padmanabhan',
-    tagline: 'Web developer, Traveller, Made in 🇮🇳',
+    tagline: 'Web developer, Traveller, Photographer, Made in 🇮🇳',
     tabs: [],
     search: true,
   },

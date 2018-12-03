@@ -1,4 +1,4 @@
-# Winter Wonderland, London
+# Winter Wonderland
 
 #### Dec 1, 2018 by Sreeram Padmanabhan
 

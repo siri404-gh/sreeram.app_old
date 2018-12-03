@@ -39,10 +39,6 @@ module.exports = [
       route: '/post/london/anthologist',
     },
     {
-      topic: 'The Anthologist',
-      route: '/post/london/anthologist',
-    },
-    {
       topic: 'Aerial view of Barbican',
       route: '/post/london/view-of-barbican-from-office',
     },
