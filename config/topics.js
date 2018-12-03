@@ -7,11 +7,11 @@ module.exports = [
     topic: 'India',
     route: [
       {
-        topic: 'Alapuzha, India',
+        topic: 'Alapuzha',
         route: '/post/india/alapuzha',
       },
       {
-        topic: 'Kalakad, India',
+        topic: 'Kalakad',
         route: '/post/india/kalakad',
       },
       {

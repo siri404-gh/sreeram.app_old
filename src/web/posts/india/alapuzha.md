@@ -1,4 +1,4 @@
-# Alapuzha, Kerala, India
+# Alapuzha, Kerala
 
 #### Dec 1, 2018 by Sreeram Padmanabhan
 
