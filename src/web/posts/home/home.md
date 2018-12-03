@@ -4,7 +4,9 @@
 
 ![Sreeram Padmanabhan](https://avatars0.githubusercontent.com/u/8502281?s=460&v=4 "Sreeram Padmanabhan")
 
-Hey, I am Sreeram Padmanabhan. Some friends call me Sree. I am a Web Developer and this is my photography website. I live in London involved in one of most creative businesses ever.
+Hey, I am Sreeram Padmanabhan. Some friends call me Sree. I am a Web Developer and this is my photography website. I live in London and am involved in one of the leading banks here. I travel regularly and have so far covered 12 countries in 2 continents. Over my life, I have seen so many things which I'd love to share here. Click on the Menu at the top to see my pictures divided into countries and cities.
+
+I am also an active in instagram. I try to post regularly at [instagram.sreeram.app](http://instagram.sreeram.app)
 
 ## The story of my life
 
@@ -19,11 +21,3 @@ I have also started and failed in creating my own start up. Actually I ended it 
 All this knowledge of creating websites until 2011, landed me my first job at a start up where I worked for 6 months as a PHP Developer. Then I got a job in a Multi National Company. Although I started initally as a C developer there, I found my own opportunity in Web Development in a different location in the same company. From there, I havent looked back. I have worked with developers from Apple, Bitovi and moved to London in 2016 to work for Lloyds Bank and I have been working there ever since. The work here has been challenging every day and I am proud to have been a good problem solver here.
 
 I know it is only a matter of time before I get my next big break.
-
-So, over the years, I have gathered a good amount of knowlegdge of the Web. I constantly face issues and I constantly think about solving them. I have grown from the boy who used Dreamweaver to create Webpages to a good programmer. I have other big ideas but its becoming increasingly hard to find the time to do it. About a month ago, I wanted to do a technical blog and all this is a result of that.
-
-I am also an active in instagram. I try to post regularly at [instagram.sreeram.app](http://instagram.sreeram.app)
-
-## Get in touch with me
-
-mailto:sreeram.com@gmail.com
